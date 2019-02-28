@@ -35,6 +35,7 @@ namespace Geoportal
                services.AddEntityFrameworkNpgsql()
                .AddDbContext<PointContext>()
                .BuildServiceProvider();
+            services.AddDbContext<iContext>();
 
 
 

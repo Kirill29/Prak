@@ -22,14 +22,17 @@ namespace Geoportal.Data
                 new Point{X=23, Y = 67}
 
             };
+           
             //записываем точки в базу данных
             foreach (Point p in points)
             {
                 context.Points.Add(p);
 
             }
+
             //сохраняем результаты
             context.SaveChanges();
+           
 
 
         }

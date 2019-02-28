@@ -26,6 +26,7 @@ namespace Geoportal
                 try
                 {
                     var context = services.GetRequiredService<PointContext>();
+
                     DbInitializer.Initialize(context);
 
                 }

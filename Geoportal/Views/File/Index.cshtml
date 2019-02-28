@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Geoportal.DemandArchiveErs>
+@*@{
+    Layout = "_Layout";
+}*@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Upload Files</title>
+</head>
+<body>
+    <!--Вывод значений из бд-->
+    
+    <h2>DemandArchiveErs</h2>
+    <table class="table">
+        <tr><td>WorkstationsNr</td><td>Status</td><td>DtstampBeginDemand</td><td>RegionTypesNr</td><td>TypesDemandNr</td><td>Priority</td><td>ConfirmDeleteAfterArchive</td><td>ServiceTypeToShare</td></tr>
+        @foreach (var item in Model)
+    {
+        <tr><td>@item.WorkstationsNr</td><td>@item.Status</td><td>@item.DtstampBeginDemand</td><td>@item.RegionTypesNr</td><td>@item.TypesDemandNr</td><td>@item.Priority</td><td>@item.ConfirmDeleteAfterArchive</td><td>@item.ServiceTypeToShare</td></tr>
+}
+    </table>
+    </body>
+</html>

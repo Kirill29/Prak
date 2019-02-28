@@ -15,8 +15,8 @@ namespace Geoportal
         {
         }
 
-        public virtual DbSet<DemandArchiveErs> DemandArchiveErs { get; set; }
-        public virtual DbSet<FilesDemandArchiveErs> FilesDemandArchiveErs { get; set; }
+        public virtual DbSet<DemandArchiveErs> DemandArchiveErss { get; set; }
+        public virtual DbSet<FilesDemandArchiveErs> FilesDemandArchiveErss { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

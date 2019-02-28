@@ -22,8 +22,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="FileModel.cs" />
+    <Compile Remove="Controllers\Bdfiles.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="Upload_Image.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Models\DemandArchiveErs.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
   </ItemGroup>
 </Project>
