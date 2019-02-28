@@ -1,0 +1,28 @@
+﻿@model Geoportal.Models.FileModel
+
+@{
+    Layout = "_Layout";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Upload Files</title>
+</head>
+<body>
+    <form asp-controller="File" asp-action="Upload_Image" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" />
+        <input type="file" name="file" />
+        <button type="submit">Upload File</button>
+    </form>
+    <br />
+    <label>Uploaded File=@ViewData["FilePath"]</label>  
+
+
+    @*<label>@Model.Name</label>*@
+
+
+
+</body>
+</html>
