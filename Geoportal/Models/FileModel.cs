@@ -12,6 +12,6 @@ namespace Geoportal.Models
         public int region_types_nr { get; set; }
         public int types_demand_nr { get; set; }
         public int priority { get; set; }
-
+        public string Name { get; set; }
     }
 }
