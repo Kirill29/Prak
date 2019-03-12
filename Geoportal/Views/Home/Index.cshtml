@@ -4,14 +4,15 @@
     ViewBag.Title = "Главная страница";
 }
 <body>
-            <table class="table">
-                <tr><td>Координата X</td><td>Координата Y</td></tr>
-                @foreach (var item in Model)
+    <a asp-action="Ramka" asp-controller="Ramka">Добавить рамку</a>
+    <table class="table">
+        <tr><td>Координата X</td><td>Координата Y</td></tr>
+        @foreach (var item in Model)
         {
             <tr><td>@item.X</td><td>@item.Y</td></tr>
-}
-            </table>
-            <div id="mapid" style="width: 800px; height: 500px;"></div>
+        }
+    </table>
+    <div id="mapid" style="width: 800px; height: 500px;"></div>
 
 
 

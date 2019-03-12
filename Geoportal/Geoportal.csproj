@@ -13,23 +13,40 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.2" />
+    <PackageReference Include="Npgsql.LegacyPostgis" Version="4.0.5" />
+    <PackageReference Include="NetTopologySuite.IO.PostGis" Version="1.15.0" />
+    <PackageReference Include="Npgsql.GeoJSON" Version="1.0.0" />
+    <PackageReference Include="Npgsql.RawPostgis" Version="4.0.5" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.NetTopologySuite" Version="2.2.0" />
+    <PackageReference Include="Npgsql" Version="4.0.5" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Data\" />
     <Folder Include="wwwroot\Files\" />
     <Folder Include="Views\Создать папку\" />
+    <Folder Include="Views\Ramka\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="FileModel.cs" />
     <Compile Remove="Controllers\Bdfiles.cs" />
+    <Compile Remove="Cmr1.cs" />
+    <Compile Remove="Cmr.cs" />
+    <Compile Remove="iContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="Upload_Image.cshtml" />
+    <Content Remove="wwwroot\Files\[only-soft.org].t39421.torrent" />
+    <Content Remove="wwwroot\Files\VisualStudioForMacInstaller__679860243.1527252481.dmg" />
+    <Content Remove="wwwroot\Files\000000010024.jpg" />
+    <Content Remove="wwwroot\Config.txt" />
   </ItemGroup>
   <ItemGroup>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Models\DemandArchiveErs.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\Config.txt" />
   </ItemGroup>
 </Project>

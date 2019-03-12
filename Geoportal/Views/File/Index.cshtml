@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Geoportal.DemandArchiveErs>
+﻿@model IEnumerable<Geoportal.DemandArchiveErs> 
 @*@{
     Layout = "_Layout";
 }*@
@@ -7,18 +7,40 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Upload Files</title>
+    <title>Все значения из бд</title>
 </head>
 <body>
+    <a href="/File/Create">Добавить новый файл</a>
+    <br />
+    <a asp-action="Ramka" asp-controller="Ramka">Добавить рамку</a>
+
     <!--Вывод значений из бд-->
-    
-    <h2>DemandArchiveErs</h2>
-    <table class="table">
-        <tr><td>WorkstationsNr</td><td>Status</td><td>DtstampBeginDemand</td><td>RegionTypesNr</td><td>TypesDemandNr</td><td>Priority</td><td>ConfirmDeleteAfterArchive</td><td>ServiceTypeToShare</td></tr>
-        @foreach (var item in Model)
-    {
-        <tr><td>@item.WorkstationsNr</td><td>@item.Status</td><td>@item.DtstampBeginDemand</td><td>@item.RegionTypesNr</td><td>@item.TypesDemandNr</td><td>@item.Priority</td><td>@item.ConfirmDeleteAfterArchive</td><td>@item.ServiceTypeToShare</td></tr>
-}
-    </table>
+    <h3>вы добавили запись с id: @ViewData["ID"]</h3>
+    <form asp-action="post" asp-controller="file">
+        <table class="table">
+            <tr><td>DemandArchiveErsNr</td><td>WorkstationsNr</td><td>Status</td><td>DtstampBeginDemand</td><td>RegionTypesNr</td><td>TypesDemandNr</td><td>Priority</td><td>ConfirmDeleteAfterArchive</td><td>ServiceTypeToShare</td></tr>
+            @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.DemandArchiveErsNr</td>
+                <td>@item.WorkstationsNr</td>
+                <td>@item.Status</td>
+                <td>@item.DtstampBeginDemand</td>
+                <td>@item.RegionTypesNr</td>
+                <td>@item.TypesDemandNr</td>
+                <td>@item.Priority</td>
+                <td>@item.ConfirmDeleteAfterArchive</td>
+                <td>@item.ServiceTypeToShare</td>
+                
+                 <td><a asp-action="Edit"  asp-route-id="@item.DemandArchiveErsNr">edit</a> </td>
+        
+
+                <td><button type="submit" asp-action="OnPostDeleteAsync" asp-route-id="@item.DemandArchiveErsNr">Delete</button></td>
+
+
+            </tr>
+    }
+        </table>
+    </form>
     </body>
 </html>
