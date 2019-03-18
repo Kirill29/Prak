@@ -11,6 +11,7 @@ using System.Web;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using System.IO;
+using Npgsql;
 
 
 namespace Geoportal.Controllers

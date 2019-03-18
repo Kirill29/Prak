@@ -33,6 +33,7 @@
     <Compile Remove="Cmr1.cs" />
     <Compile Remove="Cmr.cs" />
     <Compile Remove="iContext.cs" />
+    <Compile Remove="Models\FileModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="Upload_Image.cshtml" />
