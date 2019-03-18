@@ -34,6 +34,7 @@
     <Compile Remove="Cmr.cs" />
     <Compile Remove="iContext.cs" />
     <Compile Remove="Models\FileModel.cs" />
+    <Compile Remove="FilesDemandArchiveErs.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="Upload_Image.cshtml" />
