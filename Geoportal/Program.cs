@@ -7,7 +7,7 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using Geoportal.Data;
+
 using Microsoft.Extensions.DependencyInjection;
 using Geoportal.Models;
 using Microsoft.AspNetCore.Builder;
@@ -25,9 +25,7 @@ namespace Geoportal
 
                 try
                 {
-                    var context = services.GetRequiredService<PointContext>();
 
-                    DbInitializer.Initialize(context);
 
                 }
                 catch (Exception ex)

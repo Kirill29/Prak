@@ -25,6 +25,8 @@ namespace Geoportal.Controllers
          static public List<string> Files_path { get; set; } = new List<string>();
 
         static List<string> files_size = new List<string>();
+        static List<long?> files_Files_DemandArchiveErsNr = new List<long?>();
+        static long? demand_ArchiveErsNr;
         public string Cmr_Id { get; set; }
 
         public JsonResult UploadFile(IList<IFormFile> files)
@@ -96,10 +98,18 @@ namespace Geoportal.Controllers
             Files_path.Clear();
             files_names.Clear();
             files_size.Clear();
+            files_Files_DemandArchiveErsNr.Clear();
+            demand_ArchiveErsNr = 0;
             //LOAD FROM CONFIG.TXT
             DemandArchiveErs DAE=new DemandArchiveErs();
 
             string path_Root = _appEnvironment.WebRootPath;
+            string path_to_directory = path_Root + "//Files//";
+            if (!Directory.Exists(path_to_directory+DateTime.Now))
+            {
+                Directory.CreateDirectory(path_to_directory+DateTime.Now);
+                
+            }
             StreamReader objReader = new StreamReader(path_Root+"/Config.txt");
             string line;
             line = objReader.ReadLine();
@@ -154,7 +164,7 @@ namespace Geoportal.Controllers
 
 
                 //string path_Root = _appEnvironment.WebRootPath;
-                string path_to_file = path_Root + "//Files//" + file.FileName;
+                string path_to_file = path_to_directory  + file.FileName;
                 Files_path.Add(path_to_file);
                 FDE.PathFileName = path_to_file;
                 
@@ -162,7 +172,7 @@ namespace Geoportal.Controllers
                 FileStream fstream = null;
                 try
                 { 
-                     fstream = new FileStream(path_to_file, FileMode.OpenOrCreate);
+                     fstream = new FileStream(path_to_file, FileMode.Create);
                      await file.CopyToAsync(fstream);
                      }
                      catch (Exception ex)
@@ -180,6 +190,8 @@ namespace Geoportal.Controllers
                 _db.FilesDemandArchiveErss.Add(FDE);
                 //ViewData["Id"] = DAE.DemandArchiveErsNr;
                 await _db.SaveChangesAsync();
+                demand_ArchiveErsNr = DAE.DemandArchiveErsNr;
+                files_Files_DemandArchiveErsNr.Add(FDE.FilesDemandArchiveErsNr);
 
 
             }
@@ -228,9 +240,11 @@ namespace Geoportal.Controllers
             {
                 FilesCmr filesCmr = new FilesCmr();
                 filesCmr.CmrId = Convert.ToInt32(Cmr_Id);
-            filesCmr.RootDir = path;
-            filesCmr.FileName = files_names[i++];
-            _db.FilesCmrs.Add(filesCmr);
+                filesCmr.RootDir = path;
+                filesCmr.FileName = files_names[i++];
+                filesCmr.DemandArchiveErsNr = demand_ArchiveErsNr;
+                filesCmr.FilesDemandArchiveNr = files_Files_DemandArchiveErsNr[i++];
+               _db.FilesCmrs.Add(filesCmr);
             await _db.SaveChangesAsync();
             }
 

@@ -35,6 +35,9 @@
     <Compile Remove="iContext.cs" />
     <Compile Remove="Models\FileModel.cs" />
     <Compile Remove="FilesDemandArchiveErs.cs" />
+    <Compile Remove="Data\DbInitilizer.cs" />
+    <Compile Remove="Migrations\20190220081833_InitialCreate.Designer.cs" />
+    <Compile Remove="Migrations\20190220081833_InitialCreate.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="Upload_Image.cshtml" />
@@ -42,6 +45,7 @@
     <Content Remove="wwwroot\Files\VisualStudioForMacInstaller__679860243.1527252481.dmg" />
     <Content Remove="wwwroot\Files\000000010024.jpg" />
     <Content Remove="wwwroot\Config.txt" />
+    <Content Remove="web.json" />
   </ItemGroup>
   <ItemGroup>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Models\DemandArchiveErs.cs">

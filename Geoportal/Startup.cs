@@ -37,11 +37,12 @@ namespace Geoportal
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
            
-               services.AddEntityFrameworkNpgsql()
-               .AddDbContext<PointContext>()
-               .BuildServiceProvider();
+               
             services.AddDbContext<iContext>();
-
+            services.Configure<IISServerOptions>(options =>
+            {
+                options.AutomaticAuthentication = false;
+            });
 
 
 

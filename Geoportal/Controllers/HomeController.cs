@@ -18,17 +18,10 @@ namespace Geoportal.Controllers
 {
     public class HomeController : Controller
     {
-        private PointContext db;
 
-     
-
-        public HomeController(PointContext context)
+        public IActionResult Index()
         {
-            db = context;
-        }
-        public async Task<IActionResult> Index()
-        {
-            return View(await db.Points.ToListAsync());
+            return View();
         }
 
         public IActionResult Privacy()
