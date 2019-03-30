@@ -24,7 +24,7 @@ namespace Geoportal.Controllers
 
          static public List<string> Files_path { get; set; } = new List<string>();
 
-        static List<string> files_size = new List<string>();
+        static List<long> files_size = new List<long>();
         static List<long?> files_Files_DemandArchiveErsNr = new List<long?>();
         static long? demand_ArchiveErsNr;
         public string Cmr_Id { get; set; }
@@ -104,12 +104,13 @@ namespace Geoportal.Controllers
             DemandArchiveErs DAE=new DemandArchiveErs();
 
             string path_Root = _appEnvironment.WebRootPath;
-            string path_to_directory = path_Root + "//Files//";
-            if (!Directory.Exists(path_to_directory+DateTime.Now))
-            {
-                Directory.CreateDirectory(path_to_directory+DateTime.Now);
-                
-            }
+            //string path_to_directory = path_Root + "//Files//";
+            string path_to_directory = path_Root;
+            //if (!Directory.Exists(path_to_directory))
+            //{
+            //    Directory.CreateDirectory(path_to_directory+DateTime.Now);
+
+            //}
             StreamReader objReader = new StreamReader(path_Root+"/Config.txt");
             string line;
             line = objReader.ReadLine();
@@ -165,7 +166,11 @@ namespace Geoportal.Controllers
 
                 //string path_Root = _appEnvironment.WebRootPath;
                 string path_to_file = path_to_directory  + file.FileName;
+                //нахожу размер файла загруженного
+                 long file_size = new System.IO.FileInfo(path_to_file).Length;
                 Files_path.Add(path_to_file);
+                files_size.Add(file_size);
+                FDE.FileSizeInBytes = file_size;
                 FDE.PathFileName = path_to_file;
                 
                 //FDE.DemandArchiveErsNr=
@@ -195,15 +200,15 @@ namespace Geoportal.Controllers
 
 
             }
-           
 
 
 
-          
-           
-            return RedirectToAction("Index");
+
+
+            //return Ok("ok");
+            //return RedirectToAction("Index");
             //return Content(DAE.DemandArchiveErsNr.ToString());
-
+            return Content(files_size[0].ToString());
         }
 
         public async Task<IActionResult> Add(string WKT_string)
@@ -244,6 +249,7 @@ namespace Geoportal.Controllers
                 filesCmr.FileName = files_names[i++];
                 filesCmr.DemandArchiveErsNr = demand_ArchiveErsNr;
                 filesCmr.FilesDemandArchiveNr = files_Files_DemandArchiveErsNr[i++];
+                filesCmr.FileSize = files_size[i++].ToString();
                _db.FilesCmrs.Add(filesCmr);
             await _db.SaveChangesAsync();
             }
