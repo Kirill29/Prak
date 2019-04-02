@@ -16,6 +16,7 @@ namespace Geoportal
         }
 
         public virtual DbSet<DemandArchiveErs> DemandArchiveErss { get; set; }
+        public virtual DbSet<FilesCmr> FilesCmrs { get; set; }
         public virtual DbSet<FilesDemandArchiveErs> FilesDemandArchiveErss { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -23,7 +24,7 @@ namespace Geoportal
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseNpgsql("Host=localhost;Database=i;Username=postgres;Password=0-0-0-");
+                optionsBuilder.UseNpgsql("Host=localhost;Database=i;Username=postgres;Password=0-0-0-", x => x.UseNetTopologySuite());
             }
         }
 
@@ -31,6 +32,8 @@ namespace Geoportal
         {
             modelBuilder.HasPostgresExtension("adminpack")
                 .HasPostgresExtension("dblink")
+                .HasPostgresExtension("postgis")
+                .HasPostgresExtension("postgis_topology")
                 .HasAnnotation("ProductVersion", "2.2.2-servicing-10034");
 
             modelBuilder.Entity<DemandArchiveErs>(entity =>
@@ -180,6 +183,86 @@ namespace Geoportal
                 entity.Property(e => e.WorkstationsNr).HasColumnName("workstations_nr");
             });
 
+            modelBuilder.Entity<FilesCmr>(entity =>
+            {
+                entity.ToTable("files_cmr", "data");
+
+                entity.Property(e => e.FilesCmrId)
+                    .HasColumnName("files_cmr_id")
+                    .HasDefaultValueSql("nextval('data.files_cmr_files_cmr_id_seq'::regclass)")
+                    .ForNpgsqlHasComment("ИД файла ЦМР");
+
+                entity.Property(e => e.CmrId)
+                    .HasColumnName("cmr_id")
+                    .ForNpgsqlHasComment("ИД ЦМР");
+
+                entity.Property(e => e.CurrentDir)
+                    .HasColumnName("current_dir")
+                    .HasMaxLength(255)
+                    .ForNpgsqlHasComment("Текущая директория");
+
+                entity.Property(e => e.DateSendDemand)
+                    .HasColumnName("date_send_demand")
+                    .ForNpgsqlHasComment("Дата формирования запроса на архивирование");
+
+                entity.Property(e => e.Deleted)
+                    .HasColumnName("deleted")
+                    .HasDefaultValueSql("false");
+
+                entity.Property(e => e.DemandArchiveErsNr)
+                    .HasColumnName("demand_archive_ers_nr")
+                    .ForNpgsqlHasComment("Идентификатор пакета в запросе на архивирование");
+
+                entity.Property(e => e.File)
+                    .HasColumnName("file")
+                    .ForNpgsqlHasComment("Файл в цифровом виде");
+
+                entity.Property(e => e.FileName)
+                    .IsRequired()
+                    .HasColumnName("file_name")
+                    .HasMaxLength(64)
+                    .ForNpgsqlHasComment("Наименование файла");
+
+                entity.Property(e => e.FileSize)
+                    .HasColumnName("file_size")
+                    .HasMaxLength(40)
+                    .ForNpgsqlHasComment("Размер файла");
+
+                entity.Property(e => e.FilesDemandArchiveNr)
+                    .HasColumnName("files_demand_archive_nr")
+                    .ForNpgsqlHasComment("Идентификатор файла в запросе на архивирование");
+
+                entity.Property(e => e.FilesIsArchivedNr)
+                    .HasColumnName("files_is_archived_nr")
+                    .ForNpgsqlHasComment("Идентификатор файла в архиве");
+
+                entity.Property(e => e.FilesType)
+                    .HasColumnName("files_type")
+                    .HasDefaultValueSql("0")
+                    .ForNpgsqlHasComment("Тип файла");
+
+                entity.Property(e => e.Md5)
+                    .HasColumnName("md5")
+                    .HasMaxLength(164);
+
+                entity.Property(e => e.RootDir)
+                    .HasColumnName("root_dir")
+                    .HasMaxLength(255)
+                    .ForNpgsqlHasComment("Корневая директория");
+
+                entity.Property(e => e.StoreTypeCode)
+                    .HasColumnName("store_type_code")
+                    .ForNpgsqlHasComment(@"0 -неизвестно
+1-ЕБГИ
+2-БГД
+3-АОК
+4-АОК2");
+
+                entity.Property(e => e.UsesysidIns).HasColumnName("usesysid_ins");
+
+                entity.Property(e => e.UsesysidUpd).HasColumnName("usesysid_upd");
+            });
+
             modelBuilder.Entity<FilesDemandArchiveErs>(entity =>
             {
                 entity.HasKey(e => e.FilesDemandArchiveErsNr)
@@ -296,57 +379,17 @@ namespace Geoportal
 
             modelBuilder.HasSequence("routes_on_cycle_nr_seq");
 
-            modelBuilder.HasSequence("clouds_cloud_id_seq");
-
-            modelBuilder.HasSequence("cmr_cmr_id_seq");
-
-            modelBuilder.HasSequence("cmr_list_cmr_list_id_seq");
-
-            modelBuilder.HasSequence("document_doc_id_seq");
-
-            modelBuilder.HasSequence("document_list_doc_list_id_seq");
-
-            modelBuilder.HasSequence("ggs_catalog_id_seq");
-
-            modelBuilder.HasSequence("ggs_id_seq");
-
-            modelBuilder.HasSequence("hole_hole_id_seq");
-
-            modelBuilder.HasSequence("map_list_map_list_id_seq");
+            modelBuilder.HasSequence("files_cmr_files_cmr_id_seq");
 
             modelBuilder.HasSequence("map_map_id_seq");
-
-            modelBuilder.HasSequence("ofp_list_ofp_list_id_seq");
-
-            modelBuilder.HasSequence("ofp_ofp_id_seq");
-
-            modelBuilder.HasSequence("point_list_point_list_id_seq");
-
-            modelBuilder.HasSequence("point_point_id_seq");
-
-            modelBuilder.HasSequence("scan_list_scan_list_id_seq");
 
             modelBuilder.HasSequence("scan_scan_id_seq");
 
             modelBuilder.HasSequence("stereopair_stereo_num_seq");
 
-            modelBuilder.HasSequence("track_list_track_list_id_seq");
-
-            modelBuilder.HasSequence("track_track_id_seq");
-
-            modelBuilder.HasSequence("object_list_object_list_id_seq");
-
-            modelBuilder.HasSequence("objects_object_id_seq");
-
             modelBuilder.HasSequence("region_region_id_seq");
 
-            modelBuilder.HasSequence("task_task_id_seq");
-
             modelBuilder.HasSequence("scan_idplan_plan_id_seq");
-
-            modelBuilder.HasSequence("zapros_map_zapros_map_id_seq");
-
-            modelBuilder.HasSequence("zapros_scan_zapros_id_seq");
         }
     }
 }

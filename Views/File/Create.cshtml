@@ -2,106 +2,53 @@
 @{
     Layout = "_Layout";
 }
-<!--Добавление файлов-->
-@*<form asp-controller="File" asp-action="Create" method="post" enctype="multipart/form-data">
-    <input type="file" name="File_col" />
-    <input type="file" name="File_col" />
-    <input type="file" name="File_col" />
 
-    <button type="submit">Upload File</button>
-    <h3>Вот так вот: @ViewBag.Message</h3>
-</form>*@
-
-<br/>
+<br />
 <!--Добавление данных в бд-->
-
 <form asp-action="Add_files" asp-controller="file" method="post" enctype="multipart/form-data">
     <!--Добавление файлов-->
+<div class="form-group">
+      <input type="file" id="file" name="File_col" multiple />
+
+
+</div>
+
+
+
+
+@*<div class="form-group">
+        <label asp-for="WorkstationsNr" class="control-label">WorkstationsNr</label>
+        <input type="number" asp-for="WorkstationsNr" class="form-control" />
+    </div>
     <div class="form-group">
-        <input type="file" id="File_col" name="File_col" multiple />
-
-
-        <!--   <button type="submit">Upload File</button>
-        -->
-
+        <label asp-for="Status" class="control-label">Status</label>
+        <input type="number" asp-for="Status" class="form-control" />
     </div>
-    <div style="position:relative;width:296px;background:#f0f0f0">
-        <div id="progress" style="background: blue; height: 20px;width:0"></div>
-    </div>
-
-
-
-
-
-    <script>
-
-        $("button").click(function () {
-            var progressEle = $("#progress");
-            progressEle.css("background", "blue");
-
-            var data = document.getElementById("file").files[0];
-
-            var formData = new FormData();
-
-            formData.append("files", data);
-
-            $.ajax({
-                url: "/Home/UploadFile",
-                data: formData,
-                processData: false,
-                contentType: false,
-                type: "POST",
-                xhr: function () {
-                    var xhr = new window.XMLHttpRequest();
-                    xhr.upload.addEventListener("progress", function (evt) {
-                        if (evt.lengthComputable) {
-                            var progress = Math.round((evt.loaded / evt.total) * 100);
-                            progressEle.width(progress + "%");
-                        }
-                    }, false);
-                    return xhr;
-                },
-                success: function (data) {
-                    if (data.state == 0) {
-                        progressEle.css("background", "green");
-                    }
-                }
-            });
-        });
-    </script>
-    @*<div class="form-group">
-            <label asp-for="WorkstationsNr" class="control-label">WorkstationsNr</label>
-            <input type="number" asp-for="WorkstationsNr" class="form-control" />
-        </div>
-        <div class="form-group">
-            <label asp-for="Status" class="control-label">Status</label>
-            <input type="number" asp-for="Status" class="form-control" />
-        </div>
-        <div class="form-group">
-            <label asp-for="DtstampBeginDemand" class="control-label">DtstampBeginDemand</label>
-            <input type="datetime" asp-for="DtstampBeginDemand" class="form-control" />
-        </div>
-        <div class="form-group">
-            <label asp-for="RegionTypesNr" class="control-label">RegionTypesNr</label>
-            <input type="number" asp-for="RegionTypesNr" class="form-control" />
-        </div>
-        <div class="form-group">
-            <label asp-for="TypesDemandNr" class="control-label">TypesDemandNr</label>
-            <input type="number" asp-for="TypesDemandNr" class="form-control" />
-        </div>
-        <div class="form-group">
-            <label asp-for="Priority" class="control-label">Priority</label>
-            <input type="number" asp-for="Priority" class="form-control" />
-        </div>
-        <div class="form-group">
-            <label asp-for="ConfirmDeleteAfterArchive" class="control-label">ConfirmDeleteAfterArchive</label>
-            <input type="number" asp-for="ConfirmDeleteAfterArchive" class="form-control" />
-        </div>
-        <div class="form-group">
-            <label asp-for="ServiceTypeToShare" class="control-label">ServiceTypeToShare</label>
-            <input type="text" asp-for="ServiceTypeToShare" class="form-control" />
-        </div>*@
     <div class="form-group">
-        <input type="submit" value="Send" class="btn btn-default" />
+        <label asp-for="DtstampBeginDemand" class="control-label">DtstampBeginDemand</label>
+        <input type="datetime" asp-for="DtstampBeginDemand" class="form-control" />
     </div>
+    <div class="form-group">
+        <label asp-for="RegionTypesNr" class="control-label">RegionTypesNr</label>
+        <input type="number" asp-for="RegionTypesNr" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="TypesDemandNr" class="control-label">TypesDemandNr</label>
+        <input type="number" asp-for="TypesDemandNr" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Priority" class="control-label">Priority</label>
+        <input type="number" asp-for="Priority" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="ConfirmDeleteAfterArchive" class="control-label">ConfirmDeleteAfterArchive</label>
+        <input type="number" asp-for="ConfirmDeleteAfterArchive" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="ServiceTypeToShare" class="control-label">ServiceTypeToShare</label>
+        <input type="text" asp-for="ServiceTypeToShare" class="form-control" />
+    </div>*@
+<div class="form-group">
+    <input type="submit" value="Send" class="btn btn-default" />
+</div>
 </form>

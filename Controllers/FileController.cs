@@ -20,14 +20,17 @@ namespace Geoportal.Controllers
         private readonly IHostingEnvironment _appEnvironment;
         // GET: /<controller>/
         private iContext _db;
-        private List<string> files_names = new List<string>();
-        List<string> files_path = new List<string>();
-        List<string> files_size = new List<string>();
+        static private List<string> files_names = new List<string>();
 
-        public JsonResult UploadFile(IList<IFormFile> files)
-        {
-            return Json(new { state = 0, message = string.Empty });
-        }
+         static public List<string> Files_path { get; set; } = new List<string>();
+
+        static public List<long> files_size = new List<long>();
+        static public List<long?> files_Files_DemandArchiveErsNr = new List<long?>();
+        static long? demand_ArchiveErsNr;
+        public string Cmr_Id { get; set; }
+
+
+
 
         public IActionResult Ramka()
         {
@@ -35,32 +38,7 @@ namespace Geoportal.Controllers
         }
       
 
-        public IActionResult Add(string WKT_string)
-        {
-            //string w = "POLYGON((-71.1776585052917 42.3902909739571, -71.1776820268866 42.3903701743239,-71.1776063012595 42.3903825660754, -71.1775826583081 42.3903033653531, -71.1776585052917 42.3902909739571))";
 
-
-            var connString = "Host=localhost;Database=i;Username=postgres;Password=0-0-0-";
-
-            using (var conn = new NpgsqlConnection(connString))
-            {
-                conn.Open();
-               
-
-                using (var cmd = new NpgsqlCommand())
-                {
-                    cmd.Connection = conn;
-                    //cmd.CommandText = "INSERT INTO data.cmr(cmr_ident,cmr_name, geom) VALUES ('2', 'lol', ST_GeomFromText('LINESTRING(-71.160281 42.258729,-71.160837 42.259113,-71.161144 42.25932)'));";
-                    // cmd.Parameters.AddWithValue("p", "{0}, {1}, ST_GeomFromText({2},4326)");
-                    cmd.CommandText = "INSERT INTO data.cmr(cmr_ident,cmr_name, geom) VALUES ('2', 'now', ST_GeomFromText('" + WKT_string + "',4326)) RETURNING cmr_id;";
-                    //cmd.ExecuteReader();
-                    string str = Convert.ToString(cmd.ExecuteScalar());
-                    return Content(str);
-                }
-                //return RedirectToAction("Ramka");
-
-            }
-        }
     
     [HttpGet]
         public async Task<IActionResult> Index()
@@ -115,13 +93,23 @@ namespace Geoportal.Controllers
         [HttpPost]
         public async Task<IActionResult> Add_files(IFormFileCollection File_col)
         {
-            files_path.Clear();
+            Files_path.Clear();
+            files_names.Clear();
             files_size.Clear();
-            files_size.Clear();
+            files_Files_DemandArchiveErsNr.Clear();
+            demand_ArchiveErsNr = 0;
+            long file_size;
             //LOAD FROM CONFIG.TXT
             DemandArchiveErs DAE=new DemandArchiveErs();
 
             string path_Root = _appEnvironment.WebRootPath;
+            //string path_to_directory = path_Root + "//Files//";
+            string path_to_directory = path_Root;
+            //if (!Directory.Exists(path_to_directory))
+            //{
+            //    Directory.CreateDirectory(path_to_directory+DateTime.Now);
+
+            //}
             StreamReader objReader = new StreamReader(path_Root+"/Config.txt");
             string line;
             line = objReader.ReadLine();
@@ -176,15 +164,17 @@ namespace Geoportal.Controllers
 
 
                 //string path_Root = _appEnvironment.WebRootPath;
-                string path_to_file = path_Root + "//Files//" + file.FileName;
-                files_path.Add(path_to_file);
+                string path_to_file = path_to_directory  +"//Files//"+ file.FileName;
+
+                Files_path.Add(path_to_file);
+                
                 FDE.PathFileName = path_to_file;
                 
                 //FDE.DemandArchiveErsNr=
                 FileStream fstream = null;
                 try
                 { 
-                     fstream = new FileStream(path_to_file, FileMode.OpenOrCreate);
+                     fstream = new FileStream(path_to_file, FileMode.Create);
                      await file.CopyToAsync(fstream);
                      }
                      catch (Exception ex)
@@ -197,25 +187,83 @@ namespace Geoportal.Controllers
 
                             }
 
+                //нахожу размер файла загруженного
+                 file_size =new  System.IO.FileInfo(path_to_file).Length;
+                files_size.Add(file_size);
+                FDE.FileSizeInBytes = file_size;
+
 
                 FDE.DemandArchiveErsNr = DAE.DemandArchiveErsNr;
                 _db.FilesDemandArchiveErss.Add(FDE);
                 //ViewData["Id"] = DAE.DemandArchiveErsNr;
                 await _db.SaveChangesAsync();
+                demand_ArchiveErsNr = DAE.DemandArchiveErsNr;
+                files_Files_DemandArchiveErsNr.Add(FDE.FilesDemandArchiveErsNr);
 
 
             }
-            //вывод на html-не работает?
-            ViewBag.Names =files_names.ToArray();
-            ViewBag.Paths = files_path.ToList();
 
 
-          
-           
-            //return RedirectToAction("Index");
-            return Content(DAE.DemandArchiveErsNr.ToString());
+
+
+
+            //return Ok("ok");
+            return RedirectToAction("Index");
+
 
         }
+
+        public async Task<IActionResult> Add(string WKT_string)
+        {
+            //string w = "POLYGON((-71.1776585052917 42.3902909739571, -71.1776820268866 42.3903701743239,-71.1776063012595 42.3903825660754, -71.1775826583081 42.3903033653531, -71.1776585052917 42.3902909739571))";
+            Cmr_Id = "";
+
+            var connString = "Host=localhost;Database=i;Username=postgres;Password=0-0-0-";
+
+            using (var conn = new NpgsqlConnection(connString))
+            {
+                conn.Open();
+
+
+                using (var cmd = new NpgsqlCommand())
+                {
+                    cmd.Connection = conn;
+                    //cmd.CommandText = "INSERT INTO data.cmr(cmr_ident,cmr_name, geom) VALUES ('2', 'lol', ST_GeomFromText('LINESTRING(-71.160281 42.258729,-71.160837 42.259113,-71.161144 42.25932)'));";
+                    // cmd.Parameters.AddWithValue("p", "{0}, {1}, ST_GeomFromText({2},4326)");
+                    cmd.CommandText = "INSERT INTO data.cmr(cmr_ident,cmr_name, geom) VALUES ('2', 'now', ST_GeomFromText('" + WKT_string + "',4326)) RETURNING cmr_id;";
+                    //cmd.ExecuteReader();
+                    Cmr_Id = Convert.ToString(cmd.ExecuteScalar());
+
+                }
+                conn.Close();
+
+            }
+            var i = 0;
+            var j = 0;
+            var h = 0;
+           
+            foreach (var path in Files_path)
+            {
+                FilesCmr filesCmr = new FilesCmr();
+                filesCmr.CmrId = Convert.ToInt32(Cmr_Id);
+                filesCmr.RootDir = path;
+                filesCmr.FileName = files_names[i++];
+                filesCmr.DemandArchiveErsNr = demand_ArchiveErsNr;
+                filesCmr.FilesDemandArchiveNr = files_Files_DemandArchiveErsNr[j++];
+                filesCmr.FileSize = files_size[h++].ToString();
+               _db.FilesCmrs.Add(filesCmr);
+                await _db.SaveChangesAsync();
+            }
+
+            return RedirectToAction("Ramka");
+        }
+
+
+
+
+
+
+
 
 
         public FileController(IHostingEnvironment appEnviroment, iContext context)

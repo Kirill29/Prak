@@ -7,7 +7,6 @@ namespace Geoportal
     {
         public long DemandArchiveErsNr { get; set; }
         public int? WorkstationsNr { get; set; }
-
         public int? Status { get; set; }
         public DateTime? DtstampBeginDemand { get; set; }
         public DateTime? DtstampEndDemand { get; set; }

@@ -33,4 +33,4 @@
 /Users/kirill/Projects/Geoportal/Geoportal/obj/Release/netcoreapp2.2/Razor/Views/File/Index.g.cshtml.cs
 /Users/kirill/Projects/Geoportal/Geoportal/obj/Release/netcoreapp2.2/Razor/Views/File/Edit.g.cshtml.cs
 /Users/kirill/Projects/Geoportal/Geoportal/obj/Release/netcoreapp2.2/EFCoreNpgsqlNetTopologySuite.cs
-/Users/kirill/Projects/Geoportal/Geoportal/obj/Release/netcoreapp2.2/Razor/Views/Ramka/Ramka.g.cshtml.cs
+/Users/kirill/Projects/Geoportal/Geoportal/obj/Release/netcoreapp2.2/Razor/Views/File/Ramka.g.cshtml.cs

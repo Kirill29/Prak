@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "Главная страница";
+}
+<!-- <script src="/js/Ramka"></script>    -->
+<head>
+    <script src="/js/wicket.js" type="text/javascript"></script>
+    <script src="/js/wicket-gmap3.js" type="text/javascript"></script>
+
+
+</head>
+<body>
+
+    <div id="mapid" style="width: 800px; height: 500px;"></div>
+    <button onclick="Display()">Отобразить рамку</button>
+    @using (Html.BeginForm())
+    {
+        <label>Wkt_string</label>
+        <input type="text" name="WKT_string" id="Wkt_string" />
+        <button asp-action="Add" asp-controller="File">Добавить</button>
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+

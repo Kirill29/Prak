@@ -1694,11 +1694,11 @@
           "lib/netstandard1.3/Microsoft.DotNet.PlatformAbstractions.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore/2.2.2": {
+      "Microsoft.EntityFrameworkCore/2.2.3": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Abstractions": "2.2.2",
-          "Microsoft.EntityFrameworkCore.Analyzers": "2.2.2",
+          "Microsoft.EntityFrameworkCore.Abstractions": "2.2.3",
+          "Microsoft.EntityFrameworkCore.Analyzers": "2.2.3",
           "Microsoft.Extensions.Caching.Memory": "2.2.0",
           "Microsoft.Extensions.DependencyInjection": "2.2.0",
           "Microsoft.Extensions.Logging": "2.2.0",
@@ -1715,7 +1715,7 @@
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Abstractions/2.2.2": {
+      "Microsoft.EntityFrameworkCore.Abstractions/2.2.3": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {}
@@ -1724,14 +1724,14 @@
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Analyzers/2.2.2": {
+      "Microsoft.EntityFrameworkCore.Analyzers/2.2.3": {
         "type": "package"
       },
-      "Microsoft.EntityFrameworkCore.Design/2.2.2": {
+      "Microsoft.EntityFrameworkCore.Design/2.2.3": {
         "type": "package",
         "dependencies": {
           "Microsoft.CSharp": "4.5.0",
-          "Microsoft.EntityFrameworkCore.Relational": "2.2.2"
+          "Microsoft.EntityFrameworkCore.Relational": "2.2.3"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Design.dll": {}
@@ -1755,10 +1755,10 @@
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.InMemory.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Relational/2.2.2": {
+      "Microsoft.EntityFrameworkCore.Relational/2.2.3": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "2.2.2"
+          "Microsoft.EntityFrameworkCore": "2.2.3"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Relational.dll": {}
@@ -1780,10 +1780,10 @@
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Tools/2.2.2": {
+      "Microsoft.EntityFrameworkCore.Tools/2.2.3": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Design": "2.2.2"
+          "Microsoft.EntityFrameworkCore.Design": "2.2.3"
         },
         "compile": {
           "lib/netstandard2.0/_._": {}
@@ -4579,7 +4579,7 @@
   },
   "libraries": {
     "GeoAPI.Core/1.7.5": {
-      "sha512": "Dy/YkgZ1szgx+xbVWqMi+4++Fm6v3szbVdei1LKPRZ3meSvgNSMZxqhar5IAeaTj5LcUHLtLGdfyUtkjnYbg3A==",
+      "sha512": "ad0v0DpwY/bly6xAqVcAmtvnqdZizc0chjx7fHHrmg3VDOWWWiGExn/2iFH61Cbe6a2e10NSmX8xI/IoW+op8Q==",
       "type": "package",
       "path": "geoapi.core/1.7.5",
       "files": [
@@ -4678,7 +4678,7 @@
       ]
     },
     "GeoJSON.Net/1.1.64": {
-      "sha512": "zMZ9mvrYhHcBws/lvWg2k7ZdCSx44kdHKnARRFVdWqkUnFemUMpDBKbxZ2AurOyN2/Eh1Z0HBpgpBv+058joGQ==",
+      "sha512": "oFmWY1X1NrZsmXzMnOiUVhen91yohfXu9SUp8YW4cuYNn7cf9K/jUoqKmFgZFHp3kgjVl1b+jwD1pKOX5XkYdg==",
       "type": "package",
       "path": "geojson.net/1.1.64",
       "files": [
@@ -6135,50 +6135,46 @@
         "microsoft.dotnet.platformabstractions.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore/2.2.2": {
-      "sha512": "/j1tKR7x0wCnm9oSlfgBuh8n1aTZEVf+Aehi0AVMdDeFOnfvY4YrzIz6lsnApY/GfHUA/qyinb0e53ZpIla73Q==",
+    "Microsoft.EntityFrameworkCore/2.2.3": {
+      "sha512": "0VOFOuIMLE3ZA9yAWPbEe48pe+3pFi1CmyI4bh6rLtdTgCa5fa5TWqsbDCeZl13rjSoENPuOq6InYGSiKTR0+g==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore/2.2.2",
+      "path": "microsoft.entityframeworkcore/2.2.3",
       "files": [
-        ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.dll",
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.xml",
-        "microsoft.entityframeworkcore.2.2.2.nupkg.sha512",
+        "microsoft.entityframeworkcore.2.2.3.nupkg.sha512",
         "microsoft.entityframeworkcore.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Abstractions/2.2.2": {
-      "sha512": "qhT7GxIoMldafNNxPXUKNVtxCGk8mH2MXgGO/yJCsN1bsP1jhkDLVmpLAS0Mz0uGIZvGxuIWF5HQ+lCLwHacCg==",
+    "Microsoft.EntityFrameworkCore.Abstractions/2.2.3": {
+      "sha512": "75qgcAJOIJrNtxeYkhQx8O2goAYkb/u7r1tQOk8Xs5YjAf39zkeNfl9QRBS0GIDtffD/wGpq7jJrMS/dN3TUfQ==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.abstractions/2.2.2",
+      "path": "microsoft.entityframeworkcore.abstractions/2.2.3",
       "files": [
-        ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Abstractions.xml",
-        "microsoft.entityframeworkcore.abstractions.2.2.2.nupkg.sha512",
+        "microsoft.entityframeworkcore.abstractions.2.2.3.nupkg.sha512",
         "microsoft.entityframeworkcore.abstractions.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Analyzers/2.2.2": {
-      "sha512": "0EHbLoFkbjhD/9prSNyvETsRleYNa38QeadLNlaKJSAm8l7sQN451rk/WOKL2BOUO5RfA4IcRqCc2g3wWo06GA==",
+    "Microsoft.EntityFrameworkCore.Analyzers/2.2.3": {
+      "sha512": "AktkwwjsxeM5+CUOVKz2E/zQvEyFCaTSokbqJx643pSEckjReIDgCqgUV8rvZsGPpPm/RXIhhOXDrB/a+BEkXA==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.analyzers/2.2.2",
+      "path": "microsoft.entityframeworkcore.analyzers/2.2.3",
       "files": [
-        ".nupkg.metadata",
         ".signature.p7s",
         "analyzers/dotnet/cs/Microsoft.EntityFrameworkCore.Analyzers.dll",
-        "microsoft.entityframeworkcore.analyzers.2.2.2.nupkg.sha512",
+        "microsoft.entityframeworkcore.analyzers.2.2.3.nupkg.sha512",
         "microsoft.entityframeworkcore.analyzers.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Design/2.2.2": {
-      "sha512": "n4Nanuwwae1k98I+W8FgM9E8lx0D70smrpVaHkygh4lG4n+E2eRcZnpgUfhBxqgDRSjXGCHduzLZXU8/jjDe8Q==",
+    "Microsoft.EntityFrameworkCore.Design/2.2.3": {
+      "sha512": "ieO8DTCxp5fe39pv0C8UljOqRVyeYgNNB52vkwYyTIZdPnjEVbTot4GsubHy3JspmvG09uYgU64Ll9/LYDjkiA==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.design/2.2.2",
+      "path": "microsoft.entityframeworkcore.design/2.2.3",
       "files": [
-        ".nupkg.metadata",
         ".signature.p7s",
         "build/net461/Microsoft.EntityFrameworkCore.Design.props",
         "build/netcoreapp2.0/Microsoft.EntityFrameworkCore.Design.props",
@@ -6186,7 +6182,7 @@
         "lib/net461/Microsoft.EntityFrameworkCore.Design.xml",
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Design.dll",
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Design.xml",
-        "microsoft.entityframeworkcore.design.2.2.2.nupkg.sha512",
+        "microsoft.entityframeworkcore.design.2.2.3.nupkg.sha512",
         "microsoft.entityframeworkcore.design.nuspec"
       ]
     },
@@ -6203,16 +6199,15 @@
         "microsoft.entityframeworkcore.inmemory.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Relational/2.2.2": {
-      "sha512": "TxEceodhB3WUCi9SLXHQYgCF7sgU1Se1RnJ/RMwW0ETNM1T2s5OUEEP4njfRmXOfInjgy0fkpMjP+0pV6ieKVQ==",
+    "Microsoft.EntityFrameworkCore.Relational/2.2.3": {
+      "sha512": "addZBOfkWf/6ZkWAs/eJMu25iFUiqSHJKmETRfrI2XqzgBZwYgV5DxgmqkhMXgkjZ9prgZ9uD6I6pwQXJTbIqQ==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.relational/2.2.2",
+      "path": "microsoft.entityframeworkcore.relational/2.2.3",
       "files": [
-        ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Relational.dll",
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Relational.xml",
-        "microsoft.entityframeworkcore.relational.2.2.2.nupkg.sha512",
+        "microsoft.entityframeworkcore.relational.2.2.3.nupkg.sha512",
         "microsoft.entityframeworkcore.relational.nuspec"
       ]
     },
@@ -6229,16 +6224,14 @@
         "microsoft.entityframeworkcore.sqlserver.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Tools/2.2.2": {
-      "sha512": "vrgZSdo1tc6gFS7U961KHO/eS8oN+5CdfKDATRfmQgeS8DvyldqRPibw3o+lrpqjolKmGYAMVGu3yPJD4p6nfQ==",
+    "Microsoft.EntityFrameworkCore.Tools/2.2.3": {
+      "sha512": "p0MeXtESRNYKhQXWSnODoI3aQQYgZT5XVo1KDuXOsAyPtAbe0QGwXm4efGE4F1FqfaRU8wGsHRsk3V0E9zQFPw==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.tools/2.2.2",
-      "hasTools": true,
+      "path": "microsoft.entityframeworkcore.tools/2.2.3",
       "files": [
-        ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/_._",
-        "microsoft.entityframeworkcore.tools.2.2.2.nupkg.sha512",
+        "microsoft.entityframeworkcore.tools.2.2.3.nupkg.sha512",
         "microsoft.entityframeworkcore.tools.nuspec",
         "tools/EntityFrameworkCore.PowerShell2.psd1",
         "tools/EntityFrameworkCore.PowerShell2.psm1",
@@ -6254,7 +6247,7 @@
       ]
     },
     "Microsoft.Extensions.Caching.Abstractions/2.2.0": {
-      "sha512": "spsJkYo8gGJapaxTSQFN/wqA+ghpJMLwB4ZyTB+fSdpd7AmMFP/YSpIcGmczcw4KggpxLGhLk7lCkSIlgvHaqQ==",
+      "sha512": "L82fEbPUzi8K6+p4olT8BHtV5SWaIbQg/UGFcsq0STRXJ9I4XR2BazCKJF95Crqn0djENa3qC761eTnOuh+u1w==",
       "type": "package",
       "path": "microsoft.extensions.caching.abstractions/2.2.0",
       "files": [
@@ -6267,7 +6260,7 @@
       ]
     },
     "Microsoft.Extensions.Caching.Memory/2.2.0": {
-      "sha512": "yFs44RzB2Pzfoj4uk+mEz3MTTQKyeWb8gDhv5GyVPfHnLv0eQhGwzbw/5WpxAcVyOgG/H3/0ULY6g0/7/B+r7w==",
+      "sha512": "p0IHvn/uCWZNavHf9EqT1kmZByzSbeqBXbn7Yo13RLIZhCVUsdik4v4gMEgAC+nN0zaTuBwLRysAB1+MFmIUng==",
       "type": "package",
       "path": "microsoft.extensions.caching.memory/2.2.0",
       "files": [
@@ -6293,7 +6286,7 @@
       ]
     },
     "Microsoft.Extensions.Configuration/2.2.0": {
-      "sha512": "nOP8R1mVb/6mZtm2qgAJXn/LFm/2kMjHDAg/QJLFG6CuWYJtaD3p1BwQhufBVvRzL9ceJ/xF0SQ0qsI2GkDQAA==",
+      "sha512": "0MtJgCZ5tIw7LoxOlXlifwVTwfMd4YdMJ9+DVZyX/fqqXO9zseZ8hH2WxbJzDbBDp45nA8rwHlL4JH/6Z98B4w==",
       "type": "package",
       "path": "microsoft.extensions.configuration/2.2.0",
       "files": [
@@ -6306,7 +6299,7 @@
       ]
     },
     "Microsoft.Extensions.Configuration.Abstractions/2.2.0": {
-      "sha512": "65MrmXCziWaQFrI0UHkQbesrX5wTwf9XPjY5yFm/VkgJKFJ5gqvXRoXjIZcf2wLi5ZlwGz/oMYfyURVCWbM5iw==",
+      "sha512": "M6u4cMWXxPtqyJJ03oezyqTORmSgTPpa2gZRKkEGCXXHhyGnM1cHjPTzq5sevYS1VJEMb2TZj60mAc+hDoPPcQ==",
       "type": "package",
       "path": "microsoft.extensions.configuration.abstractions/2.2.0",
       "files": [
@@ -6319,7 +6312,7 @@
       ]
     },
     "Microsoft.Extensions.Configuration.Binder/2.2.0": {
-      "sha512": "vJ9xvOZCnUAIHcGC3SU35r3HKmHTVIeHzo6u/qzlHAqD8m6xv92MLin4oJntTvkpKxVX3vI1GFFkIQtU3AdlsQ==",
+      "sha512": "6ANwTuQZqIIt0guKAdS9Mn6c+PfhOBpqRm7FslUJqtG000uo0Cd3pAndk92RQq0ygDFRub/ftiRy8DukWXqNzQ==",
       "type": "package",
       "path": "microsoft.extensions.configuration.binder/2.2.0",
       "files": [
@@ -6438,7 +6431,7 @@
       ]
     },
     "Microsoft.Extensions.DependencyInjection/2.2.0": {
-      "sha512": "MZtBIwfDFork5vfjpJdG5g8wuJFt7d/y3LOSVVtDK/76wlbtz6cjltfKHqLx2TKVqTj5/c41t77m1+h20zqtPA==",
+      "sha512": "ASF77AJjnyi9hL7IJU1KCAvnCTgI3JEwkU+D4gnKd53nFIYpibVjR6SW8tdTkkuZ+QkmIx2rPvKdTMNVPfVU9A==",
       "type": "package",
       "path": "microsoft.extensions.dependencyinjection/2.2.0",
       "files": [
@@ -6455,7 +6448,7 @@
       ]
     },
     "Microsoft.Extensions.DependencyInjection.Abstractions/2.2.0": {
-      "sha512": "f9hstgjVmr6rmrfGSpfsVOl2irKAgr1QjrSi3FgnS7kulxband50f2brRLwySAQTADPZeTdow0mpSMcoAdadCw==",
+      "sha512": "2xMk9LHz1EY+7gVG0lG4qBvkUiVjg8QNPqd2HYmEP5+PL7Ayo96EhBieAhd++Gx4yM+xN8kNqmhZdFMBHeG0HQ==",
       "type": "package",
       "path": "microsoft.extensions.dependencyinjection.abstractions/2.2.0",
       "files": [
@@ -6689,7 +6682,7 @@
       ]
     },
     "Microsoft.Extensions.Logging/2.2.0": {
-      "sha512": "Nxqhadc9FCmFHzU+fz3oc8sFlE6IadViYg8dfUdGzJZ2JUxnCsRghBhhOWdM4B2zSZqEc+0BjliBh/oNdRZuig==",
+      "sha512": "wa1Uk8sVuEzHtwZPoDNhQiFDjlDe9t74+Iess26uqhIwn02T79v/GB/pLCJ08MOvuM953LfleJW6VPr/wVXCJw==",
       "type": "package",
       "path": "microsoft.extensions.logging/2.2.0",
       "files": [
@@ -6702,7 +6695,7 @@
       ]
     },
     "Microsoft.Extensions.Logging.Abstractions/2.2.0": {
-      "sha512": "B2WqEox8o+4KUOpL7rZPyh6qYjik8tHi2tN8Z9jZkHzED8ElYgZa/h6K+xliB435SqUcWT290Fr2aa8BtZjn8A==",
+      "sha512": "1iYT6BAnJZGebfclQXiM/drK+JUztSikkpT3xcASBQW4og877bsXtjqrMM4EI71nf8UVtvHt6O8pMdYDEE8/Lw==",
       "type": "package",
       "path": "microsoft.extensions.logging.abstractions/2.2.0",
       "files": [
@@ -6793,7 +6786,7 @@
       ]
     },
     "Microsoft.Extensions.Options/2.2.0": {
-      "sha512": "UpZLNLBpIZ0GTebShui7xXYh6DmBHjWM8NxGxZbdQh/bPZ5e6YswqI+bru6BnEL5eWiOdodsXtEz3FROcgi/qg==",
+      "sha512": "67zpvElD/YPcfRs1Qm58LSntnSm+kYSA+0PA4+0Abo7NEH4RAvUkV54krspsa0+S4yBZ/m39gUOdn3PSzffazQ==",
       "type": "package",
       "path": "microsoft.extensions.options/2.2.0",
       "files": [
@@ -6832,7 +6825,7 @@
       ]
     },
     "Microsoft.Extensions.Primitives/2.2.0": {
-      "sha512": "azyQtqbm4fSaDzZHD/J+V6oWMFaf2tWP4WEGIYePLCMw3+b2RQdj9ybgbQyjCshcitQKQ4lEDOZjmSlTTrHxUg==",
+      "sha512": "vpH+o7f8obVx65PiEtBXxTwL5RosK60fNIMy/y8WGE4/r4IvAqQGukOzMhxsp//Accvd7kmukyQTVkqVYdaDyA==",
       "type": "package",
       "path": "microsoft.extensions.primitives/2.2.0",
       "files": [
@@ -7587,7 +7580,7 @@
       ]
     },
     "NetTopologySuite.Core/1.15.0": {
-      "sha512": "SMhtTQYfpgHq9+0X9cwcLfUZlUWkmzK2OODHLMjX5KbSLP99xvCAF95CfZ4hnsI7K6qvezOQXbIKJpYdr7yKmg==",
+      "sha512": "L/waWGkbsoCqxU5QlANnKA4rBNtgAXXcS6GLCLZ4Nv5dgf7ji/ZGmT9sNmz85XpXsFzeA8CM+Jo/3B/vrsiPNw==",
       "type": "package",
       "path": "nettopologysuite.core/1.15.0",
       "files": [
@@ -8061,7 +8054,7 @@
       ]
     },
     "NetTopologySuite.IO.PostGis/1.15.0": {
-      "sha512": "LZrProRQkN14Qbaj8/0sIebyhjQtseAs38XpRUC3DUlZbtLf0iUacnccfOXaiGp7u5WbBfptKwWmkKI7+AskwA==",
+      "sha512": "I6xM967DkzPHqxYaZFCsTay8Q6sL3YEudKiX7ljOhWyUkgttRbvoEp9PDwHGBgJJocElFGxC7SvE9IYOQHm8aQ==",
       "type": "package",
       "path": "nettopologysuite.io.postgis/1.15.0",
       "files": [
@@ -8146,7 +8139,7 @@
       ]
     },
     "Npgsql/4.0.5": {
-      "sha512": "84PtCcrSTqx3j013bP9zGFSSjsf0UdoOfkTapM4es9kgGvtjZy49MCzOZfNDayNSRMNzGK0i5BsC5xv+beZtIA==",
+      "sha512": "gKEhp3ICU2TY3yLnxda9QJf3g6aDHZ/PkRFoPXbjFjuCX18jbY58EYP7VGpXSzfzsQAGSOEB9vjdgEfnnvnRyQ==",
       "type": "package",
       "path": "npgsql/4.0.5",
       "files": [
@@ -8166,7 +8159,7 @@
       ]
     },
     "Npgsql.EntityFrameworkCore.PostgreSQL/2.2.0": {
-      "sha512": "gUHdEtuJ8JR//bLMBzsu6WZOO858Jfli1BEoMcEv3ehgcU4ibdwEXUNt2b0Xs0MJmZ031wTDGasmdFEXH2KAjw==",
+      "sha512": "/dj1Mwsvy3IJdmep7qeyD0TdT07QOLiYBA170xbxY9bSqUawONhu5sPeRv+GxzgoEtqyX5IJqiopjVxdyiMWOg==",
       "type": "package",
       "path": "npgsql.entityframeworkcore.postgresql/2.2.0",
       "files": [
@@ -8179,7 +8172,7 @@
       ]
     },
     "Npgsql.EntityFrameworkCore.PostgreSQL.NetTopologySuite/2.2.0": {
-      "sha512": "DTyBTHgXpNzLLZ0yTD9WZqexo3LTPtoczjml0nOzs8M6cZqnGaPUJrtxhpNlBR3I/bOIpKG7ecpXGGl8mom60g==",
+      "sha512": "MxEKkQ5pX7hnRYbqSTn9bH0uv2ioQey15ABTTjECAvPCUjHG6PlE2gwfNUP/RcDTykqdqaAPX1IIn55RqBHxww==",
       "type": "package",
       "path": "npgsql.entityframeworkcore.postgresql.nettopologysuite/2.2.0",
       "files": [
@@ -8193,7 +8186,7 @@
       ]
     },
     "Npgsql.GeoJSON/1.0.0": {
-      "sha512": "rfQSaWyYM61h+BJoGgK3B7CT9L6CsZ9k2OTdVEUfMj+547NSSem6GYUJVROLmcFr8WiEon0CQjqckyAUVfYoMw==",
+      "sha512": "mvNa3QCJeilTHt7KALFbZNXhOtPuF8hoijpO+DhqXO8HaRE967LLeXpPmbhpwAhMC4IL8yh5N9BZKxwKOfzDDA==",
       "type": "package",
       "path": "npgsql.geojson/1.0.0",
       "files": [
@@ -8210,7 +8203,7 @@
       ]
     },
     "Npgsql.LegacyPostgis/4.0.5": {
-      "sha512": "X95LHcLnoFuLkDt7l6qeaJ9BHUuIJidHzJeAt1OZ9AE7BQ5leLWqY7Gg8H536Ao7LdeVZxjJxa5RYubdrdeK9A==",
+      "sha512": "ilPj/vUtjEqtjXysDcifngwOLtO4+8t1S2BWTplqWMvheQgDOraZ/lzK0eV5VIikWVyhXhCWwpWshh02BZU84g==",
       "type": "package",
       "path": "npgsql.legacypostgis/4.0.5",
       "files": [
@@ -8227,7 +8220,7 @@
       ]
     },
     "Npgsql.NetTopologySuite/4.0.4.1": {
-      "sha512": "jTGkF3Og1auAq0wobKTHxt9JJz1QeAXosX4te6/fP470hJZuZv26M3N4AhdtEUO64KXhjvdfHRA6khhIOWtr5Q==",
+      "sha512": "GqD93rvx2xd6+tzouA+GGXgP3mlvGrLYwFsrNl+LMHad9Y5WcVFh1pc27W+p1dM1DL8sEfng6HKMb6Zu7Ob/Ew==",
       "type": "package",
       "path": "npgsql.nettopologysuite/4.0.4.1",
       "files": [
@@ -8244,7 +8237,7 @@
       ]
     },
     "Npgsql.RawPostgis/4.0.5": {
-      "sha512": "oS4S67Nc2ZYaETKqQL/WkSdceGgCymOv+5spoxz7Dw8s5egdo1BMkFSKxb41L/RTHIPRhc5YTotX54/tzxoIiw==",
+      "sha512": "KvvSSlf8VwwvjVt3B3wSWOlEMVDVzguWURwBSb7jF9sQ1L/lN7P1BuqHJPxRbYN9Kb7PdH5+XpfyY7BAhfKOZQ==",
       "type": "package",
       "path": "npgsql.rawpostgis/4.0.5",
       "files": [
@@ -9682,7 +9675,7 @@
       ]
     },
     "System.Interactive.Async/3.2.0": {
-      "sha512": "C07p0dAA5lGqYUPiPCK3paR709gqS4aMDDsje0v0pvffwzLaxmsn5YQTfZbyNG5qrudPx+BCxTqISnncQ3wIoQ==",
+      "sha512": "T3nigy9yShklMyVu7I2TvlVMRy2vUn9oQeBaRy0KZcOptyy+rUbekYaXxoa3s0h2tWT3UVtzrGkQC89CBbCtlg==",
       "type": "package",
       "path": "system.interactive.async/3.2.0",
       "files": [
@@ -10162,7 +10155,7 @@
       ]
     },
     "System.Memory/4.5.2": {
-      "sha512": "fvq1GNmUFwbKv+aLVYYdgu/+gc8Nu9oFujOxIjPrsf+meis9JBzTPDL6aP/eeGOz9yPj6rRLUbOjKMpsMEWpNg==",
+      "sha512": "Ohf9h6em5CjPaAzupGtW/TWMzX6aVfIGPh7bq5KQmfvYJr+DqvOa0cRS9ggFKGIuvKTModCQEacGC/CwE8j7cg==",
       "type": "package",
       "path": "system.memory/4.5.2",
       "files": [
@@ -11028,7 +11021,7 @@
       ]
     },
     "System.Runtime.CompilerServices.Unsafe/4.5.2": {
-      "sha512": "wprSFgext8cwqymChhrBLu62LMg/1u92bU+VOwyfBimSPVFXtsNqEWC92Pf9ofzJFlk4IHmJA75EDJn1b2goAQ==",
+      "sha512": "hMkdWxksypQlFXB7JamQegDscxEAQO4FHd/lw/zlSZU9dZgAij65xjCrXer183wvoNAzJic5zzjj2oc9/dloWg==",
       "type": "package",
       "path": "system.runtime.compilerservices.unsafe/4.5.2",
       "files": [
@@ -12465,7 +12458,7 @@
       ]
     },
     "System.Threading.Tasks.Extensions/4.5.2": {
-      "sha512": "BG/TNxDFv0svAzx8OiMXDlsHfGw623BZ8tCXw4YLhDFDvDhNUEV58jKYMGRnkbJNm7c3JNNJDiN7JBMzxRBR2w==",
+      "sha512": "5HCu8V3QB+gouMZmGrA666weZ0UQRt+OTD16rSE3Hyhu4Qhlvxkf4nTPI0GLy52s0rxgi7C8t2ayFAzw7UK1og==",
       "type": "package",
       "path": "system.threading.tasks.extensions/4.5.2",
       "files": [
@@ -12967,9 +12960,9 @@
     ".NETCoreApp,Version=v2.2": [
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
-      "Microsoft.EntityFrameworkCore >= 2.2.2",
-      "Microsoft.EntityFrameworkCore.Design >= 2.2.2",
-      "Microsoft.EntityFrameworkCore.Tools >= 2.2.2",
+      "Microsoft.EntityFrameworkCore >= 2.2.3",
+      "Microsoft.EntityFrameworkCore.Design >= 2.2.3",
+      "Microsoft.EntityFrameworkCore.Tools >= 2.2.3",
       "Microsoft.NETCore.App >= 2.2.0",
       "NetTopologySuite.IO.PostGis >= 1.15.0",
       "Npgsql >= 4.0.5",
@@ -12991,13 +12984,13 @@
       "projectName": "Geoportal",
       "projectPath": "/Users/kirill/Projects/Geoportal/Geoportal/Geoportal.csproj",
       "packagesPath": "/Users/kirill/.nuget/packages/",
-      "outputPath": "/Users/kirill/Projects/Geoportal/Geoportal/obj/",
+      "outputPath": "/Users/kirill/Projects/Geoportal/Geoportal/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/kirill/.nuget/NuGet/NuGet.Config"
+        "/Users/kirill/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"
@@ -13022,8 +13015,7 @@
           "Microsoft.AspNetCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[2.2.0, )",
-            "autoReferenced": true
+            "version": "[2.2.0, )"
           },
           "Microsoft.AspNetCore.Razor.Design": {
             "suppressParent": "All",
@@ -13032,15 +13024,15 @@
           },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
-            "version": "[2.2.2, )"
+            "version": "[2.2.3, )"
           },
           "Microsoft.EntityFrameworkCore.Design": {
             "target": "Package",
-            "version": "[2.2.2, )"
+            "version": "[2.2.3, )"
           },
           "Microsoft.EntityFrameworkCore.Tools": {
             "target": "Package",
-            "version": "[2.2.2, )"
+            "version": "[2.2.3, )"
           },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
