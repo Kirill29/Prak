@@ -23,7 +23,7 @@ namespace Geoportal.Controllers
         static private List<string> files_names = new List<string>();
 
          static public List<string> Files_path { get; set; } = new List<string>();
-
+        static string path_to_directory;
         static public List<long> files_size = new List<long>();
         static public List<long?> files_Files_DemandArchiveErsNr = new List<long?>();
         static long? demand_ArchiveErsNr;
@@ -40,16 +40,13 @@ namespace Geoportal.Controllers
 
 
     
-    [HttpGet]
-        public async Task<IActionResult> Index()
+    
+        public  IActionResult Index()
         {
-
-            var d = _db.DemandArchiveErss.ToList();
-            var m = d[d.Count - 1];
-            ViewData["ID"] = m.DemandArchiveErsNr;
-            _db.SaveChanges();
-
-            return View(await _db.DemandArchiveErss.ToListAsync());
+            ViewBag.FilesID = files_Files_DemandArchiveErsNr;
+            ViewData["Path"] = path_to_directory;
+            ViewData["ID"] = demand_ArchiveErsNr;
+            return View();
         }
 
         public IActionResult Create()
@@ -104,12 +101,13 @@ namespace Geoportal.Controllers
 
             string path_Root = _appEnvironment.WebRootPath;
             //string path_to_directory = path_Root + "//Files//";
-            string path_to_directory = path_Root;
-            //if (!Directory.Exists(path_to_directory))
-            //{
-            //    Directory.CreateDirectory(path_to_directory+DateTime.Now);
+            string name_data ="//"+DateTime.Now.ToString("-dd-MM-yyyy-(hh-mm-ss)");
+            path_to_directory = path_Root + name_data;
+            if (!Directory.Exists(path_to_directory))
+            {
+                Directory.CreateDirectory(path_to_directory);
 
-            //}
+            }
             StreamReader objReader = new StreamReader(path_Root+"/Config.txt");
             string line;
             line = objReader.ReadLine();
@@ -164,7 +162,7 @@ namespace Geoportal.Controllers
 
 
                 //string path_Root = _appEnvironment.WebRootPath;
-                string path_to_file = path_to_directory  +"//Files//"+ file.FileName;
+                string path_to_file = path_to_directory+"//"+ file.FileName;
 
                 Files_path.Add(path_to_file);
                 

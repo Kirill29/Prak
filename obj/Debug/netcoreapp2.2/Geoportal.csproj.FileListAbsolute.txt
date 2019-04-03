@@ -33,3 +33,4 @@
 /Users/kirill/Projects/Geoportal/Geoportal/obj/Debug/netcoreapp2.2/Geoportal.dll
 /Users/kirill/Projects/Geoportal/Geoportal/obj/Debug/netcoreapp2.2/Geoportal.pdb
 /Users/kirill/Projects/Geoportal/Geoportal/obj/Debug/netcoreapp2.2/Geoportal.csproj.CopyComplete
+/Users/kirill/Projects/Geoportal/Geoportal/obj/Debug/netcoreapp2.2/Geoportal.csprojAssemblyReference.cache
