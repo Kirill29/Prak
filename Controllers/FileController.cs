@@ -56,34 +56,6 @@ namespace Geoportal.Controllers
         }
 
 
-        //EDIT
-        public async Task<IActionResult> Edit(long id)
-
-        {
-
-            var item = await _db.DemandArchiveErss.FindAsync(id);
-            if (item == null)
-            {
-                return Content("Null");
-            }
-
-            return View(item);
-        }
-
-
-
-      //DELETE 
-        public async Task<IActionResult> OnPostDeleteAsync(long id)
-        {
-            var item = await _db.DemandArchiveErss.FindAsync(id);
-            if (item != null)
-            {
-                _db.DemandArchiveErss.Remove(item);
-                await _db.SaveChangesAsync();
-            }
-           
-            return RedirectToAction("Index");
-        }
 
 
         [RequestSizeLimit(1_000_000_000)]
@@ -108,7 +80,7 @@ namespace Geoportal.Controllers
                 Directory.CreateDirectory(path_to_directory);
 
             }
-            StreamReader objReader = new StreamReader(path_Root+"/Config.txt");
+            StreamReader objReader = new StreamReader(path_Root+"//Config.txt");
             string line;
             line = objReader.ReadLine();
             char ch = '=';
@@ -175,25 +147,25 @@ namespace Geoportal.Controllers
                      fstream = new FileStream(path_to_file, FileMode.Create);
                      await file.CopyToAsync(fstream);
                      }
-                     catch (Exception ex)
+                     catch (IOException ioException)
                             {
-
-                            }
+                       return Content( $"IO Error: {ioException.Message}");
+                       }
                             finally
                             {
                                  if (fstream != null){fstream.Close();}
 
+
                             }
 
                 //нахожу размер файла загруженного
-                 file_size =new  System.IO.FileInfo(path_to_file).Length;
+                file_size =new  System.IO.FileInfo(path_to_file).Length;
                 files_size.Add(file_size);
                 FDE.FileSizeInBytes = file_size;
 
 
                 FDE.DemandArchiveErsNr = DAE.DemandArchiveErsNr;
                 _db.FilesDemandArchiveErss.Add(FDE);
-                //ViewData["Id"] = DAE.DemandArchiveErsNr;
                 await _db.SaveChangesAsync();
                 demand_ArchiveErsNr = DAE.DemandArchiveErsNr;
                 files_Files_DemandArchiveErsNr.Add(FDE.FilesDemandArchiveErsNr);
@@ -205,7 +177,7 @@ namespace Geoportal.Controllers
 
 
 
-            //return Ok("ok");
+           
             return RedirectToAction("Index");
 
 
@@ -215,31 +187,48 @@ namespace Geoportal.Controllers
         {
             //string w = "POLYGON((-71.1776585052917 42.3902909739571, -71.1776820268866 42.3903701743239,-71.1776063012595 42.3903825660754, -71.1775826583081 42.3903033653531, -71.1776585052917 42.3902909739571))";
             Cmr_Id = "";
-
-            var connString = "Host=localhost;Database=i;Username=postgres;Password=0-0-0-";
-
-            using (var conn = new NpgsqlConnection(connString))
+            try
             {
-                conn.Open();
 
 
-                using (var cmd = new NpgsqlCommand())
+                var connString = "Host=localhost;Database=i;Username=postgres;Password=0-0-0-";
+
+                using (var conn = new NpgsqlConnection(connString))
                 {
-                    cmd.Connection = conn;
-                    //cmd.CommandText = "INSERT INTO data.cmr(cmr_ident,cmr_name, geom) VALUES ('2', 'lol', ST_GeomFromText('LINESTRING(-71.160281 42.258729,-71.160837 42.259113,-71.161144 42.25932)'));";
-                    // cmd.Parameters.AddWithValue("p", "{0}, {1}, ST_GeomFromText({2},4326)");
-                    cmd.CommandText = "INSERT INTO data.cmr(cmr_ident,cmr_name, geom) VALUES ('2', 'now', ST_GeomFromText('" + WKT_string + "',4326)) RETURNING cmr_id;";
-                    //cmd.ExecuteReader();
-                    Cmr_Id = Convert.ToString(cmd.ExecuteScalar());
+                    conn.Open();
+
+
+                    using (var cmd = new NpgsqlCommand())
+                    {
+                        cmd.Connection = conn;
+                        //cmd.CommandText = "INSERT INTO data.cmr(cmr_ident,cmr_name, geom) VALUES ('2', 'lol', ST_GeomFromText('LINESTRING(-71.160281 42.258729,-71.160837 42.259113,-71.161144 42.25932)'));";
+                        // cmd.Parameters.AddWithValue("p", "{0}, {1}, ST_GeomFromText({2},4326)");
+                        cmd.CommandText = "INSERT INTO data.cmr(cmr_ident,cmr_name, geom) VALUES ('2', 'now', ST_GeomFromText('" + WKT_string + "',4326)) RETURNING cmr_id;";
+                        //cmd.ExecuteReader();
+                        Cmr_Id = Convert.ToString(cmd.ExecuteScalar());
+
+                    }
+                    conn.Close();
 
                 }
-                conn.Close();
-
             }
+            catch (Exception exception)
+            { return Content(exception.Message); }
+
+
+
+
+
             var i = 0;
             var j = 0;
             var h = 0;
            
+
+
+
+
+
+
             foreach (var path in Files_path)
             {
                 FilesCmr filesCmr = new FilesCmr();

@@ -16,7 +16,6 @@
 /Users/kirill/Projects/Geoportal/Geoportal/obj/Debug/netcoreapp2.2/Geoportal.TagHelpers.output.cache
 /Users/kirill/Projects/Geoportal/Geoportal/obj/Debug/netcoreapp2.2/Geoportal.RazorCoreGenerate.cache
 /Users/kirill/Projects/Geoportal/Geoportal/obj/Debug/netcoreapp2.2/Razor/Views/File/Create.g.cshtml.cs
-/Users/kirill/Projects/Geoportal/Geoportal/obj/Debug/netcoreapp2.2/Razor/Views/File/Edit.g.cshtml.cs
 /Users/kirill/Projects/Geoportal/Geoportal/obj/Debug/netcoreapp2.2/Razor/Views/File/Index.g.cshtml.cs
 /Users/kirill/Projects/Geoportal/Geoportal/obj/Debug/netcoreapp2.2/Razor/Views/File/Ramka.g.cshtml.cs
 /Users/kirill/Projects/Geoportal/Geoportal/obj/Debug/netcoreapp2.2/Razor/Views/Home/Index.g.cshtml.cs

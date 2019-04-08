@@ -54,6 +54,9 @@
     <Content Remove="wwwroot\js\wicket-gmap3.js" />
     <Content Remove="Views\Shared\Ramka.cshtml" />
     <Content Remove="Views\Ramka\Ramka.cshtml" />
+    <Content Remove="wwwroot\js\shp.js.html" />
+    <Content Remove="wwwroot\js\leaflet.shpfile.js" />
+    <Content Remove="wwwroot\js\shp.js" />
   </ItemGroup>
   <ItemGroup>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Models\DemandArchiveErs.cs">
@@ -69,5 +72,7 @@
     <None Include="wwwroot\js\wicket.js" />
     <None Include="wwwroot\js\wicket-leaflet.js" />
     <None Include="wwwroot\js\wicket-gmap3.js" />
+    <None Include="wwwroot\js\leaflet.shpfile.js" />
+    <None Include="wwwroot\js\shp.js" />
   </ItemGroup>
 </Project>
