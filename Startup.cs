@@ -16,6 +16,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Infrastructure.Internal;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Internal;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Http.Features;
+using Microsoft.Extensions.Logging;
+using Serilog;
+using Serilog.Sinks;
+using System.IO;
 
 namespace Geoportal
 {
@@ -60,8 +64,14 @@ namespace Geoportal
 
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env ,ILoggerFactory loggerFactory)
         {
+            string path_to_log = Path.Combine("logs", "log.txt");
+            var log = new LoggerConfiguration()
+               .MinimumLevel.Debug()
+           .WriteTo.Console()
+           .WriteTo.File(path_to_log, rollingInterval: RollingInterval.Day)
+           .CreateLogger();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

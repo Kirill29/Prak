@@ -9,6 +9,9 @@ using Microsoft.AspNetCore.Hosting;
 using Geoportal.Models;
 using Microsoft.EntityFrameworkCore;
 using Npgsql;
+using Serilog;
+using Serilog.Events;
+using Serilog.Core;
 //using Microsoft.AspNetCore.Http.Internal;
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -20,6 +23,9 @@ namespace Geoportal.Controllers
         private readonly IHostingEnvironment _appEnvironment;
         // GET: /<controller>/
         private iContext _db;
+        string path_to_log;
+        Serilog.Core.Logger log;
+
         static private List<string> files_names = new List<string>();
 
          static public List<string> Files_path { get; set; } = new List<string>();
@@ -34,6 +40,8 @@ namespace Geoportal.Controllers
 
         public IActionResult Ramka()
         {
+            log.Information("Page adding shape");
+            Log.CloseAndFlush();
             return View();
         }
       
@@ -43,6 +51,7 @@ namespace Geoportal.Controllers
     
         public  IActionResult Index()
         {
+
             ViewBag.FilesID = files_Files_DemandArchiveErsNr;
             ViewData["Path"] = path_to_directory;
             ViewData["ID"] = demand_ArchiveErsNr;
@@ -62,6 +71,7 @@ namespace Geoportal.Controllers
         [HttpPost]
         public async Task<IActionResult> Add_files(IFormFileCollection File_col)
         {
+
             Files_path.Clear();
             files_names.Clear();
             files_size.Clear();
@@ -73,14 +83,19 @@ namespace Geoportal.Controllers
 
             string path_Root = _appEnvironment.WebRootPath;
             //string path_to_directory = path_Root + "//Files//";
-            string name_data ="//"+DateTime.Now.ToString("-dd-MM-yyyy-(hh-mm-ss)");
-            path_to_directory = path_Root + name_data;
+            string name_data =DateTime.Now.ToString("-dd-MM-yyyy-(hh-mm-ss)");
+            path_to_directory = Path.Combine(path_Root, name_data);
+            //path_Root + name_data;
             if (!Directory.Exists(path_to_directory))
             {
                 Directory.CreateDirectory(path_to_directory);
 
             }
-            StreamReader objReader = new StreamReader(path_Root+"//Config.txt");
+            log.Information("Create Directory :"+ path_to_directory);
+            string path_Config = Path.Combine(path_Root, "Config.txt");
+            log.Information("Reading data from :" + path_Config);
+            StreamReader objReader = new StreamReader(path_Config);
+            //path_Root+"//Config.txt");
             string line;
             line = objReader.ReadLine();
             char ch = '=';
@@ -90,6 +105,7 @@ namespace Geoportal.Controllers
             }
             else
             {
+                log.Error("Wrong data in Config.txt");
                 return Content("Wrong sim");
             }
 
@@ -102,6 +118,7 @@ namespace Geoportal.Controllers
             }
             else
             {
+                log.Error("Wrong data in Config.txt");
                 return Content("Wrong sim");
             }
 
@@ -114,27 +131,35 @@ namespace Geoportal.Controllers
             }
             else
             {
+                log.Error("Wrong data in Config.txt");
                 return Content("Wrong sim");
             }
 
 
             _db.DemandArchiveErss.Add(DAE);
+            log.Information("Add data from file to DemandArchiveErs");
+
             await _db.SaveChangesAsync();
 
 
 
-            if ((File_col == null) || (File_col.Count == 0))  {return Content("Files are not selected");}
+            if ((File_col == null) || (File_col.Count == 0))  {
+                log.Error("Files are not selected");
+            return Content("Files are not selected");
+            }
 
             foreach (var file in File_col)
 
             {
                 FilesDemandArchiveErs FDE = new FilesDemandArchiveErs();
                 files_names.Add(file.FileName);
-
+                log.Information("Reading file: " + file.FileName);
 
 
                 //string path_Root = _appEnvironment.WebRootPath;
-                string path_to_file = path_to_directory+"//"+ file.FileName;
+
+                string path_to_file = Path.Combine(path_to_directory, file.FileName);
+                //path_to_directory+"//"+ file.FileName;
 
                 Files_path.Add(path_to_file);
                 
@@ -149,12 +174,13 @@ namespace Geoportal.Controllers
                      }
                      catch (IOException ioException)
                             {
+                    log.Error("Fail to send file");
                        return Content( $"IO Error: {ioException.Message}");
                        }
                             finally
                             {
                                  if (fstream != null){fstream.Close();}
-
+                    log.Information("File has been sent " + "Path :" + path_to_file);
 
                             }
 
@@ -167,9 +193,11 @@ namespace Geoportal.Controllers
                 FDE.DemandArchiveErsNr = DAE.DemandArchiveErsNr;
                 _db.FilesDemandArchiveErss.Add(FDE);
                 await _db.SaveChangesAsync();
-                demand_ArchiveErsNr = DAE.DemandArchiveErsNr;
-                files_Files_DemandArchiveErsNr.Add(FDE.FilesDemandArchiveErsNr);
 
+                demand_ArchiveErsNr = DAE.DemandArchiveErsNr;
+                log.Information("Add data to FilesDemandArchiveErs  DemandArchiveErsNr: " + demand_ArchiveErsNr);
+                files_Files_DemandArchiveErsNr.Add(FDE.FilesDemandArchiveErsNr);
+                log.Information("Add data to FilesDemandArchiveErs  Files_DemandArchiveErsNr: " + FDE.FilesDemandArchiveErsNr);
 
             }
 
@@ -213,7 +241,11 @@ namespace Geoportal.Controllers
                 }
             }
             catch (Exception exception)
-            { return Content(exception.Message); }
+
+            {
+
+                log.Error(exception.Message);
+                return Content(exception.Message); }
 
 
 
@@ -243,6 +275,7 @@ namespace Geoportal.Controllers
             }
 
             return RedirectToAction("Ramka");
+
         }
 
 
@@ -255,11 +288,18 @@ namespace Geoportal.Controllers
 
         public FileController(IHostingEnvironment appEnviroment, iContext context)
         {
+             path_to_log = Path.Combine("logs", "log.txt");
+             log = new LoggerConfiguration()
+               .MinimumLevel.Debug()
+           .WriteTo.Console()
+           .WriteTo.File(path_to_log, rollingInterval: RollingInterval.Day)
+           .CreateLogger();
             _appEnvironment = appEnviroment;
             _db = context;
         }
 
 
 
-    }  
+    }
+   
 }
