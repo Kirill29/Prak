@@ -34,3 +34,45 @@
 2019-04-10 00:42:04.286 +03:00 [INF] Page adding shape
 2019-04-10 00:42:05.801 +03:00 [ERR] XX000: parse error - invalid geometry
 2019-04-10 00:42:06.427 +03:00 [ERR] XX000: parse error - invalid geometry
+2019-04-10 13:48:43.518 +03:00 [INF] Create Directory :/Users/kirill/Projects/Geoportal/Geoportal/wwwroot/-10-04-2019-(01-48-43)
+2019-04-10 13:48:43.713 +03:00 [INF] Reading data from :/Users/kirill/Projects/Geoportal/Geoportal/wwwroot/Config.txt
+2019-04-10 13:48:45.770 +03:00 [INF] Add data from file to DemandArchiveErs
+2019-04-10 13:48:47.878 +03:00 [INF] Reading file: Laba_menedzhment.docx
+2019-04-10 13:48:47.924 +03:00 [INF] File has been sent Path :/Users/kirill/Projects/Geoportal/Geoportal/wwwroot/-10-04-2019-(01-48-43)/Laba_menedzhment.docx
+2019-04-10 13:48:48.110 +03:00 [INF] Add data to FilesDemandArchiveErs  DemandArchiveErsNr: 83757
+2019-04-10 13:48:48.114 +03:00 [INF] Add data to FilesDemandArchiveErs  Files_DemandArchiveErsNr: 82971
+2019-04-10 13:51:23.205 +03:00 [INF] Create Directory :/Users/kirill/Projects/Geoportal/Geoportal/wwwroot/-10-04-2019-(01-51-23)
+2019-04-10 13:51:23.432 +03:00 [INF] Reading data from :/Users/kirill/Projects/Geoportal/Geoportal/wwwroot/Config.txt
+2019-04-10 13:51:26.238 +03:00 [INF] Add data from file to DemandArchiveErs
+2019-04-10 13:51:29.308 +03:00 [INF] Reading file: Laba_menedzhment.docx
+2019-04-10 13:51:29.350 +03:00 [INF] File has been sent Path :/Users/kirill/Projects/Geoportal/Geoportal/wwwroot/-10-04-2019-(01-51-23)/Laba_menedzhment.docx
+2019-04-10 13:51:29.439 +03:00 [INF] Add data to FilesDemandArchiveErs  DemandArchiveErsNr: 83758
+2019-04-10 13:51:29.441 +03:00 [INF] Add data to FilesDemandArchiveErs  Files_DemandArchiveErsNr: 82972
+2019-04-10 14:23:33.491 +03:00 [INF] Create Directory :/Users/kirill/Projects/Geoportal/Geoportal/wwwroot/_10_04_2019_(02_23_33)
+2019-04-10 14:23:33.673 +03:00 [INF] Reading data from :/Users/kirill/Projects/Geoportal/Geoportal/wwwroot/Config.txt
+2019-04-10 14:23:35.620 +03:00 [INF] Add data from file to DemandArchiveErs
+2019-04-10 14:23:37.449 +03:00 [INF] Reading file: 62973.docx
+2019-04-10 14:23:37.451 +03:00 [INF] Path directory :/Users/kirill/Projects/Geoportal/Geoportal/wwwroot/_10_04_2019_(02_23_33)
+2019-04-10 14:23:37.468 +03:00 [INF] File has been sent Path :/Users/kirill/Projects/Geoportal/Geoportal/wwwroot/_10_04_2019_(02_23_33)/62973.docx
+2019-04-10 14:23:37.643 +03:00 [INF] Add data to FilesDemandArchiveErs  DemandArchiveErsNr: 83759
+2019-04-10 14:23:37.646 +03:00 [INF] Add data to FilesDemandArchiveErs  Files_DemandArchiveErsNr: 82973
+2019-04-10 14:24:06.096 +03:00 [INF] Page adding shape
+2019-04-10 14:24:09.987 +03:00 [ERR] XX000: parse error - invalid geometry
+2019-04-10 14:43:59.572 +03:00 [INF] Create Directory :/Users/kirill/Projects/Geoportal/Geoportal/wwwroot/_10_04_2019_(02_43_59)
+2019-04-10 14:43:59.758 +03:00 [INF] Reading data from :/Users/kirill/Projects/Geoportal/Geoportal/wwwroot/Config.txt
+2019-04-10 14:44:01.940 +03:00 [INF] Add data from file to DemandArchiveErs
+2019-04-10 14:44:03.851 +03:00 [INF] Reading file: Menedzh.r
+2019-04-10 14:44:03.853 +03:00 [INF] Path directory :/Users/kirill/Projects/Geoportal/Geoportal/wwwroot/_10_04_2019_(02_43_59)
+2019-04-10 14:44:03.853 +03:00 [INF]    Rooted: True
+2019-04-10 14:44:03.967 +03:00 [INF] File has been sent Path :/Users/kirill/Projects/Geoportal/Geoportal/wwwroot/_10_04_2019_(02_43_59)/Menedzh.r
+2019-04-10 14:44:04.140 +03:00 [INF] Add data to FilesDemandArchiveErs  DemandArchiveErsNr: 83760
+2019-04-10 14:44:04.143 +03:00 [INF] Add data to FilesDemandArchiveErs  Files_DemandArchiveErsNr: 82974
+2019-04-10 14:57:32.056 +03:00 [INF] Create Directory :/Users/kirill/Projects/Geoportal/Geoportal/wwwroot/_10_04_2019_(02_57_32)
+2019-04-10 14:57:32.354 +03:00 [INF] Reading data from :/Users/kirill/Projects/Geoportal/Geoportal/wwwroot/Config.txt
+2019-04-10 14:57:34.530 +03:00 [INF] Add data from file to DemandArchiveErs
+2019-04-10 14:57:36.760 +03:00 [INF] Reading file: Laba_menedzhment.docx
+2019-04-10 14:57:36.760 +03:00 [INF] Path directory :/Users/kirill/Projects/Geoportal/Geoportal/wwwroot/_10_04_2019_(02_57_32)
+2019-04-10 14:57:36.760 +03:00 [INF]    Rooted: False
+2019-04-10 14:57:36.772 +03:00 [INF] File has been sent Path :/Users/kirill/Projects/Geoportal/Geoportal/wwwroot/_10_04_2019_(02_57_32)/Laba_menedzhment.docx
+2019-04-10 14:57:36.955 +03:00 [INF] Add data to FilesDemandArchiveErs  DemandArchiveErsNr: 83761
+2019-04-10 14:57:36.958 +03:00 [INF] Add data to FilesDemandArchiveErs  Files_DemandArchiveErsNr: 82975

@@ -25,6 +25,7 @@ namespace Geoportal.Controllers
         private iContext _db;
         string path_to_log;
         Serilog.Core.Logger log;
+        string file_name;
 
         static private List<string> files_names = new List<string>();
 
@@ -33,7 +34,7 @@ namespace Geoportal.Controllers
         static public List<long> files_size = new List<long>();
         static public List<long?> files_Files_DemandArchiveErsNr = new List<long?>();
         static long? demand_ArchiveErsNr;
-        public string Cmr_Id { get; set; }
+        static public string Cmr_Id { get; set; }
 
 
 
@@ -78,14 +79,15 @@ namespace Geoportal.Controllers
             files_Files_DemandArchiveErsNr.Clear();
             demand_ArchiveErsNr = 0;
             long file_size;
+            string path_to_file;
             //LOAD FROM CONFIG.TXT
             DemandArchiveErs DAE=new DemandArchiveErs();
 
             string path_Root = _appEnvironment.WebRootPath;
-            //string path_to_directory = path_Root + "//Files//";
-            string name_data =DateTime.Now.ToString("-dd-MM-yyyy-(hh-mm-ss)");
+           
+            string name_data =DateTime.Now.ToString("_dd_MM_yyyy_(hh_mm_ss)");
             path_to_directory = Path.Combine(path_Root, name_data);
-            //path_Root + name_data;
+
             if (!Directory.Exists(path_to_directory))
             {
                 Directory.CreateDirectory(path_to_directory);
@@ -95,7 +97,7 @@ namespace Geoportal.Controllers
             string path_Config = Path.Combine(path_Root, "Config.txt");
             log.Information("Reading data from :" + path_Config);
             StreamReader objReader = new StreamReader(path_Config);
-            //path_Root+"//Config.txt");
+           
             string line;
             line = objReader.ReadLine();
             char ch = '=';
@@ -152,20 +154,22 @@ namespace Geoportal.Controllers
 
             {
                 FilesDemandArchiveErs FDE = new FilesDemandArchiveErs();
-                files_names.Add(file.FileName);
-                log.Information("Reading file: " + file.FileName);
+                file_name = Path.GetFileName(file.FileName);
+                files_names.Add(file_name);
+                log.Information("Reading file: " + file_name);
 
 
-                //string path_Root = _appEnvironment.WebRootPath;
 
-                string path_to_file = Path.Combine(path_to_directory, file.FileName);
-                //path_to_directory+"//"+ file.FileName;
+                log.Information("Path directory :" + path_to_directory);
+                path_to_file = Path.Combine(path_to_directory, file_name);
+                log.Information($"   Rooted: {Path.IsPathRooted(file_name)}");
+              
 
                 Files_path.Add(path_to_file);
                 
                 FDE.PathFileName = path_to_file;
                 
-                //FDE.DemandArchiveErsNr=
+               
                 FileStream fstream = null;
                 try
                 { 
@@ -211,9 +215,23 @@ namespace Geoportal.Controllers
 
         }
 
-        public async Task<IActionResult> Add(string WKT_string)
+
+
+
+
+
+
+
+
+        public async Task<IActionResult> Add(string WKT_string,string cmr_name_value)
         {
-            //string w = "POLYGON((-71.1776585052917 42.3902909739571, -71.1776820268866 42.3903701743239,-71.1776063012595 42.3903825660754, -71.1775826583081 42.3903033653531, -71.1776585052917 42.3902909739571))";
+            string w = "POLYGON((-71.1776585052917 42.3902909739571, -71.1776820268866 42.3903701743239,-71.1776063012595 42.3903825660754, -71.1775826583081 42.3903033653531, -71.1776585052917 42.3902909739571))";
+            WKT_string = w;
+            if ((cmr_name_value == null))
+            {
+                return Content("Неверное название рамки");
+            }
+
             Cmr_Id = "";
             try
             {
@@ -231,7 +249,7 @@ namespace Geoportal.Controllers
                         cmd.Connection = conn;
                         //cmd.CommandText = "INSERT INTO data.cmr(cmr_ident,cmr_name, geom) VALUES ('2', 'lol', ST_GeomFromText('LINESTRING(-71.160281 42.258729,-71.160837 42.259113,-71.161144 42.25932)'));";
                         // cmd.Parameters.AddWithValue("p", "{0}, {1}, ST_GeomFromText({2},4326)");
-                        cmd.CommandText = "INSERT INTO data.cmr(cmr_ident,cmr_name, geom) VALUES ('2', 'now', ST_GeomFromText('" + WKT_string + "',4326)) RETURNING cmr_id;";
+                        cmd.CommandText = "INSERT INTO data.cmr(cmr_ident,cmr_name, geom,date_make) VALUES ('2','" + cmr_name_value+"', ST_GeomFromText('" + WKT_string + "',4326),'now') RETURNING cmr_id;";
                         //cmd.ExecuteReader();
                         Cmr_Id = Convert.ToString(cmd.ExecuteScalar());
 
@@ -255,12 +273,6 @@ namespace Geoportal.Controllers
             var j = 0;
             var h = 0;
            
-
-
-
-
-
-
             foreach (var path in Files_path)
             {
                 FilesCmr filesCmr = new FilesCmr();
@@ -274,8 +286,15 @@ namespace Geoportal.Controllers
                 await _db.SaveChangesAsync();
             }
 
-            return RedirectToAction("Ramka");
+            return RedirectToAction("Ramka_Added_WKT");
 
+        }
+
+
+        public IActionResult  Ramka_Added_WKT()
+        {
+            ViewData["Cmr_id"] = Cmr_Id;
+            return View();
         }
 
 
@@ -283,6 +302,12 @@ namespace Geoportal.Controllers
 
 
 
+        [HttpPost]
+        public IActionResult Add_shp(string xml)
+        {
+            log.Information("shape "+ xml.ToString());
+            return Content(xml.ToString());
+        }
 
 
 

@@ -26,10 +26,8 @@
 
   <ItemGroup>
     <Folder Include="Data\" />
-    <Folder Include="wwwroot\Files\" />
     <Folder Include="Views\Создать папку\" />
     <Folder Include="Views\Ramka\" />
-    <Folder Include="wwwroot\log\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="FileModel.cs" />
@@ -48,19 +46,12 @@
     <Content Remove="wwwroot\Files\[only-soft.org].t39421.torrent" />
     <Content Remove="wwwroot\Files\VisualStudioForMacInstaller__679860243.1527252481.dmg" />
     <Content Remove="wwwroot\Files\000000010024.jpg" />
-    <Content Remove="wwwroot\Config.txt" />
     <Content Remove="web.json" />
-    <Content Remove="wwwroot\js\wicket.js" />
-    <Content Remove="wwwroot\js\wicket-leaflet.js" />
-    <Content Remove="wwwroot\wicket.js" />
-    <Content Remove="wwwroot\wicket-leaflet.js" />
-    <Content Remove="wwwroot\wicket-gmap3.js" />
-    <Content Remove="wwwroot\js\wicket-gmap3.js" />
     <Content Remove="Views\Shared\Ramka.cshtml" />
     <Content Remove="Views\Ramka\Ramka.cshtml" />
     <Content Remove="wwwroot\js\shp.js.html" />
-    <Content Remove="wwwroot\js\leaflet.shpfile.js" />
-    <Content Remove="wwwroot\js\shp.js" />
+    <Content Remove="wwwroot\js\Ramka.js" />
+    <Content Remove="Views\Home\Privacy.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Models\DemandArchiveErs.cs">
@@ -70,13 +61,6 @@
   <ItemGroup>
     <None Remove="wwwroot9eQ0qnsO-Ss.jpg" />
     <None Remove="wwwrootOрловская-3.pdf" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="wwwroot\Config.txt" />
-    <None Include="wwwroot\js\wicket.js" />
-    <None Include="wwwroot\js\wicket-leaflet.js" />
-    <None Include="wwwroot\js\wicket-gmap3.js" />
-    <None Include="wwwroot\js\leaflet.shpfile.js" />
-    <None Include="wwwroot\js\shp.js" />
+    <None Remove="Views\File\RamkaAdded.html" />
   </ItemGroup>
 </Project>

@@ -8610,6 +8610,7 @@
       "type": "package",
       "path": "serilog/2.8.0",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "lib/net45/Serilog.dll",
         "lib/net45/Serilog.pdb",
@@ -8635,6 +8636,7 @@
       "type": "package",
       "path": "serilog.sinks.console/3.1.1",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "lib/net45/Serilog.Sinks.Console.dll",
         "lib/net45/Serilog.Sinks.Console.xml",
@@ -8651,6 +8653,7 @@
       "type": "package",
       "path": "serilog.sinks.file/4.0.0",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "lib/net45/Serilog.Sinks.File.dll",
         "lib/net45/Serilog.Sinks.File.xml",

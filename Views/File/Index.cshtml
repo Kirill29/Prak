@@ -18,10 +18,10 @@
         <h2>Путь к каталогу: </h2>
         <p>@ViewData["Path"]</p>
         <br />
-        <h2>DemandArchiveErsNr:</h2>
+        <h2>"№ пакета архивирования:</h2>
         <p>@ViewData["ID"]</p>
         <br />
-        <h2>FilesDemandArchiveErsNr</h2>
+        <h2>"№ файла в пакете</h2>
 
         @foreach (var files_id in (List<long?>)ViewBag.FilesID)
     {
