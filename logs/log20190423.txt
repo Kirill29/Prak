@@ -1,0 +1,78 @@
+2019-04-23 13:22:37.150 +03:00 [INF] Page adding shape
+2019-04-23 13:22:52.087 +03:00 [INF] shape {"type":"Polygon","coordinates":[[[35,10],[45,45],[15,40],[10,20],[35,10]],[[20,30],[35,35],[30,20],[20,30]]]}
+2019-04-23 13:27:21.086 +03:00 [INF] Page adding shape
+2019-04-23 13:28:29.901 +03:00 [INF] Page adding shape
+2019-04-23 13:28:39.123 +03:00 [INF] shape {"type":"Polygon","coordinates":[[[35,10],[45,45],[15,40],[10,20],[35,10]],[[20,30],[35,35],[30,20],[20,30]]]}
+2019-04-23 13:43:21.929 +03:00 [INF] Page adding shape
+2019-04-23 13:43:31.018 +03:00 [INF] shape {"type":"Polygon","coordinates":[[[35,10],[45,45],[15,40],[10,20],[35,10]],[[20,30],[35,35],[30,20],[20,30]]]}
+2019-04-23 13:59:17.972 +03:00 [INF] Page adding shape
+2019-04-23 13:59:27.926 +03:00 [INF] shape {"type":"FeatureCollection","features":[]}
+2019-04-23 13:59:29.851 +03:00 [ERR] XX000: parse error - invalid geometry
+2019-04-23 14:02:37.901 +03:00 [INF] Page adding shape
+2019-04-23 14:02:45.648 +03:00 [INF] shape {"type":"FeatureCollection","features":[]}
+2019-04-23 14:02:47.412 +03:00 [ERR] XX000: parse error - invalid geometry
+2019-04-23 14:06:35.363 +03:00 [INF] Page adding shape
+2019-04-23 14:07:15.033 +03:00 [INF] shape {"type":"FeatureCollection","features":[]}
+2019-04-23 14:07:17.417 +03:00 [ERR] XX000: parse error - invalid geometry
+2019-04-23 14:08:02.737 +03:00 [INF] Page adding shape
+2019-04-23 14:08:10.356 +03:00 [INF] shape {"type":"FeatureCollection","features":[]}
+2019-04-23 14:08:12.792 +03:00 [ERR] XX000: parse error - invalid geometry
+2019-04-23 14:08:37.568 +03:00 [INF] Page adding shape
+2019-04-23 14:09:18.906 +03:00 [INF] Page adding shape
+2019-04-23 14:09:24.841 +03:00 [INF] shape {"type":"FeatureCollection","features":[]}
+2019-04-23 14:09:26.823 +03:00 [ERR] XX000: parse error - invalid geometry
+2019-04-23 14:10:12.346 +03:00 [INF] Page adding shape
+2019-04-23 14:10:20.284 +03:00 [INF] shape {"type":"FeatureCollection","features":[]}
+2019-04-23 14:10:22.307 +03:00 [ERR] XX000: parse error - invalid geometry
+2019-04-23 14:11:19.745 +03:00 [INF] Page adding shape
+2019-04-23 14:12:26.931 +03:00 [INF] Page adding shape
+2019-04-23 14:12:53.594 +03:00 [ERR] XX000: parse error - invalid geometry
+2019-04-23 14:15:35.353 +03:00 [INF] Page adding shape
+2019-04-23 14:44:25.916 +03:00 [INF] Page adding shape
+2019-04-23 14:44:46.192 +03:00 [ERR] XX000: invalid GeoJson representation
+et 0)
+2019-04-23 23:08:47.749 +03:00 [INF] Page adding shape
+2019-04-23 23:09:40.486 +03:00 [INF] Page adding shape
+2019-04-23 23:10:28.722 +03:00 [INF] Page adding shape
+2019-04-23 23:13:27.829 +03:00 [INF] Page adding shape
+2019-04-23 23:18:27.453 +03:00 [INF] Page adding shape
+2019-04-23 23:18:38.043 +03:00 [ERR] 22P02: invalid input syntax for type json
+2019-04-23 23:22:04.086 +03:00 [INF] Page adding shape
+2019-04-23 23:22:15.329 +03:00 [ERR] 42601: syntax error at or near ")"
+2019-04-23 23:23:13.944 +03:00 [INF] Page adding shape
+2019-04-23 23:27:12.457 +03:00 [INF] Page adding shape
+2019-04-23 23:28:24.372 +03:00 [ERR] XX000: unexpected end of data (at offset 0)
+2019-04-23 23:29:50.188 +03:00 [INF] Page adding shape
+2019-04-23 23:29:59.279 +03:00 [ERR] XX000: invalid GeoJson representation
+2019-04-23 23:30:00.174 +03:00 [ERR] XX000: unexpected end of data (at offset 0)
+2019-04-23 23:31:02.955 +03:00 [INF] Page adding shape
+2019-04-23 23:31:36.943 +03:00 [INF] Page adding shape
+2019-04-23 23:35:08.141 +03:00 [INF] Page adding shape
+2019-04-23 23:35:18.619 +03:00 [ERR] XX000: invalid GeoJson representation
+2019-04-23 23:35:19.431 +03:00 [ERR] XX000: unexpected end of data (at offset 0)
+2019-04-23 23:36:28.613 +03:00 [INF] Page adding shape
+2019-04-23 23:36:40.437 +03:00 [ERR] XX000: parse error - invalid geometry
+2019-04-23 23:36:41.256 +03:00 [ERR] XX000: parse error - invalid geometry
+2019-04-23 23:37:48.859 +03:00 [INF] Page adding shape
+2019-04-23 23:37:59.093 +03:00 [ERR] 42883: function st_geomfromgeojson(unknown, integer) does not exist
+2019-04-23 23:39:08.056 +03:00 [INF] Page adding shape
+2019-04-23 23:40:35.572 +03:00 [ERR] XX000: parse error - invalid geometry
+2019-04-23 23:41:42.884 +03:00 [INF] Page adding shape
+2019-04-23 23:42:07.825 +03:00 [ERR] XX000: parse error - invalid geometry
+2019-04-23 23:42:46.054 +03:00 [INF] Page adding shape
+2019-04-23 23:44:51.381 +03:00 [INF] Page adding shape
+2019-04-23 23:45:50.193 +03:00 [INF] Page adding shape
+2019-04-23 23:46:53.620 +03:00 [INF] Page adding shape
+2019-04-23 23:47:51.614 +03:00 [INF] Page adding shape
+2019-04-23 23:49:28.770 +03:00 [ERR] XX000: unexpected end of data (at offset 0)
+2019-04-23 23:50:10.815 +03:00 [INF] Page adding shape
+2019-04-23 23:50:28.325 +03:00 [INF] Page adding shape
+2019-04-23 23:50:41.504 +03:00 [ERR] XX000: unexpected end of data (at offset 0)
+2019-04-23 23:51:22.720 +03:00 [INF] Page adding shape
+2019-04-23 23:53:26.498 +03:00 [INF] Page adding shape
+2019-04-23 23:53:53.965 +03:00 [ERR] XX000: invalid GeoJson representation
+2019-04-23 23:57:14.229 +03:00 [INF] Page adding shape
+2019-04-23 23:59:08.894 +03:00 [INF] Page adding shape
+2019-04-23 23:59:17.097 +03:00 [ERR] XX000: invalid GeoJson representation
+2019-04-23 23:59:27.536 +03:00 [ERR] XX000: invalid GeoJson representation
+2019-04-23 23:59:28.564 +03:00 [ERR] XX000: invalid GeoJson representation

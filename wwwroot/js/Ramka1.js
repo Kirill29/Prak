@@ -41,32 +41,17 @@ var postData;
         var shpfile = new L.Shapefile(result);
         shpfile.on("data:loaded", function (e){
 
-        mymap.fitBounds(shpfile.getBounds());
+            mymap.fitBounds(shpfile.getBounds());
+            var shp_bounds=shpfile.getBounds();
        var  shp_Json=shpfile.toGeoJSON();
         myJSON = JSON.stringify(shp_Json);
-        //console.log(shp_Json);
+            //console.log(shp_Json);
+       console.log(shp_bounds.toGeoJSON());
 });
-shpfile.addTo(mymap);
-$.ajax({
-         url: "/File/Add_shp/",
-        type: "POST",
-dataType: 'json',
+        shpfile.addTo(mymap);
 
 
-
- //************************************
-data:  JSON.stringify({xml: myJSON }),
- //************************************
-
-        success: function (result) {
-            console.log("yra");
-        },
-error: function(XMLHttpRequest, textStatus, errorThrown) {
-alert(errorThrown.responseTextss);
-                        }
-    });
-
-    }
+    
 
 
 

@@ -50,8 +50,9 @@
     <Content Remove="Views\Shared\Ramka.cshtml" />
     <Content Remove="Views\Ramka\Ramka.cshtml" />
     <Content Remove="wwwroot\js\shp.js.html" />
-    <Content Remove="wwwroot\js\Ramka.js" />
     <Content Remove="Views\Home\Privacy.cshtml" />
+    <Content Remove="wwwroot\js\Ramka1.js" />
+    <Content Remove="wwwroot\js\Add_shp2.js" />
   </ItemGroup>
   <ItemGroup>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Models\DemandArchiveErs.cs">

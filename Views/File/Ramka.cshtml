@@ -20,36 +20,41 @@
     <div id="mapid" style="width: 800px; height: 500px;"></div>
 
 
-
-    @using (Html.BeginForm())
-    {
-        <label>Имя рамки</label>
+    <form asp-action="Add_WKT" asp-controller="File">
+        <label>Имя рамки wkt</label>
         <input type="text" name="cmr_name_value" id="cmr_name_value" />
         <label>WKT строка</label>
         <input type="text" name="WKT_string" id="Wkt_string" />
-        <button asp-action="Add" asp-controller="File">Добавить</button>
-
-    }
-
-    <form action='#' onsubmit="return false;">
-        <input type='file' id='fileinput'>
-        <input type='button' id='btnLoad' value='Load' onclick='loadFile();'>
+        <button asp-action="Add" asp-controller="File" type="submit">Добавить</button>
     </form>
 
-    <button onclick='Display_shp()'>добавить шейп</button>
+    <!--action='#' onsubmit="return false;"-->
+    <form asp-action="Add_shp" asp-controller="File">
+        <label>Имя рамки sph</label>
+        <input type="text" name="cmr_name_value1" id="cmr_name_value1" />
+        <input type='file' id='fileinput'>
+        <input type='button' id='btnLoad' value='Load' onclick='loadFile();'>
+        <button asp-action="Add_shp" asp-controller="File">Добавить</button>
+    </form>
 
-    <button onclick='Display()'>Отобразить рамку</button>
+    <!-- <button onclick='Display_shp()'>добавить шейп</button>
 
-    <button asp-action="Add_shp" asp-controller="File">Вернем геоджосон</button>
+     <button onclick='Display()'>Отобразить рамку</button>
 
+     <button asp-action="Add_shp" asp-controller="File">Вернем геоджосон</button>
 
-
-
-
-
+         -->
 
 
-    <script src="/js/Ramka1.js" type="text/javascript"></script>
+
+
+
+    <script src="/js/turf.js" charset="utf-8" type="text/javascript"></script>
+
+    <script src="/js/map.js" type="text/javascript"></script>
+    <script src="/js/Add_shp.js" type="text/javascript"></script>
+    <script src="/js/Add_WKT.js" type="text/javascript"></script>
+
 
 
 
