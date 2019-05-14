@@ -1,0 +1,1 @@
+2019-05-14 11:45:54.897 +03:00 [ERR] XX000: geometry requires more points

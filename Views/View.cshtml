@@ -1,0 +1,116 @@
+﻿@{
+    ViewBag.Title = "Главная страница";
+}
+<!-- <script src="/js/Ramka"></script>    -->
+<head>
+    <link rel="stylesheet" href="/css/leaflet.css" />
+    <script src="/js/leaflet.js" type="text/javascript"></script>
+    <script src="/js/shp.js" type="text/javascript"></script>
+    <script src="/js/leaflet.shpfile.js" type="text/javascript"></script>
+    <script src="/js/wicket.js" type="text/javascript"></script>
+    <script src="/js/wicket-gmap3.js" type="text/javascript"></script>
+    <script src="/js/leaflet-offline.js" type="text/javascript"></script>
+
+</head>
+<body>
+
+
+
+
+    <div id="mapid" style="width: 800px; height: 500px;"></div>
+
+
+    <form asp-action="Add_WKT" asp-controller="File">
+        <label>Имя рамки wkt</label>
+        <input type="text" name="cmr_name_value" id="cmr_name_value" />
+        <label>WKT строка</label>
+        <input type="text" name="WKT_string" id="Wkt_string" />
+        <button asp-action="Add" asp-controller="File" type="submit">Добавить</button>
+    </form>
+
+
+
+    <form asp-action="Add_shp" asp-controller="File">
+        <label>Имя рамки sph</label>
+        <input type="text" name="cmr_name_value1" id="cmr_name_value1" />
+        <input type='file' id='fileinput'>
+        <input type='button' id='btnLoad' value='Load' onclick='loadFile();'>
+        <button asp-action="Add_shp" asp-controller="File">Добавить</button>
+    </form>
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Название рамки</th>
+                <th scope="col">Источник</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+               
+               
+                <td> <input type="text" name="cmr_name_value1" id="cmr_name_value1" /></td>
+
+               
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>fat</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>twitter</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="/js/turf.js" charset="utf-8" type="text/javascript"></script>
+
+    <script src="/js/map.js" type="text/javascript"></script>
+    <script src="/js/Add_shp.js" type="text/javascript"></script>
+    <script src="/js/Add_WKT.js" type="text/javascript"></script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+

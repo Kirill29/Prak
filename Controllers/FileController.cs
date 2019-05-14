@@ -226,11 +226,12 @@ namespace Geoportal.Controllers
 
 
 
-
+        [HttpPost]
         public async Task<IActionResult> Add(string WKT_string,string cmr_name_value)
         {
             string w = "POLYGON((-71.1776585052917 42.3902909739571, -71.1776820268866 42.3903701743239,-71.1776063012595 42.3903825660754, -71.1775826583081 42.3903033653531, -71.1776585052917 42.3902909739571))";
-            //WKT_string = w;
+           // WKT_string = w;
+            cmr_name_value = "ggggg";
             if ((cmr_name_value == null))
             {
                 return Content("Неверное название рамки");
@@ -239,6 +240,7 @@ namespace Geoportal.Controllers
             {
                 cmr_name_value1 = cmr_name_value;
             }
+            cmr_name_value="ggggg";
 
             Cmr_Id = "";
             try
@@ -334,14 +336,13 @@ namespace Geoportal.Controllers
 
                     using (var cmd = new NpgsqlCommand())
                     {
+                       
                         cmd.Connection = conn;
-                        //cmd.CommandText = "SELECT ST_AsText(ST_CollectionExtract(ST_GeomFromText('" + xml + "',4326),3));";
-
-                        cmd.CommandText = "SELECT ST_AsText(ST_GeomFromGeoJSON('"+xml+"')) As wkt;";
-                        wkt_from_geojson = Convert.ToString(cmd.ExecuteScalar());
-                        cmd.CommandText = "INSERT INTO data.cmr(cmr_ident,cmr_name, geom,date_make) VALUES ('2','" + cmr_name_value1 + "', ST_GeomFromText('" + wkt_from_geojson + "',4326),'now') RETURNING cmr_id;";
+                        //cmd.CommandText = "INSERT INTO data.cmr(cmr_ident,cmr_name, geom) VALUES ('2', 'lol', ST_GeomFromText('LINESTRING(-71.160281 42.258729,-71.160837 42.259113,-71.161144 42.25932)'));";
+                        // cmd.Parameters.AddWithValue("p", "{0}, {1}, ST_GeomFromText({2},4326)");
+                        cmd.CommandText = "INSERT INTO data.cmr(cmr_ident,cmr_name, geom,date_make) VALUES ('2','" + cmr_name_value1 + "', ST_GeomFromText('" + xml + "',4326),'now') RETURNING cmr_id;";
+                        //cmd.ExecuteReader();
                         Cmr_Id = Convert.ToString(cmd.ExecuteScalar());
-
 
 
 
@@ -351,7 +352,7 @@ namespace Geoportal.Controllers
 
 
 
-                         //cmd.CommandText = "SELECT ST_AsText(ST_CollectionExtract(ST_GeomFromText('" + xml + "',4326),3));";
+                        //cmd.CommandText = "SELECT ST_AsText(ST_CollectionExtract(ST_GeomFromText('" + xml + "',4326),3));";
                         //cmd.CommandText = "INSERT INTO data.cmr(cmr_ident,cmr_name, geom) VALUES ('2', 'lol', ST_GeomFromText('LINESTRING(-71.160281 42.258729,-71.160837 42.259113,-71.161144 42.25932)'));";
                         // cmd.Parameters.AddWithValue("p", "{0}, {1}, ST_GeomFromText({2},4326)");
                         //cmd.ExecuteReader();

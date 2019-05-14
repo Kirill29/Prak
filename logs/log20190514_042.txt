@@ -1,0 +1,2 @@
+2019-05-14 13:35:47.478 +03:00 [ERR] XX000: geometry requires more points
+2019-05-14 13:37:42.364 +03:00 [INF] Page adding shape
