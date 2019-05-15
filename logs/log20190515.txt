@@ -1,0 +1,32 @@
+2019-05-15 01:19:37.021 +03:00 [INF] Page adding shape
+2019-05-15 01:20:57.691 +03:00 [INF] Page adding shape
+2019-05-15 02:27:41.935 +03:00 [INF] Create Directory :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\_15_05_2019_(02_27_41)
+2019-05-15 02:27:42.004 +03:00 [INF] Reading data from :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\Config.txt
+2019-05-15 02:27:42.724 +03:00 [INF] Add data from file to DemandArchiveErs
+2019-05-15 02:37:08.437 +03:00 [INF] Create Directory :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\_15_05_2019_(02_37_08)
+2019-05-15 02:37:08.494 +03:00 [INF] Reading data from :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\Config.txt
+2019-05-15 02:37:08.930 +03:00 [INF] Add data from file to DemandArchiveErs
+2019-05-15 02:41:23.556 +03:00 [INF] Create Directory :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\_15_05_2019_(02_41_23)
+2019-05-15 02:41:23.618 +03:00 [INF] Reading data from :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\Config.txt
+2019-05-15 02:41:24.048 +03:00 [INF] Add data from file to DemandArchiveErs
+2019-05-15 02:50:59.905 +03:00 [INF] Create Directory :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\_15_05_2019_(02_50_59)
+2019-05-15 02:50:59.961 +03:00 [INF] Reading data from :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\Config.txt
+2019-05-15 02:51:00.390 +03:00 [INF] Add data from file to DemandArchiveErs
+2019-05-15 02:52:54.988 +03:00 [INF] Create Directory :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\_15_05_2019_(02_52_54)
+2019-05-15 02:52:55.046 +03:00 [INF] Reading data from :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\Config.txt
+2019-05-15 02:52:55.464 +03:00 [INF] Add data from file to DemandArchiveErs
+2019-05-15 02:52:55.736 +03:00 [INF] Reading file: test1.zip
+2019-05-15 02:52:55.736 +03:00 [INF] Path directory :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\_15_05_2019_(02_52_54)
+2019-05-15 02:52:55.736 +03:00 [INF]    Rooted: False
+2019-05-15 02:52:55.751 +03:00 [INF] File has been sent Path :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\_15_05_2019_(02_52_54)\test1.zip
+2019-05-15 02:52:55.846 +03:00 [INF] Add data to FilesDemandArchiveErs  DemandArchiveErsNr: 83572
+2019-05-15 02:52:55.847 +03:00 [INF] Add data to FilesDemandArchiveErs  Files_DemandArchiveErsNr: 82796
+2019-05-15 03:02:49.329 +03:00 [INF] Create Directory :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\_15_05_2019_(03_02_49)
+2019-05-15 03:02:49.383 +03:00 [INF] Reading data from :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\Config.txt
+2019-05-15 03:02:49.813 +03:00 [INF] Add data from file to DemandArchiveErs
+2019-05-15 03:02:50.010 +03:00 [INF] Reading file: test1.zip
+2019-05-15 03:02:50.010 +03:00 [INF] Path directory :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\_15_05_2019_(03_02_49)
+2019-05-15 03:02:50.010 +03:00 [INF]    Rooted: False
+2019-05-15 03:02:50.017 +03:00 [INF] File has been sent Path :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\_15_05_2019_(03_02_49)\test1.zip
+2019-05-15 03:02:50.067 +03:00 [INF] Add data to FilesDemandArchiveErs  DemandArchiveErsNr: 83573
+2019-05-15 03:02:50.068 +03:00 [INF] Add data to FilesDemandArchiveErs  Files_DemandArchiveErsNr: 82797

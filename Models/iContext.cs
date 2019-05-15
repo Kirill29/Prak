@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-
+using Geoportal.Controllers;
 namespace Geoportal
 {
     public partial class iContext : DbContext
@@ -24,7 +24,8 @@ namespace Geoportal
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseNpgsql("Host=localhost;Database=i;Username=postgres;Password=0-0-0-", x => x.UseNetTopologySuite());
+                //optionsBuilder.UseNpgsql("Host=localhost;Database=i;Username=postgres;Password=0-0-0-", x => x.UseNetTopologySuite());
+                optionsBuilder.UseNpgsql("Host=localhost;Database=i;Username=" + AccountController.current_user + "; Password=" + AccountController.current_user_password + ";", x => x.UseNetTopologySuite());
             }
         }
 

@@ -20,6 +20,7 @@ using Microsoft.Extensions.Logging;
 using Serilog;
 using Serilog.Sinks;
 using System.IO;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace Geoportal
 {
@@ -52,7 +53,12 @@ namespace Geoportal
             {
                 options.AutomaticAuthentication = false;
             });
-
+            // установка конфигурации подключения
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(options => //CookieAuthenticationOptions
+                {
+                    options.LoginPath = new Microsoft.AspNetCore.Http.PathString("/Account/Login");
+                });
 
 
 
@@ -87,12 +93,12 @@ namespace Geoportal
             app.UseStaticFiles();
            
             app.UseCookiePolicy();
-
+            app.UseAuthentication();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=File}/{action=Ramka}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

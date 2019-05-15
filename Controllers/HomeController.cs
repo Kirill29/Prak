@@ -12,16 +12,17 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using System.IO;
 using Npgsql;
-
+using Microsoft.AspNetCore.Authorization;
 
 namespace Geoportal.Controllers
 {
     public class HomeController : Controller
     {
-
+        
         public IActionResult Index()
         {
             return View();
+            //return Content(User.Identity.Name);
         }
 
 

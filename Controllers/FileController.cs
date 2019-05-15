@@ -12,6 +12,8 @@ using Npgsql;
 using Serilog;
 using Serilog.Events;
 using Serilog.Core;
+using Microsoft.AspNetCore.Authorization;
+using Geoportal.Controllers;
 //using Microsoft.AspNetCore.Http.Internal;
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -40,18 +42,18 @@ namespace Geoportal.Controllers
 
 
 
-
+        [Authorize]
         public IActionResult Ramka()
         {
             log.Information("Page adding shape");
             Log.CloseAndFlush();
             return View();
         }
-      
 
 
-    
-    
+
+
+        [Authorize]
         public  IActionResult Index()
         {
 
@@ -62,7 +64,7 @@ namespace Geoportal.Controllers
         }
 
 
-
+        [Authorize]
         public IActionResult Create()
         {
 
@@ -247,8 +249,8 @@ namespace Geoportal.Controllers
             {
 
 
-                var connString = "Host=localhost;Database=i;Username=postgres;Password=0-0-0-";
-
+                // var connString = "Host=localhost;Database=i;Username=postgres;Password=0-0-0-";
+                var connString = "Host=localhost;Database=i;Username=" + AccountController.current_user + "; Password=" + AccountController.current_user_password + ";";
                 using (var conn = new NpgsqlConnection(connString))
                 {
                     conn.Open();
@@ -300,7 +302,7 @@ namespace Geoportal.Controllers
 
         }
 
-
+        [Authorize]
         public IActionResult  Ramka_Added_WKT()
         {
             ViewData["Cmr_id"] = Cmr_Id;
@@ -327,7 +329,7 @@ namespace Geoportal.Controllers
             {
 
 
-                var connString = "Host=localhost;Database=i;Username=postgres;Password=0-0-0-";
+                var connString = "Host=localhost;Database=i;Username=" + AccountController.current_user + "; Password=" + AccountController.current_user_password + ";";
 
                 using (var conn = new NpgsqlConnection(connString))
                 {

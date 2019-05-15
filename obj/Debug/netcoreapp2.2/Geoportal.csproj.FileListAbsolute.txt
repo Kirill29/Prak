@@ -70,3 +70,5 @@ C:\Users\Кирилл\Desktop\Geoportal\Geoportal\bin\Debug\netcoreapp2.2\wwwroo
 C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Geoportal.csprojAssemblyReference.cache
 C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\EFCoreNpgsqlNetTopologySuite.cs
 C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Razor\Views\View.g.cshtml.cs
+C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Razor\Views\Account\Login.g.cshtml.cs
+C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Razor\Views\Account\Register.g.cshtml.cs
