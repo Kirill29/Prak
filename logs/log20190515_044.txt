@@ -1,0 +1,1 @@
+2019-05-15 15:34:10.730 +03:00 [ERR] 22023: Geometry type (MultiPolygon) does not match column type (Polygon)

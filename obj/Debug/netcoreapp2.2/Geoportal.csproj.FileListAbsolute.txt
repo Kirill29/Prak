@@ -72,3 +72,4 @@ C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\EFCore
 C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Razor\Views\View.g.cshtml.cs
 C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Razor\Views\Account\Login.g.cshtml.cs
 C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Razor\Views\Account\Register.g.cshtml.cs
+C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Razor\Views\File\Ramka_Added_SHP.g.cshtml.cs

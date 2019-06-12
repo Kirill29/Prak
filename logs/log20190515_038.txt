@@ -1,0 +1,10 @@
+2019-05-15 15:26:39.133 +03:00 [ERR] 22023: Geometry type (MultiPolygon) does not match column type (Polygon)
+2019-05-15 15:27:30.192 +03:00 [INF] Create Directory :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\_15_05_2019_(03_27_30)
+2019-05-15 15:27:30.338 +03:00 [INF] Reading data from :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\Config.txt
+2019-05-15 15:27:31.437 +03:00 [INF] Add data from file to DemandArchiveErs
+2019-05-15 15:27:32.046 +03:00 [INF] Reading file: test1.zip
+2019-05-15 15:27:32.046 +03:00 [INF] Path directory :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\_15_05_2019_(03_27_30)
+2019-05-15 15:27:32.046 +03:00 [INF]    Rooted: False
+2019-05-15 15:27:32.080 +03:00 [INF] File has been sent Path :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\_15_05_2019_(03_27_30)\test1.zip
+2019-05-15 15:27:32.276 +03:00 [INF] Add data to FilesDemandArchiveErs  DemandArchiveErsNr: 83602
+2019-05-15 15:27:32.279 +03:00 [INF] Add data to FilesDemandArchiveErs  Files_DemandArchiveErsNr: 82827

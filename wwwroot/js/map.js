@@ -19,7 +19,21 @@ var watercolor=L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png
                 id: 'mapbox.streets',
                 accessToken: 'pk.eyJ1IjoiYmJyb29rMTU0IiwiYSI6ImNpcXN3dnJrdDAwMGNmd250bjhvZXpnbWsifQ.Nf9Zkfchos577IanoKMoYQ'
                 }).addTo(mymap);
-                
+
+//var urlFilesrv_world = 'http://filesrv/geodbse/giswebservicese/service.php?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=world&STYLE=default&TILEMATRIXSET=GoogleMapsCompatible&TILEMATRIX={z}&TILEROW={x}&TILECOL={y}&FORMAT=image/png8';
+//var settings = {
+//    maxZoom: 17,
+//    continuousWorld: true,
+//    attribution: 'Sourced from LINZ. CC BY 4.0',
+//    subdomains: 'abcd'
+//};
+//var basemaps = {
+//    Filesrv_world: new L.TileLayer(urlFilesrv_world, settings)
+//};
+
+//L.control.layers(basemaps, {}, { position: 'topright', collapsed: true }).addTo(mymap);
+//basemaps.Filesrv_world.addTo(mymap);
+    
 
 
  

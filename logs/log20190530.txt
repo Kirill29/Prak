@@ -1,0 +1,21 @@
+2019-05-30 03:55:15.042 +03:00 [INF] Create Directory :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\_30_05_2019_(03_55_15)
+2019-05-30 03:55:15.101 +03:00 [INF] Reading data from :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\Config.txt
+2019-05-30 03:55:15.805 +03:00 [INF] Add data from file to DemandArchiveErs
+2019-05-30 03:55:16.364 +03:00 [INF] Reading file: test1.cpg
+2019-05-30 03:55:16.364 +03:00 [INF] Path directory :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\_30_05_2019_(03_55_15)
+2019-05-30 03:55:16.364 +03:00 [INF]    Rooted: False
+2019-05-30 03:55:16.382 +03:00 [INF] File has been sent Path :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\_30_05_2019_(03_55_15)\test1.cpg
+2019-05-30 03:55:16.480 +03:00 [INF] Add data to FilesDemandArchiveErs  DemandArchiveErsNr: 83606
+2019-05-30 03:55:16.481 +03:00 [INF] Add data to FilesDemandArchiveErs  Files_DemandArchiveErsNr: 82831
+2019-05-30 03:55:16.481 +03:00 [INF] Reading file: test1.dbf
+2019-05-30 03:55:16.481 +03:00 [INF] Path directory :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\_30_05_2019_(03_55_15)
+2019-05-30 03:55:16.481 +03:00 [INF]    Rooted: False
+2019-05-30 03:55:16.491 +03:00 [INF] File has been sent Path :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\_30_05_2019_(03_55_15)\test1.dbf
+2019-05-30 03:55:16.502 +03:00 [INF] Add data to FilesDemandArchiveErs  DemandArchiveErsNr: 83606
+2019-05-30 03:55:16.502 +03:00 [INF] Add data to FilesDemandArchiveErs  Files_DemandArchiveErsNr: 82832
+2019-05-30 03:55:16.502 +03:00 [INF] Reading file: test1.prj
+2019-05-30 03:55:16.502 +03:00 [INF] Path directory :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\_30_05_2019_(03_55_15)
+2019-05-30 03:55:16.502 +03:00 [INF]    Rooted: False
+2019-05-30 03:55:16.506 +03:00 [INF] File has been sent Path :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\_30_05_2019_(03_55_15)\test1.prj
+2019-05-30 03:55:16.516 +03:00 [INF] Add data to FilesDemandArchiveErs  DemandArchiveErsNr: 83606
+2019-05-30 03:55:16.516 +03:00 [INF] Add data to FilesDemandArchiveErs  Files_DemandArchiveErsNr: 82833

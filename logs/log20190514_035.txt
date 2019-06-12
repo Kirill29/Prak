@@ -1,2 +1,0 @@
-2019-05-14 12:56:43.808 +03:00 [INF] Page adding shape
-2019-05-14 12:57:22.116 +03:00 [INF] Page adding shape

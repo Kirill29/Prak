@@ -1,0 +1,12 @@
+2019-05-15 15:24:49.324 +03:00 [INF] Create Directory :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\_15_05_2019_(03_24_49)
+2019-05-15 15:24:49.331 +03:00 [INF] Reading data from :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\Config.txt
+2019-05-15 15:24:49.341 +03:00 [INF] Add data from file to DemandArchiveErs
+2019-05-15 15:25:35.290 +03:00 [INF] Create Directory :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\_15_05_2019_(03_25_35)
+2019-05-15 15:25:35.451 +03:00 [INF] Reading data from :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\Config.txt
+2019-05-15 15:25:36.491 +03:00 [INF] Add data from file to DemandArchiveErs
+2019-05-15 15:25:36.986 +03:00 [INF] Reading file: Kaluga_region.zip
+2019-05-15 15:25:36.989 +03:00 [INF] Path directory :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\_15_05_2019_(03_25_35)
+2019-05-15 15:25:36.989 +03:00 [INF]    Rooted: False
+2019-05-15 15:25:37.023 +03:00 [INF] File has been sent Path :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\_15_05_2019_(03_25_35)\Kaluga_region.zip
+2019-05-15 15:25:37.178 +03:00 [INF] Add data to FilesDemandArchiveErs  DemandArchiveErsNr: 83601
+2019-05-15 15:25:37.181 +03:00 [INF] Add data to FilesDemandArchiveErs  Files_DemandArchiveErsNr: 82826

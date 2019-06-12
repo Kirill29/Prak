@@ -1,0 +1,10 @@
+2019-05-15 15:04:54.740 +03:00 [INF] Page adding shape
+2019-05-15 15:09:00.517 +03:00 [INF] Create Directory :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\_15_05_2019_(03_09_00)
+2019-05-15 15:09:00.661 +03:00 [INF] Reading data from :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\Config.txt
+2019-05-15 15:09:01.757 +03:00 [INF] Add data from file to DemandArchiveErs
+2019-05-15 15:09:02.277 +03:00 [INF] Reading file: Kaluga_region.zip
+2019-05-15 15:09:02.277 +03:00 [INF] Path directory :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\_15_05_2019_(03_09_00)
+2019-05-15 15:09:02.277 +03:00 [INF]    Rooted: False
+2019-05-15 15:09:02.310 +03:00 [INF] File has been sent Path :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\_15_05_2019_(03_09_00)\Kaluga_region.zip
+2019-05-15 15:09:02.418 +03:00 [INF] Add data to FilesDemandArchiveErs  DemandArchiveErsNr: 83594
+2019-05-15 15:09:02.421 +03:00 [INF] Add data to FilesDemandArchiveErs  Files_DemandArchiveErsNr: 82820

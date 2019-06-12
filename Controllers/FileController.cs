@@ -19,18 +19,19 @@ using Geoportal.Controllers;
 
 namespace Geoportal.Controllers
 {
-
+    //file transfer controller
     public class FileController : Controller
     {
+        //
         private readonly IHostingEnvironment _appEnvironment;
-        // GET: /<controller>/
+        //database context
         private iContext _db;
+        //path to logs_files
         string path_to_log;
         Serilog.Core.Logger log;
         string file_name;
-
+        
         static private List<string> files_names = new List<string>();
-
          static public List<string> Files_path { get; set; } = new List<string>();
         static string path_to_directory;
         static public List<long> files_size = new List<long>();
@@ -38,8 +39,6 @@ namespace Geoportal.Controllers
         static long? demand_ArchiveErsNr;
         static public string Cmr_Id { get; set; }
         static public string  cmr_name_value1{ get; set; }
-
-
 
 
         [Authorize]
@@ -54,18 +53,22 @@ namespace Geoportal.Controllers
 
 
         [Authorize]
-        public  IActionResult Index()
+        public  IActionResult Index(string button)
         {
 
             ViewBag.FilesID = files_Files_DemandArchiveErsNr;
             ViewData["Path"] = path_to_directory;
             ViewData["ID"] = demand_ArchiveErsNr;
+            //if (button == "ramka")
+            //{
+            //    Return RedirectToAction("Ramka");
+            //}
             return View();
         }
 
 
         [Authorize]
-        public IActionResult Create()
+        public IActionResult Send()
         {
 
             return View();
@@ -73,7 +76,7 @@ namespace Geoportal.Controllers
 
 
 
-
+        
         [RequestSizeLimit(1_000_000_000)]
         [HttpPost]
         public async Task<IActionResult> Add_files(IFormFileCollection File_col)
@@ -233,7 +236,6 @@ namespace Geoportal.Controllers
         {
             string w = "POLYGON((-71.1776585052917 42.3902909739571, -71.1776820268866 42.3903701743239,-71.1776063012595 42.3903825660754, -71.1775826583081 42.3903033653531, -71.1776585052917 42.3902909739571))";
            // WKT_string = w;
-            cmr_name_value = "ggggg";
             if ((cmr_name_value == null))
             {
                 return Content("Неверное название рамки");
@@ -308,6 +310,12 @@ namespace Geoportal.Controllers
             ViewData["Cmr_id"] = Cmr_Id;
             return View();
         }
+        [Authorize]
+        public IActionResult Ramka_Added_SHP()
+        {
+            ViewData["Cmr_id"] = Cmr_Id;
+            return View();
+        }
 
 
 
@@ -318,7 +326,7 @@ namespace Geoportal.Controllers
         public async Task<IActionResult> Add_shp(string xml,string  cmr_name_value1)
         {
             //log.Information("shape "+ xml.ToString());
-            cmr_name_value1 = "polychil";
+             
             if ((cmr_name_value1 == null))
             {
                 return Content("Неверное название рамки");
@@ -340,24 +348,16 @@ namespace Geoportal.Controllers
                     {
                        
                         cmd.Connection = conn;
-                        //cmd.CommandText = "INSERT INTO data.cmr(cmr_ident,cmr_name, geom) VALUES ('2', 'lol', ST_GeomFromText('LINESTRING(-71.160281 42.258729,-71.160837 42.259113,-71.161144 42.25932)'));";
-                        // cmd.Parameters.AddWithValue("p", "{0}, {1}, ST_GeomFromText({2},4326)");
-                        cmd.CommandText = "INSERT INTO data.cmr(cmr_ident,cmr_name, geom,date_make) VALUES ('2','" + cmr_name_value1 + "', ST_GeomFromText('" + xml + "',4326),'now') RETURNING cmr_id;";
+                        cmd.CommandText = "SELECT ST_AsText(ST_GeomFromGeoJSON('" + xml + "')) As wkt;";
+                        wkt_from_geojson = cmd.ExecuteScalar().ToString();
+                        cmd.CommandText = "INSERT INTO data.cmr(cmr_ident,cmr_name, geom,date_make) VALUES ('2','" + cmr_name_value1 + "', ST_GeomFromText('" + wkt_from_geojson + "',4326),'now') RETURNING cmr_id;";
                         //cmd.ExecuteReader();
                         Cmr_Id = Convert.ToString(cmd.ExecuteScalar());
 
 
 
 
-                        // cmd.CommandText = "SELECT ST_AsText(ST_Collect(ST_GeomFromGeoJSON(feat->>'geometry')))FROM (  SELECT json_array_elements('" + xml + "'::json->'features') AS feat) AS f;";
-                        // wkt_from_geojson = Convert.ToString(cmd.ExecuteScalar());
-
-
-
-                        //cmd.CommandText = "SELECT ST_AsText(ST_CollectionExtract(ST_GeomFromText('" + xml + "',4326),3));";
-                        //cmd.CommandText = "INSERT INTO data.cmr(cmr_ident,cmr_name, geom) VALUES ('2', 'lol', ST_GeomFromText('LINESTRING(-71.160281 42.258729,-71.160837 42.259113,-71.161144 42.25932)'));";
-                        // cmd.Parameters.AddWithValue("p", "{0}, {1}, ST_GeomFromText({2},4326)");
-                        //cmd.ExecuteReader();
+                        
 
                     }
                     conn.Close();
@@ -389,17 +389,9 @@ namespace Geoportal.Controllers
                 await _db.SaveChangesAsync();
             }
 
-
-
-
-
-
-
-            return RedirectToAction("Ramka_Added_WKT");
+            return RedirectToAction("Ramka_Added_SHP");
 
         }
-
-
 
         public FileController(IHostingEnvironment appEnviroment, iContext context)
         {

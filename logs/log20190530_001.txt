@@ -1,0 +1,10 @@
+2019-05-30 03:55:31.775 +03:00 [INF] Page adding shape
+2019-05-30 03:56:47.725 +03:00 [INF] Create Directory :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\_30_05_2019_(03_56_47)
+2019-05-30 03:56:47.798 +03:00 [INF] Reading data from :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\Config.txt
+2019-05-30 03:56:48.294 +03:00 [INF] Add data from file to DemandArchiveErs
+2019-05-30 03:56:48.646 +03:00 [INF] Reading file: test2.cpg
+2019-05-30 03:56:48.646 +03:00 [INF] Path directory :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\_30_05_2019_(03_56_47)
+2019-05-30 03:56:48.646 +03:00 [INF]    Rooted: False
+2019-05-30 03:56:48.653 +03:00 [INF] File has been sent Path :C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\_30_05_2019_(03_56_47)\test2.cpg
+2019-05-30 03:56:48.712 +03:00 [INF] Add data to FilesDemandArchiveErs  DemandArchiveErsNr: 83607
+2019-05-30 03:56:48.713 +03:00 [INF] Add data to FilesDemandArchiveErs  Files_DemandArchiveErsNr: 82834

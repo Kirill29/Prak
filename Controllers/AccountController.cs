@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Mvc;
 using Npgsql;
 
 namespace Geoportal.Controllers
-{
+{//controller to manage login
     public class AccountController : Controller
     {
         public static string current_user="";
@@ -29,16 +29,9 @@ namespace Geoportal.Controllers
         {
             if (ModelState.IsValid)
             {
-
-
-
-
-
-
+                //try to connect to database with user's login and password
                 try
                 {
-
-
                     var connString = "Host=localhost;Database=i;Username=" + model.Login + ";Password=" + model.Password + ";";
 
                     using (var conn = new NpgsqlConnection(connString))
@@ -61,95 +54,24 @@ namespace Geoportal.Controllers
                 catch (Exception exception)
 
                 {
-
+                    //fail-message to user
                     ModelState.AddModelError("", "Некорректные логин и(или) пароль");
                     return Content(exception.Message);
 
                 }
 
-
-
-
-
-                await Authenticate(model.Login); // аутентификация
+                await Authenticate(model.Login); // authecation
+                //
                 current_user = model.Login;
                 current_user_password = model.Password;
-                Give_Administration();
-
-
-
-
-                return RedirectToAction("Create", "File");
-
-
+                //give user permission to work with  database
+                Give_Permission();
+                //redirect to file transfer page
+                return RedirectToAction("Send", "File");
             }
             return View(model);
         }
-        [HttpGet]
-        public IActionResult Register()
-        {
-            return View();
-        }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Register(RegisterModel model)
-        {
-            List<string> roles = new List<string>();
-            List<string> passwords = new List<string>();
-            if (ModelState.IsValid)
-            {
-
-                try
-                {
-
-
-                    var connString = "Host=localhost;Database=i;Username=postgres;Password=0-0-0-";
-
-                    using (var conn = new NpgsqlConnection(connString))
-                    {
-                        conn.Open();
-
-
-                        using (var cmd = new NpgsqlCommand())
-                        {
-                            cmd.Connection = conn;
-                          
-                            
-                                cmd.CommandText = "CREATE USER " + model.Login + " WITH PASSWORD " + "'" + model.Password + "';";
-                               cmd.ExecuteNonQuery();
-
-                            await Authenticate(model.Login); // аутентификация
-                                current_user = model.Login;
-                            current_user_password = model.Password;
-                            Give_Administration();
-                        
-
-                        }
-                        conn.Close();
-
-                    }
-                }
-                catch (Exception exception)
-
-                {
-
-                    ModelState.AddModelError("", "Некорректные логин и(или) пароль");
-                    return Content(exception.Message);
-
-                }
-
-
-
-
-
-                return RedirectToAction("Create", "File");
-            }
-            else { ModelState.AddModelError("", "Некорректные логин и(или) пароль"); }
-                
-        
-            return View(model);
-    
-}
+       
 
         private async Task Authenticate(string userName)
         {
@@ -182,10 +104,9 @@ namespace Geoportal.Controllers
                     using (var cmd = new NpgsqlCommand())
                     {
                         cmd.Connection = conn;
-                        cmd.CommandText = "ALTER USER " + current_user + " NOWITH SUPERUSER;";
+                        cmd.CommandText = "ALTER USER " + current_user + " WITH NOSUPERUSER;";
                         cmd.ExecuteNonQuery();
-                        cmd.CommandText = "ALTER USER postgres WITH SUPERUSER;";
-                        cmd.ExecuteNonQuery();
+                       
                     }
                     conn.Close();
 
@@ -212,11 +133,7 @@ namespace Geoportal.Controllers
             
         }
 
-
-
-
-
-        public void Give_Administration()
+        public void Give_Permission()
         {
             try
             {
