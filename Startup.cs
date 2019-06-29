@@ -20,15 +20,26 @@ using Microsoft.Extensions.Logging;
 using Serilog;
 using Serilog.Sinks;
 using System.IO;
+using Geoportal.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace Geoportal
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        private readonly IHostingEnvironment _env;
+        private static string _applicationPath = string.Empty;
+        private static string _contentRootPath = string.Empty;
+
+        public Startup(IHostingEnvironment env)
         {
-            Configuration = configuration;
+            _applicationPath = env.WebRootPath;
+            _contentRootPath = env.ContentRootPath;
+            var builder = new ConfigurationBuilder()
+             .SetBasePath(_contentRootPath)
+             .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+             .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
+            Configuration = builder.Build();
         }
 
         public IConfiguration Configuration { get; }
@@ -48,6 +59,7 @@ namespace Geoportal
                 x.ValueLengthLimit = int.MaxValue;
                 x.MultipartBodyLengthLimit = int.MaxValue;
             });
+            //services.AddDbContext<iContext>();
             services.AddDbContext<iContext>();
             services.Configure<IISServerOptions>(options =>
             {
@@ -60,7 +72,10 @@ namespace Geoportal
                     options.LoginPath = new Microsoft.AspNetCore.Http.PathString("/Account/Login");
                 });
 
-
+           
+            services.AddSingleton<IConnectionString, ConnectionString>();
+            services.AddSingleton<IConfiguration>(Configuration);
+            services.AddTransient<ISave_Files, Save_Files>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 

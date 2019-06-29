@@ -51,10 +51,7 @@ C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Geopor
 C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Geoportal.TagHelpers.input.cache
 C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Geoportal.TagHelpers.output.cache
 C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Geoportal.RazorCoreGenerate.cache
-C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Razor\Views\File\Create.g.cshtml.cs
 C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Razor\Views\File\Index.g.cshtml.cs
-C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Razor\Views\File\Ramka.g.cshtml.cs
-C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Razor\Views\File\Ramka_Added_WKT.g.cshtml.cs
 C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.g.cshtml.cs
 C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.g.cshtml.cs
 C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
@@ -71,5 +68,7 @@ C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Geopor
 C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\EFCoreNpgsqlNetTopologySuite.cs
 C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Razor\Views\View.g.cshtml.cs
 C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Razor\Views\Account\Login.g.cshtml.cs
-C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Razor\Views\Account\Register.g.cshtml.cs
-C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Razor\Views\File\Ramka_Added_SHP.g.cshtml.cs
+C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Razor\Views\File\Send.g.cshtml.cs
+C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Razor\Views\Ramka\Ramka.g.cshtml.cs
+C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Razor\Views\Ramka\Ramka_Added_SHP.g.cshtml.cs
+C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Razor\Views\Ramka\Ramka_Added_WKT.g.cshtml.cs

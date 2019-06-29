@@ -2,30 +2,42 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Geoportal.Controllers;
+using Geoportal.Models;
+using Geoportal.Services;
+
 namespace Geoportal
 {
     public partial class iContext : DbContext
     {
+        private IConnectionString _connectionString;
         public iContext()
         {
+           
         }
-
-        public iContext(DbContextOptions<iContext> options)
+       
+        public iContext(DbContextOptions<iContext> options, IConnectionString connectionString)
             : base(options)
         {
+            _connectionString = connectionString;
+            //    this.Database.GetDbConnection().ConnectionString = Database.GetDbConnection().ConnectionString.Replace("user", AccountController.current_user);
+            //    this.Database.GetDbConnection().ConnectionString = Database.GetDbConnection().ConnectionString.Replace("password", AccountController.current_user_password);
         }
 
         public virtual DbSet<DemandArchiveErs> DemandArchiveErss { get; set; }
         public virtual DbSet<FilesCmr> FilesCmrs { get; set; }
         public virtual DbSet<FilesDemandArchiveErs> FilesDemandArchiveErss { get; set; }
+      
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
+                string conn = _connectionString.GetConnectionString();
                 //optionsBuilder.UseNpgsql("Host=localhost;Database=i;Username=postgres;Password=0-0-0-", x => x.UseNetTopologySuite());
-                optionsBuilder.UseNpgsql("Host=localhost;Database=i;Username=" + AccountController.current_user + "; Password=" + AccountController.current_user_password + ";", x => x.UseNetTopologySuite());
+                // optionsBuilder.UseNpgsql("Host=localhost;Database=i;Username=" + AccountController.current_user + "; Password=" + AccountController.current_user_password + ";", x => x.UseNetTopologySuite());
+                optionsBuilder.UseNpgsql(conn, x => x.UseNetTopologySuite());
+
             }
         }
 
@@ -41,6 +53,7 @@ namespace Geoportal
             {
                 entity.HasKey(e => e.DemandArchiveErsNr)
                     .HasName("demand_archive_pkey");
+                    
 
                 entity.ToTable("demand_archive_ers", "archive");
 
@@ -241,6 +254,7 @@ namespace Geoportal
                     .HasColumnName("files_type")
                     .HasDefaultValueSql("0")
                     .ForNpgsqlHasComment("Тип файла");
+                    
 
                 entity.Property(e => e.Md5)
                     .HasColumnName("md5")

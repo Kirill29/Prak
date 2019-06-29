@@ -1,46 +1,96 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Npgsql;
+using Geoportal.Controllers;
+using Geoportal.Services;
+using Geoportal.Models;
 
-// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace Geoportal.Controllers
 {
     public class RamkaController : Controller
     {
-        // GET: /<controller>/
-        public IActionResult Ramka()
+        private IConnectionString _connectionString;
+        public RamkaController(IConnectionString connection)
         {
+            _connectionString = connection;
+        }
+       
+        [Authorize]
+        public IActionResult Ramka(string button)
+        {
+            
             return View();
         }
-        [HttpPost]
 
-        public IActionResult Add(string WKT_string)
+
+
+        [Authorize]
+        public IActionResult Add_WKT(string WKT_string, string cmr_name_value)
+
         {
-                //string w = "POLYGON((-71.1776585052917 42.3902909739571, -71.1776820268866 42.3903701743239,-71.1776063012595 42.3903825660754, -71.1775826583081 42.3903033653531, -71.1776585052917 42.3902909739571))";
-           
-
-           var connString = "Host=localhost;Database=i;Username=testuser;Password=0-0-0-";
-
-            using (var conn = new NpgsqlConnection(connString))
+            int Cmr_Id;
+            string id_or_exception;
+           // var connString = "Host=localhost;Database=i;Username=" + AccountController.current_user + "; Password=" + AccountController.current_user_password + ";";
+            Create_shape creator = new Create_shape_WKT();
+            Shape shape_wkt = creator.Create(cmr_name_value, WKT_string, _connectionString.GetConnectionString());
+            id_or_exception = shape_wkt.Add_shape();
+            if (!(int.TryParse(id_or_exception, out Cmr_Id)))
             {
-                conn.Open();
-
-                // Insert some data
-                using (var cmd = new NpgsqlCommand())
-                {
-                    cmd.Connection = conn;
-                    //cmd.CommandText = "INSERT INTO data.cmr(cmr_ident,cmr_name, geom) VALUES ('2', 'lol', ST_GeomFromText('LINESTRING(-71.160281 42.258729,-71.160837 42.259113,-71.161144 42.25932)'));";
-                    // cmd.Parameters.AddWithValue("p", "{0}, {1}, ST_GeomFromText({2},4326)");
-                    cmd.CommandText = "INSERT INTO data.cmr(cmr_ident,cmr_name, geom) VALUES ('2', 'now', ST_GeomFromText('"+ WKT_string + "',4326));";
-                    cmd.ExecuteNonQuery();
-                }
-                return RedirectToAction("Ramka"); 
-
+                return Content(id_or_exception);
             }
+            return RedirectToAction("Save_filescmr","File", new { cmr_Id = Cmr_Id, Switch_shape = "SHP" });
         }
+
+        [Authorize]
+        public IActionResult Add_SHP(string geometry, string cmr_name_value_shp)
+
+        {
+            int Cmr_Id;
+            string id_or_exception;
+            //var connString = "Host=localhost;Database=i;Username=" + AccountController.current_user + "; Password=" + AccountController.current_user_password + ";";
+            Create_shape creator = new Create_shape_SHP();
+            Shape shape_shp = creator.Create(cmr_name_value_shp, geometry, _connectionString.GetConnectionString());
+            id_or_exception = shape_shp.Add_shape();
+            if (!(int.TryParse(id_or_exception, out Cmr_Id)))
+            {
+                return Content(id_or_exception);
+            }
+            return RedirectToAction("Save_filescmr", "File", new { cmr_Id = Cmr_Id , Switch_shape ="WKT"});
+
+        }
+
+
+        [Authorize]
+        public IActionResult Ramka_Added_WKT(int cmr_Id)
+        {
+           ViewData["Cmr_id"] = cmr_Id;
+            return View();
+        }
+        [Authorize]
+        public IActionResult Ramka_Added_SHP(int cmr_Id)
+        {
+            ViewData["Cmr_id"] = cmr_Id;
+            return View();
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
+
+
+
+
+
 }
+

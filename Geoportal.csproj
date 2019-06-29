@@ -30,7 +30,6 @@
   <ItemGroup>
     <Folder Include="Data\" />
     <Folder Include="Views\Создать папку\" />
-    <Folder Include="Views\Ramka\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="FileModel.cs" />
@@ -51,7 +50,6 @@
     <Content Remove="wwwroot\Files\000000010024.jpg" />
     <Content Remove="web.json" />
     <Content Remove="Views\Shared\Ramka.cshtml" />
-    <Content Remove="Views\Ramka\Ramka.cshtml" />
     <Content Remove="wwwroot\js\shp.js.html" />
     <Content Remove="Views\Home\Privacy.cshtml" />
     <Content Remove="wwwroot\js\Ramka1.js" />
@@ -72,4 +70,5 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 </Project>

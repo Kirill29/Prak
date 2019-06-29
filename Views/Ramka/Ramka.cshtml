@@ -1,18 +1,130 @@
-﻿
-
-@{
+﻿@{
     ViewBag.Title = "Главная страница";
 }
 <!-- <script src="/js/Ramka"></script>    -->
+<head>
+    <link rel="stylesheet" href="/css/leaflet.css" />
+    <script src="/js/leaflet.js" type="text/javascript"></script>
+    <script src="/js/shp.js" type="text/javascript"></script>
+    <script src="/js/leaflet.shpfile.js" type="text/javascript"></script>
+    <script src="/js/wicket.js" type="text/javascript"></script>
+    <script src="/js/wicket-gmap3.js" type="text/javascript"></script>
+    <script src="/js/leaflet-offline.js" type="text/javascript"></script>
+
+</head>
 <body>
-    @using (Html.BeginForm())
-    {
-        <label>Wkt_string</label>
-        <input type="text" name="WKT_string" />
-        <button asp-action="Add" asp-controller="File">Добавить</button>
-    }
+    <style type="text/css">
+        .tabs {
+            width: 100%;
+            padding: 0px;
+            margin: 0 auto;
+        }
 
-    <div id="mapid" style="width: 800px; height: 500px;"></div>
+            .tabs > input {
+                display: none;
+            }
+
+            .tabs > div {
+                display: none;
+                padding: 12px;
+                border: 1px solid #C0C0C0;
+                background: #FFFFFF;
+            }
+
+            .tabs > label {
+                display: inline-block;
+                padding: 7px;
+                margin: 0 -5px -1px 0;
+                text-align: center;
+                color: #666666;
+                border: 1px solid #C0C0C0;
+                background: #E0E0E0;
+                cursor: pointer;
+            }
+
+            .tabs > input:checked + label {
+                color: #000000;
+                border: 1px solid #C0C0C0;
+                border-bottom: 1px solid #FFFFFF;
+                background: #FFFFFF;
+            }
+
+        #tab_1:checked ~ #txt_1,
+        #tab_2:checked ~ #txt_2,
+        #tab_3:checked ~ #txt_3,
+        #tab_4:checked ~ #txt_4 {
+            display: block;
+        }
+    </style>
+
+    
+            <div id="mapid" style="width: 800px; height: 500px;"></div>
+            
+            <div class="tabs">
+                <input type="radio" name="inset" value="" id="tab_1" checked>
+                <label for="tab_1">WKT</label>
+
+                <input type="radio" name="inset" value="" id="tab_2">
+                <label for="tab_2">SHP</label>
+                <div id="txt_1">
+                    <form asp-action="Add_WKT" asp-controller="Ramka">
+                        <label>Название рамки для WKT строки</label>
+                        <p>
+                            <input type="text" name="cmr_name_value" id="cmr_name_value" />
+                        </p>
+
+
+                        <label>WKT строка</label>
+
+                        <p>
+                            <input type="text" name="WKT_string" id="Wkt_string" onkeydown="this.style.width = ((this.value.length + 1) * 8) + 'px';" />
+
+                        </p>
+                        <p>
+                            <input type='button'name="button"  id='btnLoad' value='Отобразить на карте' onclick='Display();'>
+
+                        </p>
+
+
+                        <hr>
+                        <button asp-action="Add_WKT" asp-controller="Ramka" type="submit">Добавить в базу данных</button>
+                    </form>
+                </div>
+                <div id="txt_2">
+                    <form asp-action="Add_SHP" asp-controller="Ramka" method="post" enctype="multipart/form-data">
+                        <!-- >  -->
+
+                        <label>Название  рамки для  sph-файла</label>
+
+                        <p>
+                            <input type="text" name="cmr_name_value_shp" id="cmr_name_value1" />
+                        </p>
+                        <input type='file' id='fileinput'>
+
+                        <p>
+
+                            <input type='button' id='btnLoad' value='Отобразить на карте' onclick='loadFile();'>
+                        </p>
+
+                        <p>
+
+                            <input type="hidden"  id="geo" value="add gadget" name="geometry" />
+                        </p>
+
+                        <hr>
+
+
+                        <p>
+                            <!-- <button type="submit">Добавить в базу данных</button>   -->
+                            <!-- <input class="btn-default" type="submit" id="btnSave" value="Save" asp-action="Add_shp" asp-controller="File" /> -->
+                            <button id="btnSave" name="button"  type="submit">Добавить в базу данных</button>
+                        </p>
+
+                    </form>
+                </div>
+
+            </div>
+    
 
 
 
@@ -20,6 +132,35 @@
 
 
 
+
+    @*<div id="mapid" style="width: 800px; height: 500px;"></div>
+
+
+        <form asp-action="Add_WKT" asp-controller="File">
+            <label>Имя рамки wkt</label>
+            <input type="text" name="cmr_name_value" id="cmr_name_value" />
+            <label>WKT строка</label>
+            <input type="text" name="WKT_string" id="Wkt_string" />
+            <button asp-action="Add" asp-controller="File" type="submit">Добавить</button>
+        </form>
+
+
+
+        <form asp-action="Add_shp" asp-controller="File">
+            <label>Имя рамки sph</label>
+            <input type="text" name="cmr_name_value1" id="cmr_name_value1" />
+            <input type='file' id='fileinput'>
+            <input type='button' id='btnLoad' value='Load' onclick='loadFile();'>
+            <button asp-action="Add_shp" asp-controller="File">Добавить</button>
+        </form>*@
+
+
+
+    <script src="/js/turf.js" charset="utf-8" type="text/javascript"></script>
+
+    <script src="/js/map.js" type="text/javascript"></script>
+    <script src="/js/Add_shp.js" type="text/javascript"></script>
+    <script src="/js/Add_WKT.js" type="text/javascript"></script>
 
 
 

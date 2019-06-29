@@ -9,18 +9,32 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using Npgsql;
+using Microsoft.Extensions.Configuration;
+using Geoportal.Services;
 
 namespace Geoportal.Controllers
 {//controller to manage login
     public class AccountController : Controller
     {
-        public static string current_user="";
-        public static string current_user_password = "";
-       
+        
+        private IConfiguration _configuration;
+        private IConnectionString _connectionString;
+        
+        public static string Current_user { get; private set; }
+      
+
+        public AccountController(IConfiguration configuration, IConnectionString connectionString)
+        {
+            _configuration = configuration;
+            _connectionString = connectionString;
+        }
+
+
         [HttpGet]
         public IActionResult Login()
         {
             return View();
+            
         }
 
         [HttpPost]
@@ -29,10 +43,18 @@ namespace Geoportal.Controllers
         {
             if (ModelState.IsValid)
             {
+                User user = new User()
+                {
+                    Login = model.Login,
+                    Password = model.Password
+
+                };
+                // _configuration["DefaultConnection"]=connn.;
+                _connectionString.SetConnectionString(user);
                 //try to connect to database with user's login and password
                 try
                 {
-                    var connString = "Host=localhost;Database=i;Username=" + model.Login + ";Password=" + model.Password + ";";
+                    var connString =_connectionString.GetConnectionString();
 
                     using (var conn = new NpgsqlConnection(connString))
                     {
@@ -62,13 +84,18 @@ namespace Geoportal.Controllers
 
                 await Authenticate(model.Login); // authecation
                 //
-                current_user = model.Login;
-                current_user_password = model.Password;
+               
                 //give user permission to work with  database
                 Give_Permission();
+                Current_user = model.Login;
+                
                 //redirect to file transfer page
                 return RedirectToAction("Send", "File");
             }
+
+           
+
+
             return View(model);
         }
        
@@ -94,7 +121,7 @@ namespace Geoportal.Controllers
             {
 
 
-                var connString = "Host=localhost;Database=i;Username="+current_user+"; Password="+current_user_password+";";
+                var connString =_configuration["Admin"];
 
                 using (var conn = new NpgsqlConnection(connString))
                 {
@@ -104,7 +131,7 @@ namespace Geoportal.Controllers
                     using (var cmd = new NpgsqlCommand())
                     {
                         cmd.Connection = conn;
-                        cmd.CommandText = "ALTER USER " + current_user + " WITH NOSUPERUSER;";
+                        cmd.CommandText = "ALTER USER " + (User.FindFirst(ClaimTypes.Name).Value) + " WITH NOSUPERUSER;";
                         cmd.ExecuteNonQuery();
                        
                     }
@@ -120,13 +147,13 @@ namespace Geoportal.Controllers
                 return Content(exception.Message);
 
             }
-            if (current_user == "")
+            if (string.IsNullOrEmpty((User.FindFirst(ClaimTypes.Name).Value)))
             {
                 return Content("Сначала необходимо войти в систему!");
             }
             else
             {
-                current_user = "";
+              
                 return RedirectToAction("Index", "Home");
 
             }
@@ -139,7 +166,7 @@ namespace Geoportal.Controllers
             {
 
 
-                var connString = "Host=localhost;Database=i;Username=postgres;Password=0-0-0-";
+                var connString =_configuration["Admin"];
 
                 using (var conn = new NpgsqlConnection(connString))
                 {
@@ -149,7 +176,7 @@ namespace Geoportal.Controllers
                     using (var cmd = new NpgsqlCommand())
                     {
                         cmd.Connection = conn;
-                        cmd.CommandText = "ALTER USER " + current_user + " WITH SUPERUSER;";
+                        cmd.CommandText = "ALTER USER " + User.FindFirst(ClaimTypes.Name).Value + " WITH SUPERUSER;";
                         cmd.ExecuteNonQuery();
 
                     }

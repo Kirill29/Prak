@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Geoportal.DemandArchiveErs>
+﻿@model List<Geoportal.FilesCmr>
 @{
     Layout = "_Layout";
 }
@@ -11,27 +11,63 @@
 <body>
     <a href="/File/Send">Добавить новый файл</a>
     <br />
-      <a asp-action="Ramka" asp-controller="File">Добавить рамку</a>
-    <!-- <button name="button" value="ramka">Добавить рамку</button>-->
+    <a asp-action="Ramka" asp-controller="Ramka">Добавить рамку</a>
+   
+    <form asp-controller="File"
+          asp-action="Index" method="post">
+
+
+        <input type="submit" name="button" value="ramka">Добавить рамку</>
+    </form>
 
     <div>
-        <h3>Вы добавили файлы: </h3>
-        <h2>Путь к каталогу: </h2>
-        <p>@ViewData["Path"]</p>
+        <h3>Имена файлов:</h3>
+        <ul>
+            @foreach (var file in Model)
+            {
+                <li>@file.FileName</li>
+            }
+        </ul>
+        <br />
+        <h2>Каталог для файлов: </h2>
+        <ul>
+            @foreach (var file in Model)
+            {
+                <li>@file.RootDir</li>
+            }
+        </ul>
+        <br />
+        <h2>Размер файлов в битах: </h2>
+        <ul>
+            @foreach (var file in Model)
+            {
+                <li>@file.FileSize</li>
+            }
+        </ul>
+        <br />
+        <h2>Дата запроса: </h2>
+        <ul>
+            @foreach (var file in Model)
+            {
+                <li>@file.DateSendDemand.Value.ToString("d") </li>
+            }
+        </ul>
         <br />
         <h2>"№ пакета архивирования:</h2>
-        <p>@ViewData["ID"]</p>
+        <ul>
+            @foreach (var file in Model)
+            {
+                <li>@file.DemandArchiveErsNr</li>
+            }
+        </ul>
         <br />
         <h2>"№ файла в пакете</h2>
-
-        @foreach (var files_id in (List<long?>)ViewBag.FilesID)
-        {
-            <p>@files_id.ToString()</p>
-        }
-
-
-
-
+        <ul>
+            @foreach (var file in Model)
+            {
+                <li>@file.FilesDemandArchiveNr</li>
+            }
+        </ul>
     </div>
 
 </body>
