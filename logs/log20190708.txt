@@ -1,0 +1,46 @@
+2019-07-08 13:16:42.423 +03:00 [FTL] Некорректные логин и(или) пароль
+Npgsql.PostgresException (0x80004005): 28P01: ������������ "anton" �� ������ �������� ����������� (�� ������)
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass161_0.<<ReadMessage>g__ReadMessageLong|0>d.MoveNext() in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.cs:line 1003
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass161_0.<<ReadMessage>g__ReadMessageLong|0>d.MoveNext() in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.cs:line 1032
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnector.AuthenticateMD5(String username, Byte[] salt, Boolean async) in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.Auth.cs:line 132
+   at Npgsql.NpgsqlConnector.Authenticate(String username, NpgsqlTimeout timeout, Boolean async) in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.Auth.cs:line 38
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken) in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.cs:line 425
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken) in C:\projects\npgsql\src\Npgsql\ConnectorPool.cs:line 246
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext() in C:\projects\npgsql\src\Npgsql\NpgsqlConnection.cs:line 301
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnection.Open() in C:\projects\npgsql\src\Npgsql\NpgsqlConnection.cs:line 153
+   at Geoportal.Controllers.AccountController.Login(LoginModel model) in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\AccountController.cs:line 74
+2019-07-08 13:16:58.387 +03:00 [FTL] Error in grant user permission to work with database
+Npgsql.PostgresException (0x80004005): 42601: ошибка синтаксиса (примерное положение: "$1")
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass161_0.<<ReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass161_0.<<ReadMessage>g__ReadMessageLong|0>d.MoveNext() in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.cs:line 1032
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming) in C:\projects\npgsql\src\Npgsql\NpgsqlDataReader.cs:line 444
+   at Npgsql.NpgsqlDataReader.NextResult() in C:\projects\npgsql\src\Npgsql\NpgsqlDataReader.cs:line 332
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken) in C:\projects\npgsql\src\Npgsql\NpgsqlCommand.cs:line 1218
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery(Boolean async, CancellationToken cancellationToken) in C:\projects\npgsql\src\Npgsql\NpgsqlCommand.cs:line 1042
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery() in C:\projects\npgsql\src\Npgsql\NpgsqlCommand.cs:line 1025
+   at Geoportal.Controllers.AccountController.Give_Permission() in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\AccountController.cs:line 213
+2019-07-08 13:16:58.394 +03:00 [INF] User user3 logged in
+2019-07-08 13:17:15.333 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83686
+2019-07-08 13:17:15.338 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_08_07_2019_(01_17_15)
+2019-07-08 13:17:15.882 +03:00 [INF] All file's attributes were saved
+2019-07-08 13:17:45.767 +03:00 [INF] SHP Shape Added ID: 5091 , Name: ki 
+2019-07-08 13:17:46.236 +03:00 [INF] Files' attributes were saved in files_cmr
+2019-07-08 14:30:02.023 +03:00 [ERR] Error while adding drawded shape Host can't be null
+2019-07-08 14:34:57.004 +03:00 [ERR] Error while adding drawded shape XX000: invalid GeoJson representation
+2019-07-08 15:25:20.365 +03:00 [ERR] Error while adding drawded shape 42883: функция st_union(text, text, text) не существует
+2019-07-08 15:25:20.365 +03:00 [ERR] Error while adding drawded shape 42883: функция st_union(text, text, text) не существует
+2019-07-08 15:27:54.428 +03:00 [ERR] Error while adding drawded shape 42883: функция st_union(geometry, geometry, geometry) не существует
+2019-07-08 15:40:37.381 +03:00 [ERR] Error while adding drawded shape XX000: unexpected character (at offset 0)
+2019-07-08 15:45:15.528 +03:00 [ERR] Error while adding drawded shape XX000: unexpected character (at offset 0)
+2019-07-08 16:09:49.765 +03:00 [ERR] Error while adding drawded shape XX000: unexpected character (at offset 0)
+2019-07-08 23:14:40.194 +03:00 [ERR] Error while adding drawded shape 42703: столбец "wkt_geometry" не существует
+2019-07-08 23:26:31.683 +03:00 [ERR] Error while adding drawded shape XX000: unexpected character (at offset 0)
+2019-07-08 23:28:20.788 +03:00 [ERR] Error while adding drawded shape XX000: lwgeom_union: GEOS Error: TopologyException: Input geom 0 is invalid: Self-intersection at or near point -482.44886177369625 37.7795342481134 at -482.44886177369625 37.7795342481134
+2019-07-08 23:30:34.688 +03:00 [ERR] Error while adding drawded shape XX000: unexpected character (at offset 0)
+2019-07-08 23:36:16.302 +03:00 [ERR] Error while adding drawded shape XX000: unexpected character (at offset 0)
+2019-07-08 23:40:20.073 +03:00 [ERR] Error while adding drawded shape XX000: unexpected character (at offset 0)

@@ -22,8 +22,9 @@ namespace Geoportal.Controllers
         public IActionResult Index()
         {
             return View();
-            //return Content(User.Identity.Name);
+           
         }
+       
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

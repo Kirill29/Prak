@@ -1,3 +1,0 @@
-﻿workstations_nr=46
-region_types_nr=2
-confirm_delete_after_archive=8

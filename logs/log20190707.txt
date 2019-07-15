@@ -1,0 +1,48 @@
+2019-07-07 18:28:35.430 +03:00 [INF] User user3 logged in
+2019-07-07 18:28:42.806 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83685
+2019-07-07 18:28:42.809 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_07_07_2019_(06_28_42)
+2019-07-07 18:28:42.941 +03:00 [INF] All file's attributes were saved
+2019-07-07 18:29:28.082 +03:00 [INF] WKT Shape Added ID: 5090 , Name: tyu 
+2019-07-07 18:29:28.264 +03:00 [INF] User has chosen SHP
+2019-07-07 18:54:10.934 +03:00 [FTL] Error while saving data in demandArchiveErs
+System.ArgumentNullException: Value cannot be null.
+Parameter name: connectionString
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Utilities.Check.NotEmpty(String value, String parameterName) in C:\projects\npgsql-entityframeworkcore-postgresql\src\EFCore.PG\Utilities\Check.cs:line 76
+   at Microsoft.EntityFrameworkCore.NpgsqlDbContextOptionsExtensions.UseNpgsql(DbContextOptionsBuilder optionsBuilder, String connectionString, Action`1 npgsqlOptionsAction) in C:\projects\npgsql-entityframeworkcore-postgresql\src\EFCore.PG\Extensions\NpgsqlDbContextOptionsExtensions.cs:line 33
+   at Geoportal.iContext.OnConfiguring(DbContextOptionsBuilder optionsBuilder) in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Models\iContext.cs:line 39
+   at Microsoft.EntityFrameworkCore.DbContext.get_InternalServiceProvider()
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.EntryWithoutDetectChanges[TEntity](TEntity entity)
+   at Microsoft.EntityFrameworkCore.DbContext.SetEntityState[TEntity](TEntity entity, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.DbContext.Add[TEntity](TEntity entity)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Add(TEntity entity)
+   at Geoportal.Controllers.FileController.Save_Package_atrributes(DemandArchiveErs DAE) in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\FileController.cs:line 208
+   at Geoportal.Controllers.FileController.Upload() in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\FileController.cs:line 62
+2019-07-07 19:35:38.573 +03:00 [FTL] Error while saving data in demandArchiveErs
+System.ArgumentNullException: Value cannot be null.
+Parameter name: connectionString
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Utilities.Check.NotEmpty(String value, String parameterName) in C:\projects\npgsql-entityframeworkcore-postgresql\src\EFCore.PG\Utilities\Check.cs:line 76
+   at Microsoft.EntityFrameworkCore.NpgsqlDbContextOptionsExtensions.UseNpgsql(DbContextOptionsBuilder optionsBuilder, String connectionString, Action`1 npgsqlOptionsAction) in C:\projects\npgsql-entityframeworkcore-postgresql\src\EFCore.PG\Extensions\NpgsqlDbContextOptionsExtensions.cs:line 33
+   at Geoportal.iContext.OnConfiguring(DbContextOptionsBuilder optionsBuilder) in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Models\iContext.cs:line 39
+   at Microsoft.EntityFrameworkCore.DbContext.get_InternalServiceProvider()
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.EntryWithoutDetectChanges[TEntity](TEntity entity)
+   at Microsoft.EntityFrameworkCore.DbContext.SetEntityState[TEntity](TEntity entity, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.DbContext.Add[TEntity](TEntity entity)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Add(TEntity entity)
+   at Geoportal.Controllers.FileController.Save_Package_atrributes(DemandArchiveErs DAE) in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\FileController.cs:line 208
+   at Geoportal.Controllers.FileController.Upload() in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\FileController.cs:line 62
+2019-07-07 19:36:01.681 +03:00 [FTL] Error while saving data in demandArchiveErs
+System.ArgumentNullException: Value cannot be null.
+Parameter name: connectionString
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Utilities.Check.NotEmpty(String value, String parameterName) in C:\projects\npgsql-entityframeworkcore-postgresql\src\EFCore.PG\Utilities\Check.cs:line 76
+   at Microsoft.EntityFrameworkCore.NpgsqlDbContextOptionsExtensions.UseNpgsql(DbContextOptionsBuilder optionsBuilder, String connectionString, Action`1 npgsqlOptionsAction) in C:\projects\npgsql-entityframeworkcore-postgresql\src\EFCore.PG\Extensions\NpgsqlDbContextOptionsExtensions.cs:line 33
+   at Geoportal.iContext.OnConfiguring(DbContextOptionsBuilder optionsBuilder) in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Models\iContext.cs:line 39
+   at Microsoft.EntityFrameworkCore.DbContext.get_InternalServiceProvider()
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.EntryWithoutDetectChanges[TEntity](TEntity entity)
+   at Microsoft.EntityFrameworkCore.DbContext.SetEntityState[TEntity](TEntity entity, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.DbContext.Add[TEntity](TEntity entity)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Add(TEntity entity)
+   at Geoportal.Controllers.FileController.Save_Package_atrributes(DemandArchiveErs DAE) in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\FileController.cs:line 208
+   at Geoportal.Controllers.FileController.Upload() in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\FileController.cs:line 62

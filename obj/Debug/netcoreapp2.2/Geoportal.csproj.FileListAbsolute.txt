@@ -64,11 +64,12 @@ C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Geopor
 C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Geoportal.Views.pdb
 C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Geoportal.csproj.CopyComplete
 C:\Users\Кирилл\Desktop\Geoportal\Geoportal\bin\Debug\netcoreapp2.2\wwwroot\js\Add_shp.js
-C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Geoportal.csprojAssemblyReference.cache
-C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\EFCoreNpgsqlNetTopologySuite.cs
 C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Razor\Views\View.g.cshtml.cs
 C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Razor\Views\Account\Login.g.cshtml.cs
 C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Razor\Views\File\Send.g.cshtml.cs
 C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Razor\Views\Ramka\Ramka.g.cshtml.cs
 C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Razor\Views\Ramka\Ramka_Added_SHP.g.cshtml.cs
 C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Razor\Views\Ramka\Ramka_Added_WKT.g.cshtml.cs
+C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Razor\Views\Ramka\Ramka_Draw.g.cshtml.cs
+C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\EFCoreNpgsqlNetTopologySuite.cs
+C:\Users\Кирилл\Desktop\Geoportal\Geoportal\obj\Debug\netcoreapp2.2\Razor\Views\Ramka\Ramka_Added_Draw.g.cshtml.cs

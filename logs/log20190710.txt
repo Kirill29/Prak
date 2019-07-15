@@ -1,0 +1,35 @@
+2019-07-10 02:16:45.658 +03:00 [INF] Drawded Shape Added ID: 5099 , Name: ен 
+2019-07-10 02:29:09.609 +03:00 [INF] User user3 logged in
+2019-07-10 02:29:26.029 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83753
+2019-07-10 02:29:26.032 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_10_07_2019_(02_29_26)
+2019-07-10 02:29:27.775 +03:00 [INF] All file's attributes were saved
+2019-07-10 02:30:05.764 +03:00 [INF] User  logged out
+2019-07-10 03:23:08.974 +03:00 [INF] User user3 logged in
+2019-07-10 03:23:18.684 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83754
+2019-07-10 03:23:18.685 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_10_07_2019_(03_23_18)
+2019-07-10 03:23:19.013 +03:00 [INF] All file's attributes were saved
+2019-07-10 03:24:03.222 +03:00 [INF] User  logged out
+2019-07-10 03:31:03.552 +03:00 [INF] User user3 logged in
+2019-07-10 03:31:10.466 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83755
+2019-07-10 03:31:10.467 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_10_07_2019_(03_31_10)
+2019-07-10 03:31:10.573 +03:00 [INF] All file's attributes were saved
+2019-07-10 03:31:33.158 +03:00 [INF] User  logged out
+2019-07-10 03:56:48.083 +03:00 [INF] User user3 logged in
+2019-07-10 03:56:58.829 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83756
+2019-07-10 03:56:58.830 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_10_07_2019_(03_56_58)
+2019-07-10 03:56:58.951 +03:00 [INF] All file's attributes were saved
+2019-07-10 03:58:56.492 +03:00 [INF] User user3 logged in
+2019-07-10 03:59:04.359 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83757
+2019-07-10 03:59:04.360 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_10_07_2019_(03_59_04)
+2019-07-10 03:59:04.448 +03:00 [INF] All file's attributes were saved
+2019-07-10 04:03:36.926 +03:00 [INF] User user3 logged in
+2019-07-10 04:03:48.571 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83758
+2019-07-10 04:03:48.572 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_10_07_2019_(04_03_48)
+2019-07-10 04:03:48.691 +03:00 [INF] All file's attributes were saved
+2019-07-10 12:14:34.754 +03:00 [INF] User user3 logged in
+2019-07-10 12:14:47.463 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83759
+2019-07-10 12:14:47.468 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_10_07_2019_(12_14_47)
+2019-07-10 12:14:47.730 +03:00 [INF] All file's attributes were saved
+2019-07-10 12:15:20.095 +03:00 [INF] Drawded Shape Added ID: 5101 , Name: uy 
+2019-07-10 12:15:20.483 +03:00 [INF] Files' attributes were saved in files_cmr
+2019-07-10 12:15:28.691 +03:00 [INF] User  logged out

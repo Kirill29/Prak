@@ -22,6 +22,7 @@ using Serilog.Sinks;
 using System.IO;
 using Geoportal.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Geoportal.Services.Logging;
 
 namespace Geoportal
 {
@@ -40,6 +41,7 @@ namespace Geoportal
              .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
              .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
             Configuration = builder.Build();
+           
         }
 
         public IConfiguration Configuration { get; }
@@ -69,14 +71,14 @@ namespace Geoportal
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(options => //CookieAuthenticationOptions
                 {
-                    options.LoginPath = new Microsoft.AspNetCore.Http.PathString("/Account/Login");
+                    options.LoginPath = new PathString("/Account/Login");
                 });
 
            
             services.AddSingleton<IConnectionString, ConnectionString>();
             services.AddSingleton<IConfiguration>(Configuration);
             services.AddTransient<ISave_Files, Save_Files>();
-
+            services.AddSingleton<ILogger_custom, Logger_Serilog >();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
         }
@@ -84,8 +86,8 @@ namespace Geoportal
 
 
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env ,ILoggerFactory loggerFactory)
+       
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             string path_to_log = Path.Combine("logs", "log.txt");
             var log = new LoggerConfiguration()

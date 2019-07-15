@@ -14,10 +14,21 @@
 </head>
 <body>
     <style type="text/css">
+        .btn {
+            font-size: 15px;
+            background-color: #a9a9a9;
+            border: 3px solid #a9a9a9;
+            border-radius: 10px;
+        }
         .tabs {
             width: 100%;
             padding: 0px;
             margin: 0 auto;
+        }
+        #mapid {
+            margin: 5px 0px 5px 0px;
+            width: 100%;
+            height: 500px;
         }
 
             .tabs > input {
@@ -57,102 +68,74 @@
         }
     </style>
 
-    
-            <div id="mapid" style="width: 800px; height: 500px;"></div>
-            
-            <div class="tabs">
-                <input type="radio" name="inset" value="" id="tab_1" checked>
-                <label for="tab_1">WKT</label>
 
-                <input type="radio" name="inset" value="" id="tab_2">
-                <label for="tab_2">SHP</label>
-                <div id="txt_1">
-                    <form asp-action="Add_WKT" asp-controller="Ramka">
-                        <label>Название рамки для WKT строки</label>
-                        <p>
-                            <input type="text" name="cmr_name_value" id="cmr_name_value" />
-                        </p>
+    <div id="mapid" ></div>
 
+    <div class="tabs">
+        <input type="radio" name="inset" value="" id="tab_1" checked>
+        <label for="tab_1">WKT</label>
 
-                        <label>WKT строка</label>
+        <input type="radio" name="inset" value="" id="tab_2">
+        <label for="tab_2">SHP</label>
+        <div id="txt_1">
+            <form asp-action="Add_WKT" asp-controller="Ramka">
 
-                        <p>
-                            <input type="text" name="WKT_string" id="Wkt_string" onkeydown="this.style.width = ((this.value.length + 1) * 8) + 'px';" />
-
-                        </p>
-                        <p>
-                            <input type='button'name="button"  id='btnLoad' value='Отобразить на карте' onclick='Display();'>
-
-                        </p>
-
-
-                        <hr>
-                        <button asp-action="Add_WKT" asp-controller="Ramka" type="submit">Добавить в базу данных</button>
-                    </form>
-                </div>
-                <div id="txt_2">
-                    <form asp-action="Add_SHP" asp-controller="Ramka" method="post" enctype="multipart/form-data">
-                        <!-- >  -->
-
-                        <label>Название  рамки для  sph-файла</label>
-
-                        <p>
-                            <input type="text" name="cmr_name_value_shp" id="cmr_name_value1" />
-                        </p>
-                        <input type='file' id='fileinput'>
-
-                        <p>
-
-                            <input type='button' id='btnLoad' value='Отобразить на карте' onclick='loadFile();'>
-                        </p>
-
-                        <p>
-
-                            <input type="hidden"  id="geo" value="add gadget" name="geometry" />
-                        </p>
-
-                        <hr>
-
-
-                        <p>
-                            <!-- <button type="submit">Добавить в базу данных</button>   -->
-                            <!-- <input class="btn-default" type="submit" id="btnSave" value="Save" asp-action="Add_shp" asp-controller="File" /> -->
-                            <button id="btnSave" name="button"  type="submit">Добавить в базу данных</button>
-                        </p>
-
-                    </form>
-                </div>
-
-            </div>
-    
+                <p>
+                    <input type="text" placeholder="Введите название для рамки" class="form-control" name="cmr_name_value" id="cmr_name_value" />
+                </p>
 
 
 
 
+                <p>
+                    <input type="text" placeholder="Введите WKT строку" class="form-control" name="WKT_string" id="Wkt_string" />
+
+                </p>
+                <p>
+
+                    <input type='button' name="button" id='btnLoad' value='Отобразить на карте' onclick='Display();'>
+
+                </p>
 
 
+                <hr>
+               
+                <button asp-action="Add_WKT" asp-controller="Ramka" type="submit" class="btn btn-primary" >Добавить в базу данных</button>
+            </form>
+        </div>
+        <div id="txt_2">
+            <form asp-action="Add_SHP" asp-controller="Ramka" method="post" enctype="multipart/form-data">
+               
+
+                
+
+                <p>
+                    <input type="text" placeholder="Введите название для рамки" class="form-control" name="cmr_name_value_shp" id="cmr_name_value1" />
+                </p>
+                <input type='file' id='fileinput'>
+
+                <p>
+
+                    <input type='button' id='btnLoad' value='Отобразить на карте' onclick='loadFile();'>
+                </p>
+
+                <p>
+
+                    <input type="hidden" id="geo" value="add gadget" name="geometry" />
+                </p>
+
+                <hr>
 
 
-    @*<div id="mapid" style="width: 800px; height: 500px;"></div>
+                <p>
+                   
+                    <button id="btnSave" name="button" type="submit" class="btn btn-primary">Добавить в базу данных</button>
+                </p>
 
+            </form>
+        </div>
 
-        <form asp-action="Add_WKT" asp-controller="File">
-            <label>Имя рамки wkt</label>
-            <input type="text" name="cmr_name_value" id="cmr_name_value" />
-            <label>WKT строка</label>
-            <input type="text" name="WKT_string" id="Wkt_string" />
-            <button asp-action="Add" asp-controller="File" type="submit">Добавить</button>
-        </form>
-
-
-
-        <form asp-action="Add_shp" asp-controller="File">
-            <label>Имя рамки sph</label>
-            <input type="text" name="cmr_name_value1" id="cmr_name_value1" />
-            <input type='file' id='fileinput'>
-            <input type='button' id='btnLoad' value='Load' onclick='loadFile();'>
-            <button asp-action="Add_shp" asp-controller="File">Добавить</button>
-        </form>*@
+    </div>
 
 
 
@@ -173,8 +156,3 @@
 
 
 </body>
-
-
-
-
-

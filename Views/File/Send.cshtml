@@ -2,17 +2,60 @@
 @{
     Layout = "_Layout";
 }
+<head>
 
+    <script src="~/js/dropzone.js"></script>
+    <link rel="stylesheet" href="~/css/dropzone.css">
+
+</head>
+<style>
+  #input-file-now {
+        
+        background-image:url(/css/images/698648-icon-130-cloud-upload-512.png);
+        border: 3px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+        color: #555;
+        display: block;
+        font-size: 20px;
+        height: 512px;
+        width: 512px;
+        padding: 6px 12px;
+        vertical-align: middle;
+         background-position: center  center; 
+         background-repeat: no-repeat;
+}
+  .btn{
+      font-size:20px;
+      background-color:#a9a9a9;
+       border: 3px solid #a9a9a9;
+       border-radius: 10px;
+  }
+       
+
+</style>
 <br />
-<!--Добавление данных в бд-->
-<form asp-action="Add_files" asp-controller="file" method="post" enctype="multipart/form-data">
-    <!--Добавление файлов-->
-<div class="form-group">
-      <input type="file" id="file" name="File_col" multiple />
 
+<form method="post" enctype="multipart/form-data" asp-action="Upload" asp-controller="File">
+    <div>
+        <p style="font-size:22px;">Выберете файлы или перетащите на форму:</p>
+        <div class="file-upload-wrapper input-group input-group-lg">
+            <input type="file" name="files" multiple id="input-file-now" class="file-upload form-control input-lg" />
+        </div>
+        </div>
 
-</div>
-<div class="form-group">
-    <input type="submit" value="Send" class="btn btn-default" />
-</div>
+        <div>
+            <p>
+                <input type="submit" class="btn btn-primary" value="Загрузить" />
+            </p>
+          
+        </div>
 </form>
+<script>
+  $('.file-upload').file_upload();
+ 
+
+
+
+</script>
+

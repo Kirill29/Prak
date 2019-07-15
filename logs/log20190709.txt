@@ -1,0 +1,500 @@
+2019-07-09 12:12:04.399 +03:00 [FTL] Error in grant user permission to work with database
+Npgsql.PostgresException (0x80004005): 42601: ошибка синтаксиса (примерное положение: "$1")
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass161_0.<<ReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass161_0.<<ReadMessage>g__ReadMessageLong|0>d.MoveNext() in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.cs:line 1032
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming) in C:\projects\npgsql\src\Npgsql\NpgsqlDataReader.cs:line 444
+   at Npgsql.NpgsqlDataReader.NextResult() in C:\projects\npgsql\src\Npgsql\NpgsqlDataReader.cs:line 332
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken) in C:\projects\npgsql\src\Npgsql\NpgsqlCommand.cs:line 1218
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery(Boolean async, CancellationToken cancellationToken) in C:\projects\npgsql\src\Npgsql\NpgsqlCommand.cs:line 1042
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery() in C:\projects\npgsql\src\Npgsql\NpgsqlCommand.cs:line 1025
+   at Geoportal.Controllers.AccountController.Give_Permission() in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\AccountController.cs:line 213
+2019-07-09 12:12:04.730 +03:00 [INF] User user3 logged in
+2019-07-09 12:12:18.065 +03:00 [FTL] Error in revoking privileges!
+Npgsql.PostgresException (0x80004005): 42601: ошибка синтаксиса (примерное положение: "$1")
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass161_0.<<ReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass161_0.<<ReadMessage>g__ReadMessageLong|0>d.MoveNext() in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.cs:line 1032
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming) in C:\projects\npgsql\src\Npgsql\NpgsqlDataReader.cs:line 444
+   at Npgsql.NpgsqlDataReader.NextResult() in C:\projects\npgsql\src\Npgsql\NpgsqlDataReader.cs:line 332
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken) in C:\projects\npgsql\src\Npgsql\NpgsqlCommand.cs:line 1218
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery(Boolean async, CancellationToken cancellationToken) in C:\projects\npgsql\src\Npgsql\NpgsqlCommand.cs:line 1042
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery() in C:\projects\npgsql\src\Npgsql\NpgsqlCommand.cs:line 1025
+   at Geoportal.Controllers.AccountController.Logout() in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\AccountController.cs:line 156
+2019-07-09 12:14:37.432 +03:00 [FTL] Error in grant user permission to work with database
+Npgsql.PostgresException (0x80004005): 42601: ошибка синтаксиса (примерное положение: "$1")
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass161_0.<<ReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass161_0.<<ReadMessage>g__ReadMessageLong|0>d.MoveNext() in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.cs:line 1032
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming) in C:\projects\npgsql\src\Npgsql\NpgsqlDataReader.cs:line 444
+   at Npgsql.NpgsqlDataReader.NextResult() in C:\projects\npgsql\src\Npgsql\NpgsqlDataReader.cs:line 332
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken) in C:\projects\npgsql\src\Npgsql\NpgsqlCommand.cs:line 1218
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery(Boolean async, CancellationToken cancellationToken) in C:\projects\npgsql\src\Npgsql\NpgsqlCommand.cs:line 1042
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery() in C:\projects\npgsql\src\Npgsql\NpgsqlCommand.cs:line 1025
+   at Geoportal.Controllers.AccountController.Give_Permission() in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\AccountController.cs:line 213
+2019-07-09 12:14:37.686 +03:00 [INF] User user3 logged in
+2019-07-09 12:17:24.801 +03:00 [FTL] Error in grant user permission to work with database
+Npgsql.PostgresException (0x80004005): 42601: ошибка синтаксиса (примерное положение: "$1")
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass161_0.<<ReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass161_0.<<ReadMessage>g__ReadMessageLong|0>d.MoveNext() in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.cs:line 1032
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming) in C:\projects\npgsql\src\Npgsql\NpgsqlDataReader.cs:line 444
+   at Npgsql.NpgsqlDataReader.NextResult() in C:\projects\npgsql\src\Npgsql\NpgsqlDataReader.cs:line 332
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken) in C:\projects\npgsql\src\Npgsql\NpgsqlCommand.cs:line 1218
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery(Boolean async, CancellationToken cancellationToken) in C:\projects\npgsql\src\Npgsql\NpgsqlCommand.cs:line 1042
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery() in C:\projects\npgsql\src\Npgsql\NpgsqlCommand.cs:line 1025
+   at Geoportal.Controllers.AccountController.Give_Permission() in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\AccountController.cs:line 213
+2019-07-09 12:17:25.014 +03:00 [INF] User user3 logged in
+2019-07-09 12:19:48.879 +03:00 [FTL] Error in grant user permission to work with database
+Npgsql.PostgresException (0x80004005): 42601: ошибка синтаксиса (примерное положение: "$1")
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass161_0.<<ReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass161_0.<<ReadMessage>g__ReadMessageLong|0>d.MoveNext() in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.cs:line 1032
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming) in C:\projects\npgsql\src\Npgsql\NpgsqlDataReader.cs:line 444
+   at Npgsql.NpgsqlDataReader.NextResult() in C:\projects\npgsql\src\Npgsql\NpgsqlDataReader.cs:line 332
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken) in C:\projects\npgsql\src\Npgsql\NpgsqlCommand.cs:line 1218
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery(Boolean async, CancellationToken cancellationToken) in C:\projects\npgsql\src\Npgsql\NpgsqlCommand.cs:line 1042
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery() in C:\projects\npgsql\src\Npgsql\NpgsqlCommand.cs:line 1025
+   at Geoportal.Controllers.AccountController.Give_Permission() in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\AccountController.cs:line 213
+2019-07-09 12:19:49.098 +03:00 [INF] User user3 logged in
+2019-07-09 12:24:04.568 +03:00 [FTL] Error in grant user permission to work with database
+Npgsql.PostgresException (0x80004005): 42601: ошибка синтаксиса (примерное положение: "$1")
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass161_0.<<ReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass161_0.<<ReadMessage>g__ReadMessageLong|0>d.MoveNext() in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.cs:line 1032
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming) in C:\projects\npgsql\src\Npgsql\NpgsqlDataReader.cs:line 444
+   at Npgsql.NpgsqlDataReader.NextResult() in C:\projects\npgsql\src\Npgsql\NpgsqlDataReader.cs:line 332
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken) in C:\projects\npgsql\src\Npgsql\NpgsqlCommand.cs:line 1218
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery(Boolean async, CancellationToken cancellationToken) in C:\projects\npgsql\src\Npgsql\NpgsqlCommand.cs:line 1042
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery() in C:\projects\npgsql\src\Npgsql\NpgsqlCommand.cs:line 1025
+   at Geoportal.Controllers.AccountController.Give_Permission() in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\AccountController.cs:line 213
+2019-07-09 12:24:04.808 +03:00 [INF] User user3 logged in
+2019-07-09 12:28:35.577 +03:00 [FTL] Error in grant user permission to work with database
+Npgsql.PostgresException (0x80004005): 42601: ошибка синтаксиса (примерное положение: "$1")
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass161_0.<<ReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass161_0.<<ReadMessage>g__ReadMessageLong|0>d.MoveNext() in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.cs:line 1032
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming) in C:\projects\npgsql\src\Npgsql\NpgsqlDataReader.cs:line 444
+   at Npgsql.NpgsqlDataReader.NextResult() in C:\projects\npgsql\src\Npgsql\NpgsqlDataReader.cs:line 332
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken) in C:\projects\npgsql\src\Npgsql\NpgsqlCommand.cs:line 1218
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery(Boolean async, CancellationToken cancellationToken) in C:\projects\npgsql\src\Npgsql\NpgsqlCommand.cs:line 1042
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery() in C:\projects\npgsql\src\Npgsql\NpgsqlCommand.cs:line 1025
+   at Geoportal.Controllers.AccountController.Give_Permission() in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\AccountController.cs:line 213
+2019-07-09 12:28:35.805 +03:00 [INF] User user3 logged in
+2019-07-09 18:54:39.281 +03:00 [FTL] Некорректные логин и(или) пароль
+Npgsql.PostgresException (0x80004005): 28P01: ������������ "user3" �� ������ �������� ����������� (�� ������)
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass161_0.<<ReadMessage>g__ReadMessageLong|0>d.MoveNext() in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.cs:line 1003
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass161_0.<<ReadMessage>g__ReadMessageLong|0>d.MoveNext() in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.cs:line 1032
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnector.AuthenticateMD5(String username, Byte[] salt, Boolean async) in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.Auth.cs:line 132
+   at Npgsql.NpgsqlConnector.Authenticate(String username, NpgsqlTimeout timeout, Boolean async) in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.Auth.cs:line 38
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken) in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.cs:line 425
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken) in C:\projects\npgsql\src\Npgsql\ConnectorPool.cs:line 246
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext() in C:\projects\npgsql\src\Npgsql\NpgsqlConnection.cs:line 301
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnection.Open() in C:\projects\npgsql\src\Npgsql\NpgsqlConnection.cs:line 153
+   at Geoportal.Controllers.AccountController.Login(LoginModel model) in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\AccountController.cs:line 74
+2019-07-09 18:58:02.588 +03:00 [INF] User user3 logged in
+2019-07-09 18:58:32.743 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83687
+2019-07-09 18:58:32.744 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(06_58_32)
+2019-07-09 18:58:32.836 +03:00 [FTL] Error while saving data in filesDemandArchiveErs
+System.IO.FileNotFoundException: Could not find file 'C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(06_58_32)'.
+File name: 'C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(06_58_32)'
+   at System.IO.FileInfo.get_Length()
+   at Geoportal.Controllers.FileController.Upload() in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\FileController.cs:line 115
+2019-07-09 18:58:57.615 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83688
+2019-07-09 18:58:57.617 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(06_58_57)
+2019-07-09 19:00:38.714 +03:00 [INF] User user3 logged in
+2019-07-09 19:01:09.784 +03:00 [INF] User  logged out
+2019-07-09 19:02:51.899 +03:00 [INF] User user3 logged in
+2019-07-09 19:03:04.852 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83689
+2019-07-09 19:03:04.853 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(07_03_04)
+2019-07-09 19:03:04.947 +03:00 [FTL] Error while saving data in filesDemandArchiveErs
+System.IO.FileNotFoundException: Could not find file 'C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(07_03_04)'.
+File name: 'C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(07_03_04)'
+   at System.IO.FileInfo.get_Length()
+   at Geoportal.Controllers.FileController.Upload() in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\FileController.cs:line 115
+2019-07-09 19:03:07.383 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83690
+2019-07-09 19:03:07.385 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(07_03_07)
+2019-07-09 19:03:07.427 +03:00 [FTL] Error while saving data in filesDemandArchiveErs
+System.IO.FileNotFoundException: Could not find file 'C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(07_03_07)'.
+File name: 'C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(07_03_07)'
+   at System.IO.FileInfo.get_Length()
+   at Geoportal.Controllers.FileController.Upload() in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\FileController.cs:line 115
+2019-07-09 19:03:08.633 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83691
+2019-07-09 19:03:08.634 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(07_03_08)
+2019-07-09 19:05:13.856 +03:00 [INF] User user1 logged in
+2019-07-09 19:05:21.273 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83692
+2019-07-09 19:05:21.274 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user1\_09_07_2019_(07_05_21)
+2019-07-09 19:05:21.361 +03:00 [FTL] Error while saving data in filesDemandArchiveErs
+System.IO.FileNotFoundException: Could not find file 'C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user1\_09_07_2019_(07_05_21)'.
+File name: 'C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user1\_09_07_2019_(07_05_21)'
+   at System.IO.FileInfo.get_Length()
+   at Geoportal.Controllers.FileController.Upload() in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\FileController.cs:line 115
+2019-07-09 19:05:22.452 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83693
+2019-07-09 19:05:22.453 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user1\_09_07_2019_(07_05_22)
+2019-07-09 19:05:22.456 +03:00 [INF] All file's attributes were saved
+2019-07-09 19:12:04.600 +03:00 [INF] User user3 logged in
+2019-07-09 19:12:10.940 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83694
+2019-07-09 19:12:10.941 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(07_12_10)
+2019-07-09 19:12:11.018 +03:00 [FTL] Error while saving data in filesDemandArchiveErs
+System.IO.FileNotFoundException: Could not find file 'C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(07_12_10)'.
+File name: 'C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(07_12_10)'
+   at System.IO.FileInfo.get_Length()
+   at Geoportal.Controllers.FileController.Upload() in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\FileController.cs:line 115
+2019-07-09 19:12:13.948 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83695
+2019-07-09 19:12:13.949 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(07_12_13)
+2019-07-09 19:12:13.951 +03:00 [INF] All file's attributes were saved
+2019-07-09 19:14:05.771 +03:00 [FTL] Некорректные логин и(или) пароль
+Npgsql.PostgresException (0x80004005): 28P01: ������������ "user23" �� ������ �������� ����������� (�� ������)
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass161_0.<<ReadMessage>g__ReadMessageLong|0>d.MoveNext() in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.cs:line 1003
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass161_0.<<ReadMessage>g__ReadMessageLong|0>d.MoveNext() in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.cs:line 1032
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnector.AuthenticateMD5(String username, Byte[] salt, Boolean async) in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.Auth.cs:line 132
+   at Npgsql.NpgsqlConnector.Authenticate(String username, NpgsqlTimeout timeout, Boolean async) in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.Auth.cs:line 38
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken) in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.cs:line 425
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken) in C:\projects\npgsql\src\Npgsql\ConnectorPool.cs:line 246
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext() in C:\projects\npgsql\src\Npgsql\NpgsqlConnection.cs:line 301
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnection.Open() in C:\projects\npgsql\src\Npgsql\NpgsqlConnection.cs:line 153
+   at Geoportal.Controllers.AccountController.Login(LoginModel model) in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\AccountController.cs:line 74
+2019-07-09 19:14:26.005 +03:00 [INF] User user2 logged in
+2019-07-09 19:14:32.504 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83696
+2019-07-09 19:14:32.505 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user2\_09_07_2019_(07_14_32)
+2019-07-09 19:14:32.597 +03:00 [FTL] Error while saving data in filesDemandArchiveErs
+System.IO.FileNotFoundException: Could not find file 'C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user2\_09_07_2019_(07_14_32)'.
+File name: 'C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user2\_09_07_2019_(07_14_32)'
+   at System.IO.FileInfo.get_Length()
+   at Geoportal.Controllers.FileController.Upload() in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\FileController.cs:line 115
+2019-07-09 19:14:43.027 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83697
+2019-07-09 19:14:43.028 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user2\_09_07_2019_(07_14_43)
+2019-07-09 19:14:43.067 +03:00 [FTL] Error while saving data in filesDemandArchiveErs
+System.IO.FileNotFoundException: Could not find file 'C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user2\_09_07_2019_(07_14_43)'.
+File name: 'C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user2\_09_07_2019_(07_14_43)'
+   at System.IO.FileInfo.get_Length()
+   at Geoportal.Controllers.FileController.Upload() in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\FileController.cs:line 115
+2019-07-09 19:14:47.642 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83698
+2019-07-09 19:14:47.643 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user2\_09_07_2019_(07_14_47)
+2019-07-09 19:14:47.644 +03:00 [INF] All file's attributes were saved
+2019-07-09 19:17:45.208 +03:00 [FTL] Error while saving data in demandArchiveErs
+System.ArgumentNullException: Value cannot be null.
+Parameter name: connectionString
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Utilities.Check.NotEmpty(String value, String parameterName) in C:\projects\npgsql-entityframeworkcore-postgresql\src\EFCore.PG\Utilities\Check.cs:line 76
+   at Microsoft.EntityFrameworkCore.NpgsqlDbContextOptionsExtensions.UseNpgsql(DbContextOptionsBuilder optionsBuilder, String connectionString, Action`1 npgsqlOptionsAction) in C:\projects\npgsql-entityframeworkcore-postgresql\src\EFCore.PG\Extensions\NpgsqlDbContextOptionsExtensions.cs:line 33
+   at Geoportal.iContext.OnConfiguring(DbContextOptionsBuilder optionsBuilder) in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Models\iContext.cs:line 39
+   at Microsoft.EntityFrameworkCore.DbContext.get_InternalServiceProvider()
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.EntryWithoutDetectChanges[TEntity](TEntity entity)
+   at Microsoft.EntityFrameworkCore.DbContext.SetEntityState[TEntity](TEntity entity, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.DbContext.Add[TEntity](TEntity entity)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Add(TEntity entity)
+   at Geoportal.Controllers.FileController.Save_Package_atrributes(DemandArchiveErs DAE) in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\FileController.cs:line 208
+   at Geoportal.Controllers.FileController.Upload() in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\FileController.cs:line 62
+2019-07-09 19:18:00.414 +03:00 [FTL] Error while saving data in demandArchiveErs
+System.ArgumentNullException: Value cannot be null.
+Parameter name: connectionString
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Utilities.Check.NotEmpty(String value, String parameterName) in C:\projects\npgsql-entityframeworkcore-postgresql\src\EFCore.PG\Utilities\Check.cs:line 76
+   at Microsoft.EntityFrameworkCore.NpgsqlDbContextOptionsExtensions.UseNpgsql(DbContextOptionsBuilder optionsBuilder, String connectionString, Action`1 npgsqlOptionsAction) in C:\projects\npgsql-entityframeworkcore-postgresql\src\EFCore.PG\Extensions\NpgsqlDbContextOptionsExtensions.cs:line 33
+   at Geoportal.iContext.OnConfiguring(DbContextOptionsBuilder optionsBuilder) in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Models\iContext.cs:line 39
+   at Microsoft.EntityFrameworkCore.DbContext.get_InternalServiceProvider()
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.EntryWithoutDetectChanges[TEntity](TEntity entity)
+   at Microsoft.EntityFrameworkCore.DbContext.SetEntityState[TEntity](TEntity entity, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.DbContext.Add[TEntity](TEntity entity)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Add(TEntity entity)
+   at Geoportal.Controllers.FileController.Save_Package_atrributes(DemandArchiveErs DAE) in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\FileController.cs:line 208
+   at Geoportal.Controllers.FileController.Upload() in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\FileController.cs:line 62
+2019-07-09 19:18:14.568 +03:00 [FTL] Error while saving data in demandArchiveErs
+System.ArgumentNullException: Value cannot be null.
+Parameter name: connectionString
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Utilities.Check.NotEmpty(String value, String parameterName) in C:\projects\npgsql-entityframeworkcore-postgresql\src\EFCore.PG\Utilities\Check.cs:line 76
+   at Microsoft.EntityFrameworkCore.NpgsqlDbContextOptionsExtensions.UseNpgsql(DbContextOptionsBuilder optionsBuilder, String connectionString, Action`1 npgsqlOptionsAction) in C:\projects\npgsql-entityframeworkcore-postgresql\src\EFCore.PG\Extensions\NpgsqlDbContextOptionsExtensions.cs:line 33
+   at Geoportal.iContext.OnConfiguring(DbContextOptionsBuilder optionsBuilder) in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Models\iContext.cs:line 39
+   at Microsoft.EntityFrameworkCore.DbContext.get_InternalServiceProvider()
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.EntryWithoutDetectChanges[TEntity](TEntity entity)
+   at Microsoft.EntityFrameworkCore.DbContext.SetEntityState[TEntity](TEntity entity, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.DbContext.Add[TEntity](TEntity entity)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Add(TEntity entity)
+   at Geoportal.Controllers.FileController.Save_Package_atrributes(DemandArchiveErs DAE) in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\FileController.cs:line 208
+   at Geoportal.Controllers.FileController.Upload() in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\FileController.cs:line 62
+2019-07-09 19:18:45.084 +03:00 [INF] User user1 logged in
+2019-07-09 19:18:51.390 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83699
+2019-07-09 19:18:51.392 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user1\_09_07_2019_(07_18_51)
+2019-07-09 19:18:51.440 +03:00 [FTL] Error while saving data in filesDemandArchiveErs
+System.IO.FileNotFoundException: Could not find file 'C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user1\_09_07_2019_(07_18_51)'.
+File name: 'C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user1\_09_07_2019_(07_18_51)'
+   at System.IO.FileInfo.get_Length()
+   at Geoportal.Controllers.FileController.Upload() in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\FileController.cs:line 115
+2019-07-09 19:32:17.388 +03:00 [INF] User user3 logged in
+2019-07-09 19:32:29.075 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83700
+2019-07-09 19:32:29.076 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(07_32_29)
+2019-07-09 19:32:29.114 +03:00 [INF] All file's attributes were saved
+2019-07-09 19:38:57.312 +03:00 [FTL] Некорректные логин и(или) пароль
+Npgsql.PostgresException (0x80004005): 28P01: ������������ "anton" �� ������ �������� ����������� (�� ������)
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass161_0.<<ReadMessage>g__ReadMessageLong|0>d.MoveNext() in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.cs:line 1003
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass161_0.<<ReadMessage>g__ReadMessageLong|0>d.MoveNext() in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.cs:line 1032
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnector.AuthenticateMD5(String username, Byte[] salt, Boolean async) in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.Auth.cs:line 132
+   at Npgsql.NpgsqlConnector.Authenticate(String username, NpgsqlTimeout timeout, Boolean async) in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.Auth.cs:line 38
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken) in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.cs:line 425
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken) in C:\projects\npgsql\src\Npgsql\ConnectorPool.cs:line 246
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext() in C:\projects\npgsql\src\Npgsql\NpgsqlConnection.cs:line 301
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnection.Open() in C:\projects\npgsql\src\Npgsql\NpgsqlConnection.cs:line 153
+   at Geoportal.Controllers.AccountController.Login(LoginModel model) in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\AccountController.cs:line 74
+2019-07-09 19:39:05.566 +03:00 [INF] User user3 logged in
+2019-07-09 19:39:16.199 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83701
+2019-07-09 19:39:16.200 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(07_39_16)
+2019-07-09 19:39:16.226 +03:00 [INF] All file's attributes were saved
+2019-07-09 19:50:42.608 +03:00 [INF] User user3 logged in
+2019-07-09 19:51:34.177 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83702
+2019-07-09 19:51:34.178 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(07_51_34)
+2019-07-09 19:51:34.216 +03:00 [INF] All file's attributes were saved
+2019-07-09 19:51:40.999 +03:00 [INF] User  logged out
+2019-07-09 19:57:57.864 +03:00 [INF] User user3 logged in
+2019-07-09 19:58:36.598 +03:00 [INF] User user3 logged in
+2019-07-09 20:01:17.332 +03:00 [INF] User user1 logged in
+2019-07-09 20:14:39.951 +03:00 [FTL] Error while saving data in demandArchiveErs
+System.ArgumentNullException: Value cannot be null.
+Parameter name: connectionString
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Utilities.Check.NotEmpty(String value, String parameterName) in C:\projects\npgsql-entityframeworkcore-postgresql\src\EFCore.PG\Utilities\Check.cs:line 76
+   at Microsoft.EntityFrameworkCore.NpgsqlDbContextOptionsExtensions.UseNpgsql(DbContextOptionsBuilder optionsBuilder, String connectionString, Action`1 npgsqlOptionsAction) in C:\projects\npgsql-entityframeworkcore-postgresql\src\EFCore.PG\Extensions\NpgsqlDbContextOptionsExtensions.cs:line 33
+   at Geoportal.iContext.OnConfiguring(DbContextOptionsBuilder optionsBuilder) in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Models\iContext.cs:line 39
+   at Microsoft.EntityFrameworkCore.DbContext.get_InternalServiceProvider()
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.EntryWithoutDetectChanges[TEntity](TEntity entity)
+   at Microsoft.EntityFrameworkCore.DbContext.SetEntityState[TEntity](TEntity entity, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.DbContext.Add[TEntity](TEntity entity)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Add(TEntity entity)
+   at Geoportal.Controllers.FileController.Save_Package_atrributes(DemandArchiveErs DAE) in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\FileController.cs:line 208
+   at Geoportal.Controllers.FileController.Upload() in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\FileController.cs:line 62
+2019-07-09 20:15:52.394 +03:00 [INF] User user3 logged in
+2019-07-09 20:16:00.923 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83703
+2019-07-09 20:16:00.924 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_16_00)
+2019-07-09 20:16:01.218 +03:00 [FTL] Error while saving data in filesDemandArchiveErs
+System.IO.FileNotFoundException: Could not find file 'C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_16_00)'.
+File name: 'C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_16_00)'
+   at System.IO.FileInfo.get_Length()
+   at Geoportal.Controllers.FileController.Upload() in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\FileController.cs:line 115
+2019-07-09 20:17:48.716 +03:00 [INF] User user3 logged in
+2019-07-09 20:17:55.555 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83704
+2019-07-09 20:17:55.556 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_17_55)
+2019-07-09 20:19:08.493 +03:00 [INF] User user3 logged in
+2019-07-09 20:19:15.080 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83705
+2019-07-09 20:19:15.081 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_19_15)
+2019-07-09 20:19:15.106 +03:00 [INF] All file's attributes were saved
+2019-07-09 20:21:15.083 +03:00 [INF] User user3 logged in
+2019-07-09 20:21:21.200 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83706
+2019-07-09 20:21:21.201 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_21_21)
+2019-07-09 20:21:21.222 +03:00 [INF] All file's attributes were saved
+2019-07-09 20:26:26.085 +03:00 [INF] User user3 logged in
+2019-07-09 20:26:34.377 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83707
+2019-07-09 20:26:34.378 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_26_34)
+2019-07-09 20:26:34.385 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83708
+2019-07-09 20:26:34.385 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_26_34)
+2019-07-09 20:26:34.501 +03:00 [FTL] Error while saving data in filesDemandArchiveErs
+System.IO.FileNotFoundException: Could not find file 'C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_26_34)'.
+File name: 'C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_26_34)'
+   at System.IO.FileInfo.get_Length()
+   at Geoportal.Controllers.FileController.Upload() in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\FileController.cs:line 115
+2019-07-09 20:26:34.501 +03:00 [FTL] Error while saving data in filesDemandArchiveErs
+System.IO.FileNotFoundException: Could not find file 'C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_26_34)'.
+File name: 'C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_26_34)'
+   at System.IO.FileInfo.get_Length()
+   at Geoportal.Controllers.FileController.Upload() in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\FileController.cs:line 115
+2019-07-09 20:27:34.918 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83709
+2019-07-09 20:27:34.920 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_27_34)
+2019-07-09 20:27:34.959 +03:00 [FTL] Error while saving data in filesDemandArchiveErs
+System.IO.FileNotFoundException: Could not find file 'C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_27_34)'.
+File name: 'C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_27_34)'
+   at System.IO.FileInfo.get_Length()
+   at Geoportal.Controllers.FileController.Upload() in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\FileController.cs:line 115
+2019-07-09 20:27:35.003 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83710
+2019-07-09 20:27:35.004 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_27_35)
+2019-07-09 20:27:35.006 +03:00 [INF] All file's attributes were saved
+2019-07-09 20:28:49.357 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83711
+2019-07-09 20:28:49.359 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_28_49)
+2019-07-09 20:28:49.404 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83712
+2019-07-09 20:28:49.404 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_28_49)
+2019-07-09 20:28:49.410 +03:00 [INF] All file's attributes were saved
+2019-07-09 20:28:49.439 +03:00 [INF] All file's attributes were saved
+2019-07-09 20:29:28.327 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83713
+2019-07-09 20:29:28.327 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_29_28)
+2019-07-09 20:29:36.239 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83714
+2019-07-09 20:29:36.864 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_29_36)
+2019-07-09 20:34:56.984 +03:00 [INF] User user3 logged in
+2019-07-09 20:35:04.114 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83715
+2019-07-09 20:35:04.115 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_35_04)
+2019-07-09 20:35:04.186 +03:00 [FTL] Error while saving data in filesDemandArchiveErs
+System.IO.FileNotFoundException: Could not find file 'C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_35_04)'.
+File name: 'C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_35_04)'
+   at System.IO.FileInfo.get_Length()
+   at Geoportal.Controllers.FileController.Upload() in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\FileController.cs:line 115
+2019-07-09 20:36:10.427 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83716
+2019-07-09 20:36:21.488 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_36_14)
+2019-07-09 20:38:30.696 +03:00 [INF] User user3 logged in
+2019-07-09 20:38:42.673 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83717
+2019-07-09 20:38:45.820 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_38_43)
+2019-07-09 20:41:14.511 +03:00 [INF] User user3 logged in
+2019-07-09 20:41:36.868 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83718
+2019-07-09 20:41:39.274 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_41_37)
+2019-07-09 20:41:56.502 +03:00 [INF] All file's attributes were saved
+2019-07-09 20:50:26.135 +03:00 [INF] User user3 logged in
+2019-07-09 20:50:41.763 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83719
+2019-07-09 20:50:45.055 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_50_42)
+2019-07-09 20:51:31.189 +03:00 [INF] All file's attributes were saved
+2019-07-09 20:53:27.249 +03:00 [INF] User user3 logged in
+2019-07-09 20:53:38.751 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83720
+2019-07-09 20:53:38.752 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_53_38)
+2019-07-09 20:53:38.872 +03:00 [INF] All file's attributes were saved
+2019-07-09 20:55:39.913 +03:00 [INF] User user3 logged in
+2019-07-09 20:55:48.794 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83721
+2019-07-09 20:55:48.795 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_55_48)
+2019-07-09 20:55:48.893 +03:00 [INF] All file's attributes were saved
+2019-07-09 20:56:49.610 +03:00 [INF] User user3 logged in
+2019-07-09 20:57:02.309 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83722
+2019-07-09 20:57:02.309 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83723
+2019-07-09 20:57:02.311 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_57_02)
+2019-07-09 20:57:02.311 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_57_02)
+2019-07-09 20:57:02.454 +03:00 [INF] All file's attributes were saved
+2019-07-09 20:57:02.454 +03:00 [INF] All file's attributes were saved
+2019-07-09 20:57:29.261 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83724
+2019-07-09 20:57:29.261 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83725
+2019-07-09 20:57:29.266 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_57_29)
+2019-07-09 20:57:29.266 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_57_29)
+2019-07-09 20:57:29.377 +03:00 [FTL] Error while saving data in filesDemandArchiveErs
+System.IO.FileNotFoundException: Could not find file 'C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_57_29)'.
+File name: 'C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_57_29)'
+   at System.IO.FileInfo.get_Length()
+   at Geoportal.Controllers.FileController.Upload() in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\FileController.cs:line 115
+2019-07-09 20:57:29.463 +03:00 [FTL] Error while saving data in filesDemandArchiveErs
+System.IO.FileNotFoundException: Could not find file 'C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_57_29)'.
+File name: 'C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_57_29)'
+   at System.IO.FileInfo.get_Length()
+   at Geoportal.Controllers.FileController.Upload() in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\FileController.cs:line 115
+2019-07-09 20:57:49.352 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83726
+2019-07-09 20:57:49.353 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_57_49)
+2019-07-09 20:57:49.362 +03:00 [INF] All file's attributes were saved
+2019-07-09 20:57:54.839 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83727
+2019-07-09 20:57:54.841 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_57_54)
+2019-07-09 20:57:54.843 +03:00 [INF] All file's attributes were saved
+2019-07-09 20:58:10.348 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83728
+2019-07-09 20:58:12.284 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83729
+2019-07-09 20:58:21.607 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_58_10)
+2019-07-09 20:58:24.479 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_58_12)
+2019-07-09 20:59:54.659 +03:00 [FTL] Error while saving data in filesDemandArchiveErs
+System.IO.FileNotFoundException: Could not find file 'C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_58_12)\Kaluga_region.zip'.
+File name: 'C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(08_58_12)\Kaluga_region.zip'
+   at System.IO.FileInfo.get_Length()
+   at Geoportal.Controllers.FileController.Upload() in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\FileController.cs:line 115
+2019-07-09 21:00:35.005 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83730
+2019-07-09 21:00:35.008 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(09_00_35)
+2019-07-09 21:00:35.036 +03:00 [INF] All file's attributes were saved
+2019-07-09 21:01:16.820 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83731
+2019-07-09 21:01:19.583 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83732
+2019-07-09 21:01:31.151 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(09_01_18)
+2019-07-09 21:01:33.723 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(09_01_20)
+2019-07-09 21:02:46.278 +03:00 [INF] User user3 logged in
+2019-07-09 21:03:04.590 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83734
+2019-07-09 21:03:05.965 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83733
+2019-07-09 21:03:16.051 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(09_03_05)
+2019-07-09 21:03:17.615 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(09_03_08)
+2019-07-09 21:08:36.132 +03:00 [INF] User user3 logged in
+2019-07-09 21:08:44.426 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83735
+2019-07-09 21:08:44.428 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(09_08_44)
+2019-07-09 21:08:44.603 +03:00 [INF] All file's attributes were saved
+2019-07-09 21:17:55.217 +03:00 [INF] User user3 logged in
+2019-07-09 21:18:03.366 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83736
+2019-07-09 21:18:03.367 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(09_18_03)
+2019-07-09 21:18:03.549 +03:00 [INF] All file's attributes were saved
+2019-07-09 21:20:09.821 +03:00 [INF] User user3 logged in
+2019-07-09 21:20:17.737 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83737
+2019-07-09 21:20:17.738 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(09_20_17)
+2019-07-09 21:20:17.857 +03:00 [INF] All file's attributes were saved
+2019-07-09 21:23:54.629 +03:00 [INF] User user3 logged in
+2019-07-09 21:24:02.523 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83739
+2019-07-09 21:24:02.525 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(09_24_02)
+2019-07-09 21:24:02.531 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83738
+2019-07-09 21:24:02.531 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(09_24_02)
+2019-07-09 21:24:02.681 +03:00 [FTL] Error while saving data in filesDemandArchiveErs
+System.IO.FileNotFoundException: Could not find file 'C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(09_24_02)'.
+File name: 'C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(09_24_02)'
+   at System.IO.FileInfo.get_Length()
+   at Geoportal.Controllers.FileController.Upload() in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\FileController.cs:line 115
+2019-07-09 21:24:02.764 +03:00 [FTL] Error while saving data in filesDemandArchiveErs
+System.IO.FileNotFoundException: Could not find file 'C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(09_24_02)'.
+File name: 'C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(09_24_02)'
+   at System.IO.FileInfo.get_Length()
+   at Geoportal.Controllers.FileController.Upload() in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\FileController.cs:line 115
+2019-07-09 21:25:22.652 +03:00 [INF] User user3 logged in
+2019-07-09 21:25:34.711 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83740
+2019-07-09 21:25:34.712 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(09_25_34)
+2019-07-09 21:25:34.721 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83741
+2019-07-09 21:25:34.721 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(09_25_34)
+2019-07-09 21:25:34.747 +03:00 [INF] All file's attributes were saved
+2019-07-09 21:26:36.737 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83742
+2019-07-09 21:26:36.742 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(09_26_36)
+2019-07-09 21:26:36.818 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83743
+2019-07-09 21:26:36.818 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(09_26_36)
+2019-07-09 21:26:36.820 +03:00 [INF] All file's attributes were saved
+2019-07-09 21:26:37.083 +03:00 [FTL] Error while saving data in filesDemandArchiveErs
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at Geoportal.Controllers.FileController.Upload() in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\FileController.cs:line 124
+2019-07-09 21:26:47.740 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83744
+2019-07-09 21:26:47.741 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(09_26_47)
+2019-07-09 21:26:47.742 +03:00 [INF] All file's attributes were saved
+2019-07-09 21:27:00.922 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83745
+2019-07-09 21:27:00.923 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(09_27_00)
+2019-07-09 21:27:00.934 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83746
+2019-07-09 21:27:00.934 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(09_27_00)
+2019-07-09 21:27:00.936 +03:00 [INF] All file's attributes were saved
+2019-07-09 21:27:21.272 +03:00 [INF] User  logged out
+2019-07-09 21:40:20.773 +03:00 [FTL] Некорректные логин и(или) пароль
+Npgsql.PostgresException (0x80004005): 28P01: ������������ "user3" �� ������ �������� ����������� (�� ������)
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass161_0.<<ReadMessage>g__ReadMessageLong|0>d.MoveNext() in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.cs:line 1003
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass161_0.<<ReadMessage>g__ReadMessageLong|0>d.MoveNext() in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.cs:line 1032
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnector.AuthenticateMD5(String username, Byte[] salt, Boolean async) in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.Auth.cs:line 132
+   at Npgsql.NpgsqlConnector.Authenticate(String username, NpgsqlTimeout timeout, Boolean async) in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.Auth.cs:line 38
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken) in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.cs:line 425
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken) in C:\projects\npgsql\src\Npgsql\ConnectorPool.cs:line 246
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext() in C:\projects\npgsql\src\Npgsql\NpgsqlConnection.cs:line 301
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnection.Open() in C:\projects\npgsql\src\Npgsql\NpgsqlConnection.cs:line 153
+   at Geoportal.Controllers.AccountController.Login(LoginModel model) in C:\Users\Кирилл\Desktop\Geoportal\Geoportal\Controllers\AccountController.cs:line 74
+2019-07-09 21:40:26.710 +03:00 [INF] User user3 logged in
+2019-07-09 21:40:49.987 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83747
+2019-07-09 21:40:49.989 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(09_40_49)
+2019-07-09 21:40:50.043 +03:00 [INF] All file's attributes were saved
+2019-07-09 21:45:06.070 +03:00 [INF] User user3 logged in
+2019-07-09 21:45:46.045 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83748
+2019-07-09 21:45:46.046 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(09_45_46)
+2019-07-09 21:45:46.160 +03:00 [INF] All file's attributes were saved
+2019-07-09 21:45:58.559 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83749
+2019-07-09 21:45:58.560 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(09_45_58)
+2019-07-09 21:45:58.814 +03:00 [INF] All file's attributes were saved
+2019-07-09 21:46:07.103 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83750
+2019-07-09 21:46:07.105 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(09_46_07)
+2019-07-09 21:46:07.607 +03:00 [INF] All file's attributes were saved
+2019-07-09 21:46:25.264 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83751
+2019-07-09 21:46:25.266 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(09_46_25)
+2019-07-09 21:46:25.539 +03:00 [INF] All file's attributes were saved
+2019-07-09 21:49:55.819 +03:00 [INF] User user3 logged in
+2019-07-09 21:55:32.552 +03:00 [INF] User user3 logged in
+2019-07-09 21:55:38.880 +03:00 [INF] Package atrributes were saved in demandArchiveErs,ID : 83752
+2019-07-09 21:55:38.881 +03:00 [INF] Crate directory C:\Users\Кирилл\Desktop\Geoportal\Geoportal\wwwroot\user3\_09_07_2019_(09_55_38)
+2019-07-09 21:55:39.336 +03:00 [INF] All file's attributes were saved
