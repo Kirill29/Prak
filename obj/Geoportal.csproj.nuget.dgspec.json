@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Кирилл\\Desktop\\Geoportal\\Geoportal\\Geoportal.csproj": {}
+    "C:\\Users\\Кирилл\\Desktop\\Diploma\\Praktika\\Geoportal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Кирилл\\Desktop\\Geoportal\\Geoportal\\Geoportal.csproj": {
+    "C:\\Users\\Кирилл\\Desktop\\Diploma\\Praktika\\Geoportal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Кирилл\\Desktop\\Geoportal\\Geoportal\\Geoportal.csproj",
+        "projectUniqueName": "C:\\Users\\Кирилл\\Desktop\\Diploma\\Praktika\\Geoportal.csproj",
         "projectName": "Geoportal",
-        "projectPath": "C:\\Users\\Кирилл\\Desktop\\Geoportal\\Geoportal\\Geoportal.csproj",
+        "projectPath": "C:\\Users\\Кирилл\\Desktop\\Diploma\\Praktika\\Geoportal.csproj",
         "packagesPath": "C:\\Users\\Кирилл\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Кирилл\\Desktop\\Geoportal\\Geoportal\\obj\\",
+        "outputPath": "C:\\Users\\Кирилл\\Desktop\\Diploma\\Praktika\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -25,7 +25,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://build.directcrm.ru/httpAuth/app/nuget/feed/Libraries/default/v2": {}
         },
         "frameworks": {
           "netcoreapp2.2": {
@@ -136,7 +137,12 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true

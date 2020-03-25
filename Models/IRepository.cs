@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Geoportal.Models
 {
-    interface IRepository:IDisposable
-    {
-    }
+	interface IRepository : IDisposable
+	{
+	}
 }

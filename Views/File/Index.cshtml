@@ -6,12 +6,10 @@
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    
+    <meta name="viewport" content="width=device-width"/>
 </head>
-
 <body>
-    <style>
+<style>
         .simple-little-table {
             font-family: Arial, Helvetica, sans-serif;
             color: #666;
@@ -124,35 +122,32 @@
             }
     </style>
 
-    <p>
-        <a asp-action="Ramka" asp-controller="Ramka">Добавить рамку в виде WKT или SHP файла</a>
-    </p>
-    <a asp-action="Ramka_Draw" asp-controller="Ramka">Добавить рамку в виде отрисованной области на карте</a>
-    <div>
-        <table class="simple-little-table">
-
+<p>
+    <a asp-action="Ramka" asp-controller="Ramka">Добавить рамку в виде WKT или SHP файла</a>
+</p>
+<a asp-action="Ramka_Draw" asp-controller="Ramka">Добавить рамку в виде отрисованной области на карте</a>
+<div>
+    <table class="simple-little-table">
+        <tr>
+            <th>Имя файла</th>
+            <th>Полный путь к файлу</th>
+            <th>Размер файла в битах</th>
+            <th>Дата отправки:</th>
+            <th>"№" пакета архивирования</th>
+            <th>"№" файла в пакете</th>
+        </tr>
+        @foreach (var file in Model)
+        {
             <tr>
-                <th>Имя файла</th>
-                <th>Полный путь к файлу</th>
-                <th>Размер файла в битах</th>
-                <th>Дата отправки:</th>
-                <th>"№" пакета архивирования</th>
-                <th>"№" файла в пакете</th>
+                <td>@file.FileName</td>
+                <td>@file.RootDir</td>
+                <td>@file.FileSize</td>
+                <td>@file.DateSendDemand.Value.ToString("d")</td>
+                <td>@file.DemandArchiveErsNr</td>
+                <td>@file.FilesDemandArchiveNr</td>
             </tr>
-
-            @foreach (var file in Model)
-            {
-                <tr>
-                    <td>@file.FileName</td>
-                    <td>@file.RootDir</td>
-                    <td>@file.FileSize</td>
-                    <td>@file.DateSendDemand.Value.ToString("d")</td>
-                    <td>@file.DemandArchiveErsNr</td>
-                    <td>@file.FilesDemandArchiveNr</td>
-                </tr>
-            }
-
-        </table>
-    </div>
+        }
+    </table>
+</div>
 </body>
 </html>

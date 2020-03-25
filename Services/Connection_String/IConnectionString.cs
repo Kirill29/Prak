@@ -6,9 +6,10 @@ using Geoportal.Models;
 
 namespace Geoportal.Services
 {
-    public interface IConnectionString
-    {
-        string GetConnectionString();
-        void SetConnectionString(User _user);
-    }
+	public interface IConnectionString
+	{
+		string GetConnectionString();
+
+		void SetConnectionString(User _user);
+	}
 }

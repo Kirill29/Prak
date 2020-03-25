@@ -1,16 +1,12 @@
-﻿
-@{
+﻿@{
     Layout = "_Layout";
 }
 <head>
-
     <script src="~/js/dropzone.js"></script>
     <link rel="stylesheet" href="~/css/dropzone.css">
-
 </head>
 <style>
   #input-file-now {
-        
         background-image:url(/css/images/698648-icon-130-cloud-upload-512.png);
         border: 3px solid #ccc;
         border-radius: 10px;
@@ -31,31 +27,22 @@
        border: 3px solid #a9a9a9;
        border-radius: 10px;
   }
-       
-
 </style>
-<br />
+<br/>
 
 <form method="post" enctype="multipart/form-data" asp-action="Upload" asp-controller="File">
     <div>
         <p style="font-size:22px;">Выберете файлы или перетащите на форму:</p>
         <div class="file-upload-wrapper input-group input-group-lg">
-            <input type="file" name="files" multiple id="input-file-now" class="file-upload form-control input-lg" />
+            <input type="file" name="files" multiple id="input-file-now" class="file-upload form-control input-lg"/>
         </div>
-        </div>
-
-        <div>
-            <p>
-                <input type="submit" class="btn btn-primary" value="Загрузить" />
-            </p>
-          
-        </div>
+    </div>
+    <div>
+        <p>
+            <input type="submit" class="btn btn-primary" value="Загрузить"/>
+        </p>
+    </div>
 </form>
 <script>
   $('.file-upload').file_upload();
- 
-
-
-
 </script>
-
