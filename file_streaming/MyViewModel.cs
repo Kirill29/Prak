@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace Geoportal.file_streaming
 {
-    public class MyViewModel
-    {
-        public string Username { get; set; }
-    }
+	public class MyViewModel
+	{
+		public string Username { get; set; }
+	}
 }

@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Кирилл\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Кирилл\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Geoportal.-275492807.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Кирилл\Desktop\Diploma\Praktika" t="IncludeRecursive">
+      <e p="appsettings.Development.json" t="Include" />
+      <e p="appsettings.json" t="Include" />
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="ClassDiagram.cd" t="Include" />
+      <e p="Controllers" t="Include">
+        <e p="AccountController.cs" t="Include" />
+        <e p="FileController.cs" t="Include" />
+        <e p="HomeController.cs" t="Include" />
+        <e p="RamkaController.cs" t="Include" />
+      </e>
+      <e p="Data" t="Include" />
+      <e p="file_streaming" t="Include">
+        <e p="DisableFormValueModelBindingAttribute.cs" t="Include" />
+        <e p="FileStreamingHelper.cs" t="Include" />
+        <e p="MultipartRequestHelper.cs" t="Include" />
+        <e p="MyViewModel.cs" t="Include" />
+      </e>
+      <e p="Geoportal.csproj" t="IncludeRecursive" />
+      <e p="Geoportal.sln" t="IncludeFlat" />
+      <e p="logs" t="Include">
+        <e p="log20190515_027.txt" t="Include" />
+        <e p="log20190515_028.txt" t="Include" />
+        <e p="log20190515_029.txt" t="Include" />
+        <e p="log20190515_030.txt" t="Include" />
+        <e p="log20190515_031.txt" t="Include" />
+        <e p="log20190515_032.txt" t="Include" />
+        <e p="log20190515_033.txt" t="Include" />
+        <e p="log20190515_034.txt" t="Include" />
+        <e p="log20190515_035.txt" t="Include" />
+        <e p="log20190515_036.txt" t="Include" />
+        <e p="log20190515_037.txt" t="Include" />
+        <e p="log20190515_038.txt" t="Include" />
+        <e p="log20190515_039.txt" t="Include" />
+        <e p="log20190515_040.txt" t="Include" />
+        <e p="log20190515_041.txt" t="Include" />
+        <e p="log20190515_042.txt" t="Include" />
+        <e p="log20190515_043.txt" t="Include" />
+        <e p="log20190515_044.txt" t="Include" />
+        <e p="log20190530.txt" t="Include" />
+        <e p="log20190530_001.txt" t="Include" />
+        <e p="log20190530_002.txt" t="Include" />
+        <e p="log20190607.txt" t="Include" />
+        <e p="log20190607_001.txt" t="Include" />
+        <e p="log20190607_002.txt" t="Include" />
+        <e p="log20190625.txt" t="Include" />
+        <e p="log20190625_001.txt" t="Include" />
+        <e p="log20190625_002.txt" t="Include" />
+        <e p="log20190707.txt" t="Include" />
+        <e p="log20190708.txt" t="Include" />
+        <e p="log20190709.txt" t="Include" />
+        <e p="log20190710.txt" t="Include" />
+      </e>
+      <e p="Models" t="Include">
+        <e p="DemandArchiveErs.cs" t="Include" />
+        <e p="ErrorViewModel.cs" t="Include" />
+        <e p="FilesCmr.cs" t="Include" />
+        <e p="FilesDemandArchiveErs.cs" t="Include" />
+        <e p="Geom_shape.cs" t="Include" />
+        <e p="iContext.cs" t="Include" />
+        <e p="IRepository.cs" t="Include" />
+        <e p="User.cs" t="Include" />
+      </e>
+      <e p="obj" t="ExcludeRecursive">
+        <e p="Debug" t="Include">
+          <e p="netcoreapp2.2" t="Include">
+            <e p="Geoportal.AssemblyInfo.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Program.cs" t="Include" />
+      <e p="Properties" t="Include">
+        <e p="launchSettings.json" t="Include" />
+        <e p="PublishProfiles" t="Include">
+          <e p="FolderProfile 1.pubxml" t="Include" />
+          <e p="FolderProfile 10.pubxml" t="Include" />
+          <e p="FolderProfile 11.pubxml" t="Include" />
+          <e p="FolderProfile 12.pubxml" t="Include" />
+          <e p="FolderProfile 13.pubxml" t="Include" />
+          <e p="FolderProfile 14.pubxml" t="Include" />
+          <e p="FolderProfile 15.pubxml" t="Include" />
+          <e p="FolderProfile 16.pubxml" t="Include" />
+          <e p="FolderProfile 17.pubxml" t="Include" />
+          <e p="FolderProfile 18.pubxml" t="Include" />
+          <e p="FolderProfile 19.pubxml" t="Include" />
+          <e p="FolderProfile 2.pubxml" t="Include" />
+          <e p="FolderProfile 20.pubxml" t="Include" />
+          <e p="FolderProfile 21.pubxml" t="Include" />
+          <e p="FolderProfile 22.pubxml" t="Include" />
+          <e p="FolderProfile 3.pubxml" t="Include" />
+          <e p="FolderProfile 4.pubxml" t="Include" />
+          <e p="FolderProfile 5.pubxml" t="Include" />
+          <e p="FolderProfile 6.pubxml" t="Include" />
+          <e p="FolderProfile 7.pubxml" t="Include" />
+          <e p="FolderProfile 8.pubxml" t="Include" />
+          <e p="FolderProfile 9.pubxml" t="Include" />
+          <e p="FolderProfile.pubxml" t="Include" />
+          <e p="FolderProfile1.pubxml" t="Include" />
+          <e p="FolderProfile10.pubxml" t="Include" />
+          <e p="FolderProfile11.pubxml" t="Include" />
+          <e p="FolderProfile12.pubxml" t="Include" />
+          <e p="FolderProfile13.pubxml" t="Include" />
+          <e p="FolderProfile14.pubxml" t="Include" />
+          <e p="FolderProfile15.pubxml" t="Include" />
+          <e p="FolderProfile16.pubxml" t="Include" />
+          <e p="FolderProfile17.pubxml" t="Include" />
+          <e p="FolderProfile18.pubxml" t="Include" />
+          <e p="FolderProfile19.pubxml" t="Include" />
+          <e p="FolderProfile2.pubxml" t="Include" />
+          <e p="FolderProfile20.pubxml" t="Include" />
+          <e p="FolderProfile21.pubxml" t="Include" />
+          <e p="FolderProfile22.pubxml" t="Include" />
+          <e p="FolderProfile23.pubxml" t="Include" />
+          <e p="FolderProfile24.pubxml" t="Include" />
+          <e p="FolderProfile25.pubxml" t="Include" />
+          <e p="FolderProfile26.pubxml" t="Include" />
+          <e p="FolderProfile27.pubxml" t="Include" />
+          <e p="FolderProfile28.pubxml" t="Include" />
+          <e p="FolderProfile29.pubxml" t="Include" />
+          <e p="FolderProfile3.pubxml" t="Include" />
+          <e p="FolderProfile4.pubxml" t="Include" />
+          <e p="FolderProfile5.pubxml" t="Include" />
+          <e p="FolderProfile6.pubxml" t="Include" />
+          <e p="FolderProfile7.pubxml" t="Include" />
+          <e p="FolderProfile8.pubxml" t="Include" />
+          <e p="FolderProfile9.pubxml" t="Include" />
+        </e>
+      </e>
+      <e p="Services" t="Include">
+        <e p="Connection_String" t="Include">
+          <e p="ConnectionString.cs" t="Include" />
+          <e p="IConnectionString.cs" t="Include" />
+        </e>
+        <e p="Fabica_Shape" t="Include">
+          <e p="Create_shape.cs" t="Include" />
+          <e p="Create_shape_draw.cs" t="Include" />
+          <e p="Create_shape_SHP.cs" t="Include" />
+          <e p="Create_shape_WKT.cs" t="Include" />
+          <e p="Shape.cs" t="Include" />
+          <e p="Shape_draw.cs" t="Include" />
+          <e p="Shape_SHP.cs" t="Include" />
+          <e p="Shape_WKT.cs" t="Include" />
+        </e>
+        <e p="Logging" t="Include">
+          <e p="ILogger_custom.cs" t="Include" />
+          <e p="Logger_Serilog.cs" t="Include" />
+        </e>
+        <e p="Save_files" t="Include">
+          <e p="ISave_files.cs" t="Include" />
+          <e p="Save_Files_IFormFile.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Startup.cs" t="Include" />
+      <e p="ViewModel" t="Include">
+        <e p="LoginModel.cs" t="Include" />
+        <e p="RegisterModel.cs" t="Include" />
+      </e>
+      <e p="Views" t="Include">
+        <e p="_ViewImports.cshtml" t="Include" />
+        <e p="_ViewStart.cshtml" t="Include" />
+        <e p="Account" t="Include">
+          <e p="Login.cshtml" t="Include" />
+        </e>
+        <e p="File" t="Include">
+          <e p="Index.cshtml" t="Include" />
+          <e p="Send.cshtml" t="Include" />
+        </e>
+        <e p="Home" t="Include">
+          <e p="Index.cshtml" t="Include" />
+        </e>
+        <e p="Ramka" t="Include">
+          <e p="Ramka.cshtml" t="Include" />
+          <e p="Ramka_Added_Draw.cshtml" t="Include" />
+          <e p="Ramka_Added_SHP.cshtml" t="Include" />
+          <e p="Ramka_Added_WKT.cshtml" t="Include" />
+          <e p="Ramka_Draw.cshtml" t="Include" />
+        </e>
+        <e p="Shared" t="Include">
+          <e p="_CookieConsentPartial.cshtml" t="Include" />
+          <e p="_Layout.cshtml" t="Include" />
+          <e p="_ValidationScriptsPartial.cshtml" t="Include" />
+          <e p="Error.cshtml" t="Include" />
+        </e>
+        <e p="View.cshtml" t="Include" />
+      </e>
+      <e p="wwwroot" t="Include">
+        <e p="css" t="Include">
+          <e p="basic.css" t="Include" />
+          <e p="dropzone.css" t="Include" />
+          <e p="File" t="Include">
+            <e p="layers.png" t="Include" />
+            <e p="leaflet.css" t="Include" />
+            <e p="marker-icon.png" t="Include" />
+            <e p="marker-shadow.png" t="Include" />
+          </e>
+          <e p="images" t="Include">
+            <e p="698648-icon-130-cloud-upload-512.png" t="Include" />
+            <e p="icons-000000.png" t="Include" />
+            <e p="layers.png" t="Include" />
+            <e p="marker-icon.png" t="Include" />
+            <e p="marker-shadow.png" t="Include" />
+            <e p="spritesheet-2x.png" t="Include" />
+          </e>
+          <e p="leaflet.css" t="Include" />
+          <e p="leaflet.draw.css" t="Include" />
+          <e p="login_panel.css" t="Include" />
+          <e p="mapbox.css" t="Include" />
+          <e p="site (копировать).css" t="Include" />
+          <e p="site.css" t="Include" />
+        </e>
+        <e p="js" t="Include">
+          <e p="Add_shp.js" t="Include" />
+          <e p="Add_WKT.js" t="Include" />
+          <e p="dropzone-amd-module.js" t="Include" />
+          <e p="dropzone.js" t="Include" />
+          <e p="f.json" t="Include" />
+          <e p="images" t="Include">
+            <e p="layers-2x.png" t="Include" />
+            <e p="layers.png" t="Include" />
+            <e p="marker-icon-2x.png" t="Include" />
+            <e p="marker-icon.png" t="Include" />
+            <e p="marker-shadow.png" t="Include" />
+          </e>
+          <e p="jquery-3.3.1.js" t="Include" />
+          <e p="leaflet-offline.js" t="Include" />
+          <e p="leaflet-src.esm.js" t="Include" />
+          <e p="leaflet-src.esm.js.map" t="Include" />
+          <e p="leaflet-src.js" t="Include" />
+          <e p="leaflet-src.js.map" t="Include" />
+          <e p="leaflet.css" t="Include" />
+          <e p="leaflet.draw.js" t="Include" />
+          <e p="leaflet.js" t="Include" />
+          <e p="leaflet.js.map" t="Include" />
+          <e p="leaflet.shpfile.js" t="Include" />
+          <e p="localforage.js" t="Include" />
+          <e p="map.js" t="Include" />
+          <e p="mapbox.js" t="Include" />
+          <e p="script.js" t="Include" />
+          <e p="shp.js" t="Include" />
+          <e p="site.js" t="Include" />
+          <e p="turf.js" t="Include" />
+          <e p="wicket-gmap3.js" t="Include" />
+          <e p="wicket-leaflet.js" t="Include" />
+          <e p="wicket.js" t="Include" />
+        </e>
+        <e p="Kaluga_region.zip" t="Include" />
+        <e p="lib" t="Include">
+          <e p="bootstrap" t="Include">
+            <e p="dist" t="Include">
+              <e p="css" t="Include">
+                <e p="bootstrap-grid.css" t="Include" />
+                <e p="bootstrap-grid.css.map" t="Include" />
+                <e p="bootstrap-grid.min.css" t="Include" />
+                <e p="bootstrap-grid.min.css.map" t="Include" />
+                <e p="bootstrap-reboot.css" t="Include" />
+                <e p="bootstrap-reboot.css.map" t="Include" />
+                <e p="bootstrap-reboot.min.css" t="Include" />
+                <e p="bootstrap-reboot.min.css.map" t="Include" />
+                <e p="bootstrap.css" t="Include" />
+                <e p="bootstrap.css.map" t="Include" />
+                <e p="bootstrap.min.css" t="Include" />
+                <e p="bootstrap.min.css.map" t="Include" />
+              </e>
+              <e p="js" t="Include">
+                <e p="bootstrap.bundle.js" t="Include" />
+                <e p="bootstrap.bundle.js.map" t="Include" />
+                <e p="bootstrap.bundle.min.js" t="Include" />
+                <e p="bootstrap.bundle.min.js.map" t="Include" />
+                <e p="bootstrap.js" t="Include" />
+                <e p="bootstrap.js.map" t="Include" />
+                <e p="bootstrap.min.js" t="Include" />
+                <e p="bootstrap.min.js.map" t="Include" />
+              </e>
+            </e>
+            <e p="LICENSE" t="Include" />
+          </e>
+          <e p="jquery" t="Include">
+            <e p="dist" t="Include">
+              <e p="jquery.js" t="Include" />
+              <e p="jquery.min.js" t="Include" />
+              <e p="jquery.min.map" t="Include" />
+            </e>
+            <e p="LICENSE.txt" t="Include" />
+          </e>
+          <e p="jquery-validation" t="Include">
+            <e p="dist" t="Include">
+              <e p="additional-methods.js" t="Include" />
+              <e p="additional-methods.min.js" t="Include" />
+              <e p="jquery.validate.js" t="Include" />
+              <e p="jquery.validate.min.js" t="Include" />
+            </e>
+            <e p="LICENSE.md" t="Include" />
+          </e>
+          <e p="jquery-validation-unobtrusive" t="Include">
+            <e p="jquery.validate.unobtrusive.js" t="Include" />
+            <e p="jquery.validate.unobtrusive.min.js" t="Include" />
+            <e p="LICENSE.txt" t="Include" />
+          </e>
+        </e>
+        <e p="user3" t="Include">
+          <e p="_10_07_2019_(12_14_47)" t="Include">
+            <e p="gl4z1tn5.pds" t="Include" />
+            <e p="Новый текстовый документ (2).txt" t="Include" />
+          </e>
+        </e>
+      </e>
+    </e>
+  </component>
+</project>
